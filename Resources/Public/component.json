@@ -1,0 +1,12 @@
+{
+  "name": "Bootstrap Starter",
+  "version": "1.0.0",
+  "main": [],
+  "dependencies": {
+    "jquery": "1.*",
+    "bootstrap": "3.*",
+    "less-elements": "*",
+    "font-awesome": "*",
+    "famelo-components": "*"
+  }
+}
