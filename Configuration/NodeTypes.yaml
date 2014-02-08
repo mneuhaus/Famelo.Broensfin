@@ -1,0 +1,39 @@
+'TYPO3.Neos:Content':
+  properties:
+    wrapper:
+      type: string
+      defaultValue: 'wrapper'
+      ui:
+        label: 'Wrapper'
+        reloadIfChanged: TRUE
+        inspector:
+          group: visibility
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              wrapper:
+                label: 'No Background'
+              wrapper-beige:
+                label: 'Beige Background'
+
+'Famelo.Broensfin:Web':
+  superTypes: ['TYPO3.Neos.NodeTypes:Text']
+  ui:
+    label: 'Web'
+    icon: 'icon-file-text'
+  properties:
+    title:
+      type: string
+      defaultValue: 'Web'
+      ui:
+        inlineEditable: TRUE
+        aloha:
+          'format':
+            'removeFormat': TRUE
+          'link':
+            'a': FALSE
+    url:
+      type: string
+      defaultValue: 'http://foo.bar.com/typo3'
+      ui:
+        inlineEditable: TRUE
