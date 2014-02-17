@@ -1,0 +1,56 @@
+@media (min-width: 500px) and (max-width: @screen-tablet) {
+	.col-s-1,
+	.col-s-2,
+	.col-s-3,
+	.col-s-4,
+	.col-s-5,
+	.col-s-6,
+	.col-s-7,
+	.col-s-8,
+	.col-s-9,
+	.col-s-10,
+	.col-s-11,
+	.col-s-12 {
+	  position: relative;
+	  // Prevent columns from collapsing when empty
+	  min-height: 1px;
+	  // Inner gutter via padding
+	  padding-left:  (@grid-gutter-width / 2);
+	  padding-right: (@grid-gutter-width / 2);
+	}
+
+
+	// Small grid to bridge the gap between small tablet < > mobile
+	//
+	// Grid classes for extra small devices like smartphones. No offset, push, or
+	// pull classes are present here due to the size of the target.
+	//
+	// Note that `.col-s-12` doesn't get floated on purpose—there's no need since
+	// it's full-width.
+
+	.col-s-1,
+	.col-s-2,
+	.col-s-3,
+	.col-s-4,
+	.col-s-5,
+	.col-s-6,
+	.col-s-7,
+	.col-s-8,
+	.col-s-9,
+	.col-s-10,
+	.col-s-11 {
+	  float: left;
+	}
+	.col-s-1  { width: percentage((1 / @grid-columns)); }
+	.col-s-2  { width: percentage((2 / @grid-columns)); }
+	.col-s-3  { width: percentage((3 / @grid-columns)); }
+	.col-s-4  { width: percentage((4 / @grid-columns)); }
+	.col-s-5  { width: percentage((5 / @grid-columns)); }
+	.col-s-6  { width: percentage((6 / @grid-columns)); }
+	.col-s-7  { width: percentage((7 / @grid-columns)); }
+	.col-s-8  { width: percentage((8 / @grid-columns)); }
+	.col-s-9  { width: percentage((9 / @grid-columns)); }
+	.col-s-10 { width: percentage((10/ @grid-columns)); }
+	.col-s-11 { width: percentage((11/ @grid-columns)); }
+	.col-s-12 { width: 100%; }
+}

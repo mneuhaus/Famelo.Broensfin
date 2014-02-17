@@ -1,0 +1,45 @@
+@navVerticalIndent: 10px;
+@navVerticalPadding: 5px 10px;
+
+.nav-vertical {
+	.clearfix();
+	display: inline-block;
+
+	ul, li {
+		margin: 0;
+	}
+
+	li {
+	  float: none;
+	  display: block;
+	}
+
+	li > a{
+		display: block;
+	  	text-align: left;
+	  	padding: @navVerticalPadding;
+	}
+
+	ul a {
+		padding-left: @navVerticalIndent * 2;
+	}
+
+	ul ul a {
+		padding-left: @navVerticalIndent * 3;
+	}
+
+	ul.dropdown-menu,
+	.dropdown-hover > ul {
+		top: 0;
+		left: 100%;
+	}
+}
+
+.nav-vertical.well {
+	padding: 0;
+
+	a {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}

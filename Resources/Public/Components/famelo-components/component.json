@@ -1,0 +1,14 @@
+{
+  "name": "famelo-components",
+  "version": "0.0.0",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/famelo/Components.git"
+  },
+  "gitHead": "5a7e117a5405849156f7116c470f3c5b4d9f989c",
+  "readmeFilename": "Readme.md",
+  "_id": "famelo-components@0.1.0",
+  "commit": "5a7e117a5405849156f7116c470f3c5b4d9f989c"
+}
