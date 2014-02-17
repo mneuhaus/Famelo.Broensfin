@@ -13,7 +13,7 @@
 		document.baseUrl = "{f:uri.resource(path: '', package: 'Famelo.Broensfin')}";
 		</script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'Components/jquery/jquery.js', package: 'Famelo.Broensfin')}"></script>
-		<script type="text/javascript" src="{f:uri.resource(path: 'Components/zclip/jquery.zclip.js', package: 'Famelo.Broensfin')}"></script>
+		<script type="text/javascript" src="{f:uri.resource(path: 'Components/bootstrap/dist/js/bootstrap.min.js', package: 'Famelo.Broensfin')}"></script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'Scripts/Main.js', package: 'Famelo.Broensfin')}"></script>
 	</f:section>
 </head>
@@ -29,7 +29,10 @@
 							Login
 						</a>
 					</li>
-					<li class="dropdown">
+
+					{parts.languageMenu -> f:format.raw()}
+
+<!-- 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<img src="Media/Flags/de_DE.png" width="20" />
 							Deutsch
@@ -49,7 +52,7 @@
 								</a>
 							</li>
 						</ul>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -65,51 +68,6 @@
 	</header>
 
 	{content.main -> f:format.raw()}
-
-	<div class="wrapper-beige">
-		<div class="container">
-			<h2>Partner GRATIS testen</h2>
-			<p>
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-			</p>
-		</div>
-	</div>
-
-	<div class="wrapper">
-		<div class="container text-center">
-			<h1>Testen Sie BROENSFIN jetzt!</h1>
-			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-			</p>
-			<button type="button" class="btn btn-primary btn-lg">Jetzt BROENSFIN gratis testen</button>
-		</div>
-	</div>
-
-	<footer class="wrapper-grey">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<img src="{f:uri.resource(path: 'Media/Logo.png', package: 'Famelo.Broensfin')}" width="200"/>
-				</div>
-				<div class="col-md-3">
-					<h5>BROENSFIN</h5>
-				</div>
-				<div class="col-md-3">
-					<h5>Partner</h5>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-
-	<div class="wrapper">
-		<div class="container text-center">
-			<p>
-				Impressum Copyright 2014 BROENSFIN <br />
-				Design und Entwicklung Famelo OHG & Sven Steinker
-			</p>
-		</div>
-	</div>
 
 </f:section>
 </body>

@@ -27,6 +27,11 @@ page = Page {
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/Menu.html'
 				maximumLevels = 3
 			}
+
+			languageMenu = TYPO3.Neos:LanguageMenu {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/LanguageMenu.html'
+			}
+
 			breadcrumb = Breadcrumb
 		}
 			// These are your content areas, you can define as many as you want, just name them and the nodePath.

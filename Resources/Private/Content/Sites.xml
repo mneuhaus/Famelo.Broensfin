@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<site nodeName="satisfy" type="TYPO3.Neos.NodeTypes:Page">
+	<site nodeName="broensfin" type="TYPO3.Neos.NodeTypes:Page">
 		<properties>
-			<name>Satisfy</name>
+			<name>Broensfin</name>
 			<title><![CDATA[Home]]></title>
 			<state>1</state>
-			<siteResourcesPackageKey>Famelo.Satisfy</siteResourcesPackageKey>
+			<siteResourcesPackageKey>Famelo.Broensfin</siteResourcesPackageKey>
 		</properties>
 		<node type="TYPO3.Neos:ContentCollection" nodeName="main">
 			<node type="TYPO3.Neos.NodeTypes:Text" nodeName="text1">

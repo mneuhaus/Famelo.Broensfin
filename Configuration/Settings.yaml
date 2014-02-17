@@ -1,0 +1,11 @@
+TYPO3:
+  TYPO3CR:
+    contentDimensions:
+      locales:
+        default: mul_ZZ
+
+  Neos:
+    localization:
+      localeMapping:
+        de: [de_DE, de_ZZ, mul_ZZ]
+        en: [en_ZZ, mul_ZZ]

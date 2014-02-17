@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" source-language="de" target-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="de">
+				<source>de</source>
+				<target>Deutsch</target>
+			</trans-unit>
+			<trans-unit id="en">
+				<source>en</source>
+				<target>Englisch</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
