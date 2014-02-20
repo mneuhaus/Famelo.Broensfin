@@ -1,0 +1,6 @@
+{namespace m=Famelo\Messaging\ViewHelpers}
+<m:message
+	to="{claim.debtor.email}:{claim.debtor.name}"
+	subject="{claim.debtor.name} hat eine Forderung akzeptiert " />
+
+<f:render partial="Claim" arguments="{claim: claim}" />

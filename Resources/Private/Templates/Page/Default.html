@@ -16,6 +16,14 @@
 		<script type="text/javascript" src="{f:uri.resource(path: 'Components/jquery/jquery.js', package: 'Famelo.Broensfin')}"></script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'Components/bootstrap/dist/js/bootstrap.min.js', package: 'Famelo.Broensfin')}"></script>
 		<script type="text/javascript" src="{f:uri.resource(path: 'Scripts/Main.js', package: 'Famelo.Broensfin')}"></script>
+
+
+		<script src="{f:uri.resource(path: 'Scripts/Main.min.js', package: 'TYPO3.Expose')}"></script>
+
+
+		<link rel="stylesheet" href="{f:uri.resource(path: 'components/chosen/chosen/chosen.css', package: 'TYPO3.Expose')}" />
+		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Main.css', package: 'TYPO3.Expose')}" />
+
 	</f:section>
 </head>
 <body>
@@ -24,10 +32,26 @@
 		<div class="container">
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav pull-right">
+					<li class="current">
+					<f:security.ifAuthenticated>
+ 						<f:then>
+							<a href="logout.html" class="current">
+								<i class="fa fa-user"></i>
+								Logout
+							</a>
+ 						</f:then>
+ 						<f:else>
+							<a href="login.html" class="current">
+								<i class="fa fa-user"></i>
+								Login
+							</a>
+						</f:else>
+					</f:security.ifAuthenticated>
+					</li>
 					{parts.languageMenu -> f:format.raw()}
 				</ul>
 			</div>
-		</div>		
+		</div>
 	</div>
 
 	<header>
@@ -35,11 +59,11 @@
 			<div class="container">
 				{parts.menu -> f:format.raw()}
 			</div>
-		</nav>		
+		</nav>
 	</header>
 
 	{content.main -> f:format.raw()}
-	
+
 	<footer>
 		<div class="container">
 			<div class="col-sm-3">
@@ -57,21 +81,7 @@
 					<li>
 						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
 					</li>
-				</ul>				
-			</div>
-			<div class="col-sm-3">
-				<h5>Rechtliches</h5>
-				<ul>
-					<li>
-						<neos:link.node node="/sites/broensfin/ueber-uns">Nutzungsbedingungen</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
-					</li>
-				</ul>				
+				</ul>
 			</div>
 			<div class="col-sm-3">
 				<h5>Rechtliches</h5>
@@ -86,12 +96,26 @@
 						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
 					</li>
 				</ul>
-			</div>		
-		</div>		
+			</div>
+			<div class="col-sm-3">
+				<h5>Rechtliches</h5>
+				<ul>
+					<li>
+						<neos:link.node node="/sites/broensfin/ueber-uns">Nutzungsbedingungen</neos:link.node>
+					</li>
+					<li>
+						<neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
+					</li>
+					<li>
+						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 	<div class="footerwrapper">
 		<p><a href="#" title="Impressum">Impressum</a> . © Copyright 2014 BROENSFIN</p>
-	
+
 		<p class="copyright">Design und Entwicklung von <a href="http://www.famelo.com" title="Webentwicklung und IT-Service">Famelo OHG</a> & <a href="http://www.svensteinker.de" title="Sven Steinker - Webdesign und Frontendentwicklung">Sven Steinker </a></p>
 	</div>
 </f:section>

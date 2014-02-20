@@ -1,0 +1,57 @@
+{namespace e=TYPO3\Expose\ViewHelpers}
+<div class="row">
+	<div class="col-xs-4">
+		<h3>Gläubiger</h3>
+		<f:render partial="User" arguments="{user: claim.creditor}" />
+	</div>
+	<div class="col-xs-4">
+		<h3>Forderung</h3>
+		<f:render partial="Claim" arguments="{claim: claim}" />
+
+		<f:if condition="{claim.debtor} == {user}">
+			<f:if condition="{claim.currentState.accepted} == 0">
+				<f:form action="accept" method="post" arguments="{claim: claim}">
+					<button type="submit" class="btn btn-success">Anerkennen</button>
+				</f:form>
+			</f:if>
+
+			<f:if condition="{claim.currentState.rejected} == 0">
+				<f:form action="reject" method="post" arguments="{claim: claim}">
+					<button type="submit" class="btn btn-warning">Ablehnen</button>
+				</f:form>
+			</f:if>
+		</f:if>
+	</div>
+	<div class="col-xs-4">
+		<h3>Schuldner</h3>
+		<f:render partial="User" arguments="{user: claim.debtor}" />
+	</div>
+</div>
+
+<h3>Verlauf</h3>
+<table class="table table-bordered table-striped">
+	<f:for each="{claim.states}" as="state">
+	<tr>
+		<td>{state.state}</td>
+		<td>{state.date -> f:format.date(forceLocale: true)}</td>
+	</tr>
+	</f:for>
+</table>
+
+<f:for each="{claim.comments}" as="comment">
+	<div class="media">
+	  <a class="pull-left" href="#">
+	    {comment.user}
+	  </a>
+	  <div class="media-body">
+	    {comment.message}
+	  </div>
+	</div>
+</f:for>
+
+<f:form action="comment" method="post" arguments="{claim: claim}" class="form-horizontal">
+	<div class="form-group">
+    	<f:form.textarea name="comment" class="form-control" rows="3" />
+	</div>
+	<button type="submit" class="btn btn-warning">Absenden</button>
+</f:form>

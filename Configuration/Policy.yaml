@@ -1,0 +1,12 @@
+#                                                                        #
+# Security policy for the TYPO3.NeosDemoTypo3Org package                 #
+#                                                                        #
+
+resources:
+  methods:
+    Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import)Controller->.*Action())'
+
+acls:
+  Everybody:
+    methods:
+      Famelo_Broensfin_PluginAccess: GRANT

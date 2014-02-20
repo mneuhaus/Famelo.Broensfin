@@ -87,3 +87,8 @@ prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
 prototype(TYPO3.Neos.NodeTypes:MultiColumnItem){
 	attributes.class = ${'col-sm-' + String.split(q(node).parents().first().property('layout'), '-')[multiColumnIteration.index] + (q(node).parents('[instanceof TYPO3.Neos.NodeTypes:Column]').property('centerColumns') ? ' text-center' : '')}
 }
+
+prototype(TYPO3.Neos:Plugin) {
+	@process.contentWrapper = Famelo.Broensfin:ContentWrapper
+	@process.contentWrapper.@position = 'start'
+}

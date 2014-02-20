@@ -1,0 +1,94 @@
+prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(TYPO3.Expose:Schema) {
+	properties {
+		reference.ignore = true
+		states.ignore = true
+		comments.ignore = true
+		deletedAt.ignore = true
+		currentState.ignore = true
+
+		creditor {
+			label = 'Gläubiger'
+		}
+
+		debtor {
+			label = 'Schuldner'
+		}
+
+		externalReference {
+			label = 'Referenz'
+		}
+
+		currency {
+			label = 'Währung'
+			element = 'TYPO3.Form:SingleSelectDropdown'
+			optionsProvider {
+				class = 'Array'
+				options {
+					EUR = 'Euro'
+				}
+			}
+		}
+
+		amount {
+			label = 'Betrag'
+		}
+
+		dueDate {
+			label = 'Fälligkeitsdatum'
+		}
+
+		creationDate {
+			label = 'Erstellungsdatum'
+		}
+
+		currentState {
+			label = 'Status'
+		}
+	}
+}
+
+prototype(Famelo.Broensfin:DebtorClaims) {
+	prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) {
+		queryMethod = 'createDebtorQuery'
+	}
+
+	prototype(TYPO3.Expose:GlobalControllerLinks) {
+		20 = TYPO3.Expose:ControllerLink
+		20.label = '<i class="fa fa-upload"></i>'
+		20.action = 'index'
+		20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
+		20.arguments.type = ${type}
+	}
+}
+
+prototype(Famelo.Broensfin:CreditorClaims) {
+	prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) {
+		queryMethod = 'createCreditorQuery'
+	}
+}
+
+prototype(TYPO3.Expose:RecordList) {
+	prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) {
+		properties {
+			creationDate.ignore = true
+		}
+	}
+}
+
+prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim).prototype(TYPO3.Expose:RecordList) {
+	recordList.ClaimList = Famelo.Broensfin:ClaimList
+	currentFormat = 'ClaimList'
+}
+
+prototype(Famelo.Broensfin:ClaimList) < prototype(TYPO3.Expose:RecordList.Table) {
+	templatePath = 'resource://Famelo.Broensfin/Private/Elements/List/Claim/Table.html'
+	tableBody.itemRenderer = Famelo.Broensfin:ClaimRow
+}
+
+prototype(Famelo.Broensfin:ClaimRow) < prototype(TYPO3.Expose:RecordList.Table.Row) {
+	templatePath = 'resource://Famelo.Broensfin/Private/Elements/List/Claim/Row.html'
+	controllerLinks.10 {
+		action = 'index'
+		controller = 'Famelo\\Broensfin\\Controller\\Claim\\DetailController'
+	}
+}
