@@ -1,62 +1,348 @@
-body {}
+/*
+	 	written by: Sven Steinker and Marc Neuhaus
+		Web: http://svensteinker.de , Mail: sven{at}svensteinker.de
+		Web: http://famelo.com , Mail: mneuhaus@famelo.com
 
-body > .container {
-	background: #efefef;
-	padding: 20px;
-}
+	take a look and learn, but never copy n paste!
 
-h1, h2, h3 {
-	color: @red;
-}
+*/
 
-h4, h5, h6 {
-	color: @grey;
-}
+// mixins, functions, operations
 
-p {
-	color: @grey;
-}
+@white:			#ffffff;
+@black: 		#2d3138;
+@grey: 			#808b9d;;
+@beige: 		#f3ece9;
+@red: 			#cb101b;
+@light-grey: 	#eeeeee;
+@gold: 			rgba(236, 193, 116, 0.7);
+@lightGrey: 	#f6f6f6;
+@footer: 		#eeeeee;
+@superlight: 	#b9bdc2; 
+@BShover: 		#555555;
 
-.navbar-small {
-	min-height: 30px;
-	margin-bottom: 0;
 
-	.navbar-nav > li > a {
-		padding-top: 5px;
-		padding-bottom: 5px;
+//font defaults 
+	.font (@fontsize:13px) {
+		font-size: @fontsize;
+		line-height: @fontsize + 3;
+		color:@grey;
+		margin: 0px 0;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
-}
 
-header {
-	.logo {
-		float: left;
-		margin: 10px 0;
+	.ultralight {
+		font-weight: 100;
+	}
+	.light {
+		font-weight: 300;
 	}
 
-	.navbar-nav {
-		a {
-			color: @grey;
-			font-size: 18px;
-			padding-top: 25px;
-			pagging-bottom: 20px;
+	.regular {
+		font-weight: 400;
+	}
+
+	.bold {
+		font-weight: 600;
+	}
+
+	p{
+		.font(15px);
+	}
+
+	h1 {
+		.font(65px;);
+		.light;
+	}
+
+
+	h2 {
+		.font(55px;);
+		.ultralight;
+	}	
+
+	h3 {
+		.font(25px;);
+		.light;
+	}
+
+
+	h4, h5, h6 {
+		color: @grey;
+	}
+
+	a {
+		text-decoration: none;
+		.transition-duration(0.2s);
+		&:hover {
+			color:@grey;
+			text-decoration: none;
 		}
+	}
 
-		a:hover {
+//Deafult styles 
+	button {
+		.font(19px;);
+		background:@red;
+		border:none;
+		color:@white;
+		padding: 15px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	body {
+		background:@lightGrey;
+	}
+
+// disable large Desktop
+@media (min-width: @screen-lg-min) {
+	.container {
+		width: 970px;
+	}
+}
+
+// Navbar Small (LANG)
+	.navbar-small {
+		.font(13px;);
+		min-height: 30px;
+		margin-bottom: 0;
+
+		.navbar-nav > li > a {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+
+// Header
+	header {
+		background: @white;
+		
+		.logo {
+			float: left;
+			margin: 10px 0;
+		}
+		
+	//navbar	
+		nav.navbar {
+			margin-bottom: 0px;
+		}
+		.navbar-default {
 			background: none;
 		}
+		.navbar-brand {
+			height: auto;
+		}
+		.navbar-nav {
+			a {
+				.font(18px;);
+				.bold;
+			}
+
+			a:hover {
+				background: none;
+			}
+		}
+		.navbar-nav > li.current a {
+			color: @BShover;
+		}
+		.navbar-nav > li > a {
+			padding: 8px 15px;
+		}		
+		.mainnav {
+			margin-left: 40px;
+		}
+		.navbar-collapse {
+			padding-top: 18px;
+		}
+
+	//fakemenu
+		.fakemenu li a {
+			.regular;
+		}
+
+		.fakemenu li.register {
+			background:@red;
+
+			a {
+				color:@white;
+			
+			a:hover {
+				color:@white;
+			}			
+			}		
+		}
+
 	}
-}
 
-.wrapper {
-	padding: 30px 0;
-}
 
-.wrapper-beige {
-	background: @beige;
-	padding: 30px 0;
-}
+// some wrapper options
+	.wrapper {
+		padding: 30px 0;
+	}
 
-.wrapper-grey {
-	background: @light-grey;
-	padding: 30px 0;
-}
+	.wrapper-beige {
+		background: @beige;
+		padding: 30px 0;
+	}
+
+	.without-wrapper {
+		.container {
+			width:auto;
+			padding:0px;
+		}
+	}
+
+
+	.typo3-neos-alignment-center {
+		text-align: center;
+	}
+
+// Text about page
+	.col-sm-offset-2 {
+		text-align: center;
+
+		p {
+			margin: 15px 0;
+		}
+		h3 {
+			margin: 25px 0 15px 0;
+		}
+	}
+
+// Frontpage 
+	h3.free {
+		.font(30px;);
+		color:@red;
+		.bold;
+	}
+	a.trail-membership {
+		button {
+			margin-top: 30px;
+		}
+	}
+	//advantages
+	div.advantages {
+		text-align: center;
+		display: block;
+		overflow: hidden;
+		margin: 70px 0;
+		
+		i {
+			color:@red;
+			font-size: 100px;
+		}
+
+		h4 {
+			.font(20px;);
+			color: @black;
+			.bold;
+			margin:10px 0;
+			text-transform: uppercase;
+		}
+	}
+
+	//Clients Quote
+	.clients-quote  {
+		h3 {
+			.font(35px;);
+			.bold;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+	}
+	.carousel-inner > .item > img {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.carousel-control {
+		background: none!important;
+		i {
+			font-size: 50px;
+			color:@red;
+			opacity: 1;
+		}
+	}
+	#carousel-example-generic {
+		margin-bottom:20px;
+	}
+
+	// call to action 
+		.call-to-action {
+			margin: 30px 0;
+			text-align: center;
+			h3 {
+			.font(35px;);
+			.bold;
+			text-align: center;				
+			}
+
+			p {
+				margin: 20px 0;
+			}
+
+		}
+// Footer styling
+	footer {
+		padding: 15px 0;
+		background: @footer; 
+
+		h5 {
+			.font(15px;);
+			.bold;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li {
+				.font(13px;);
+				line-height: 20px;
+				color:@superlight;
+
+				a {
+					color:@superlight;
+				}
+			}
+		}
+
+	}
+
+	.footerwrapper {
+		padding: 30px 0;
+		p {
+			.font(13px);
+			text-align: center;
+
+			a {
+				color:@grey;	
+			}
+		}
+		p.copyright {
+			color:@superlight;
+			a {
+				color:@superlight;	
+			}		
+		}
+	}
+
+// Figure style 
+	figcaption {
+		p {
+			padding-top: 10px;
+			.font(15px;);
+			.light;
+			font-style: italic;
+		}
+	}

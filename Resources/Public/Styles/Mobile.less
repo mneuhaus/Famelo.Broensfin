@@ -1,3 +1,43 @@
-@media (max-width: @screen-tablet - 1) {
+@media (max-width: @screen-xs-max) {
+	img {
+		width:100%;
+		height:auto;
+	}
 
+	// Fonts and default adjustments	
+		h1 {
+			.font(55px;);
+		}
+
+		h2 {
+			.font(45px;);
+			.light;
+		}
+
+		.container  {
+			text-align: center!important;
+		}		
+
+	//Menu adjustments
+		.navbar-header button[type="button"] {
+			margin-top: 16px;
+		}
+
+		ul.mainnav {
+			margin-left: -15px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid lighten(@grey, 40%);
+		}
+	
+		ul.fakemenu li.register {
+			background: transparent;
+
+			a {
+				color:@red;
+			}
+		}
+	
+	.trail-membership button {
+		margin-top: 20px;
+	}
 }

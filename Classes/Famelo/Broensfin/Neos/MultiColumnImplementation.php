@@ -16,13 +16,12 @@ use TYPO3\Flow\Security\Authorization\AccessDecisionManagerInterface;
 use TYPO3\Neos\Domain\Service\ContentContext;
 use TYPO3\Neos\Service\ContentElementWrappingService;
 use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
-use TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject;
 use TYPO3\Neos\Domain\Exception;
 
 /**
  * Adds meta data attributes to the processed Content Element
  */
-class ContentWrapperImplementation extends AbstractTypoScriptObject {
+class MultiColumnImplementation extends \TYPO3\TypoScript\TypoScriptObjects\TemplateImplementation {
 	/**
 	 * The string to be processed
 	 *
@@ -33,6 +32,17 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 	}
 
 	/**
+	 * Render the array collection by triggering the itemRenderer for every element
+	 *
+	 * @return array
+	 */
+	public function getCollection() {
+		$colelction = $this->tsValue('collection');
+		var_dump($collection);
+		return $this->tsValue('collection');
+	}
+
+	/**
 	 * Evaluate this TypoScript object and return the result
 	 *
 	 * @return mixed
@@ -40,11 +50,15 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 	public function evaluate() {
 		$content = $this->getValue();
 		$node = $this->tsValue('node');
+		$columnSizes = explode('-', $node->getProperty('layout'));
+		var_dump($columnSizes);
+		return 'foo';
+		$content = $this->getValue();
+		$node = $this->tsValue('node');
 		if ($node->isRemoved()) {
 			return '';
 		}
-
-		if ($this->isParentAlreadyWrapped($node) || !$node->hasProperty('wrapper')) {
+		if ($node->getDepth() !== 4) {
 			return $content;
 		}
 		$wrapperClass = 'wrapper';
@@ -53,17 +67,6 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 		}
 		$content = '<div class="' . $wrapperClass . '"><div class="container">' . $content . '</div></div>';
 		return $content;
-	}
-
-	public function isParentAlreadyWrapped($node) {
-		if ($node->getParent()->hasProperty('wrapper')) {
-			return TRUE;
-		}
-		if ($node->getNodeType()->isOfType('TYPO3.Neos.NodeTypes:Page')) {
-			return FALSE;
-		} else {
-			return $this->isParentAlreadyWrapped($node->getParent());
-		}
 	}
 
 }

@@ -10,6 +10,14 @@
 				<source>New</source>
 				<target>New</target>
 			</trans-unit>
+			<trans-unit id="de">
+				<source>de</source>
+				<target>Deutsch</target>
+			</trans-unit>
+			<trans-unit id="en">
+				<source>en</source>
+				<target>Englisch</target>
+			</trans-unit>			
 		</body>
 	</file>
 </xliff>
