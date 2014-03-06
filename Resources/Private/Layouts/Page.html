@@ -32,7 +32,22 @@
 		<div class="container">
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav pull-right">
-					{parts.userMenu -> f:format.raw()}
+					<li class="current">
+					<f:security.ifAuthenticated>
+ 						<f:then>
+							<a href="logout.html" class="current">
+								<i class="fa fa-user"></i>
+								Logout
+							</a>
+ 						</f:then>
+ 						<f:else>
+							<a href="login.html" class="current">
+								<i class="fa fa-user"></i>
+								Login
+							</a>
+						</f:else>
+					</f:security.ifAuthenticated>
+					</li>
 					{parts.languageMenu -> f:format.raw()}
 				</ul>
 			</div>
@@ -47,7 +62,7 @@
 		</nav>
 	</header>
 
-	{content.main -> f:format.raw()}
+	<f:render section="body" />
 
 	<footer>
 		<div class="container">

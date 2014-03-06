@@ -47,7 +47,16 @@
 		</nav>
 	</header>
 
-	{content.main -> f:format.raw()}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				{parts.submenu -> f:format.raw()}
+			</div>
+			<div class="col-sm-9">
+				{content.main -> f:format.raw()}
+			</div>
+		</div>
+	</div>
 
 	<footer>
 		<div class="container">

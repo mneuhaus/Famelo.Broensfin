@@ -1,3 +1,24 @@
+'TYPO3.Neos.NodeTypes:Page':
+  properties:
+    layout:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              'default':
+                label: 'Default'
+              'sidebar':
+                label: 'With sidebar'
+    subpageLayout:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              'default':
+                label: 'Default'
+              'sidebar':
+                label: 'With sidebar'
+
 'TYPO3.Neos.NodeTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.NodeTypes:Column']
   ui:
@@ -49,7 +70,7 @@
               wrapper-beige:
                 label: 'Beige Background'
               without-wrapper:
-                label: 'Without Wrapper'                
+                label: 'Without Wrapper'
 
 'Famelo.Broensfin:Web':
   superTypes: ['TYPO3.Neos.NodeTypes:Text']

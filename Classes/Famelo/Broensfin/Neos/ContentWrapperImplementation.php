@@ -11,13 +11,14 @@ namespace Famelo\Broensfin\Neos;
  * The TYPO3 project - inspiring people to share!                         *
  *                                                                        */
 
+use TYPO3\Eel\FlowQuery\FlowQuery;
 use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Security\Authorization\AccessDecisionManagerInterface;
+use TYPO3\Neos\Domain\Exception;
 use TYPO3\Neos\Domain\Service\ContentContext;
 use TYPO3\Neos\Service\ContentElementWrappingService;
 use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
 use TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject;
-use TYPO3\Neos\Domain\Exception;
 
 /**
  * Adds meta data attributes to the processed Content Element
@@ -60,10 +61,35 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 			return TRUE;
 		}
 		if ($node->getNodeType()->isOfType('TYPO3.Neos.NodeTypes:Page')) {
+			if ($this->getPageLayout($node) === 'sidebar') {
+				return TRUE;
+			}
 			return FALSE;
 		} else {
 			return $this->isParentAlreadyWrapped($node->getParent());
 		}
+	}
+
+	public function getPageLayout($node, $level = 0) {
+		if ($node === NULL) {
+			return NULL;
+		}
+		if ($node->getNodeType()->isOfType('TYPO3.Neos.NodeTypes:Page')) {
+			$layout = $node->getProperty('layout');
+			$subpageLayout = $node->getProperty('subpageLayout');
+			if ($level === 0) {
+				$layout = $node->getProperty('layout');
+				if (strlen($layout) > 0) {
+					return $layout;
+				}
+			}
+			$subpageLayout = $node->getProperty('subpageLayout');
+			if (strlen($subpageLayout) > 0) {
+				return $subpageLayout;
+			}
+		}
+		$level++;
+		return $this->getPageLayout($node->getParent(), $level);
 	}
 
 }

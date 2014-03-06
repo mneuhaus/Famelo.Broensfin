@@ -1,5 +1,8 @@
 namespace: TypoScript=TYPO3.TypoScript
 
+root.@cache.mode = 'uncached'
+page.@cache.mode = 'uncached'
+
 /**
  * Root TypoScript template for the Broensfin Site
  */
@@ -25,11 +28,23 @@ page = Page {
 			menu = Menu {
 				entryLevel = 1
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/Menu.html'
-				maximumLevels = 3
+				maximumLevels = 1
+				@cache.mode = 'uncached'
+			}
+			submenu = Menu {
+				entryLevel = 2
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/SubMenu.html'
+				maximumLevels = 1
 			}
 
 			languageMenu = TYPO3.Neos:LanguageMenu {
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/LanguageMenu.html'
+			}
+
+			userMenu = TypoScript:Template
+			userMenu {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/UserMenu.html'
+				@cache.mode = 'uncached'
 			}
 
 			breadcrumb = Breadcrumb
@@ -43,6 +58,14 @@ page = Page {
 		}
 	}
 }
+
+default < page
+
+sidebar < page
+sidebar.body {
+    templatePath = 'resource://Famelo.Broensfin/Private/Templates/Page/Sidebar.html'
+}
+
 
 print < page
 print {
