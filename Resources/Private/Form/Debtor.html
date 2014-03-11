@@ -1,0 +1,35 @@
+<f:layout name="TYPO3.Form:Field" />
+<f:section name="field">
+	<div class="row controls-debtor">
+		<div class="col-sm-4">
+			<f:form.select property="{element.identifier}.existing" id="{element.uniqueIdentifier}" options="{element.properties.options}" class="xlarge chosen form-control" errorClass="{element.properties.elementErrorClassAttribute}" />
+		</div>
+		<div class="col-sm-8 invite-form" style="display: none;">
+			<h4>Invite</h4>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.company" placeholder="Company Name" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.firstname" placeholder="Firstname" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.lastname" placeholder="Lastname" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.email" placeholder="E-Mail" class="form-control" />
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery('#form_objects_0_debtor_chzn input').keyup(function(){
+				if (jQuery('#form_objects_0_debtor_chzn .no-results').length > 0) {
+					jQuery('.invite-form').show();
+				} else {
+					jQuery('.invite-form').hide();
+				}
+			})
+		});
+	</script>
+</f:section>

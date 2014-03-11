@@ -1,23 +1,3387 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-	<file original="" product-name="TYPO3.Expose" source-language="en" datatype="plaintext">
-		<body>
-			<trans-unit id="submit" xml:space="preserve">
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="TYPO3.Expose" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="submit" xml:space="preserve">
 				<source>Submit</source>
 				<target>Submit</target>
 			</trans-unit>
-			<trans-unit id="New" xml:space="preserve">
+      <trans-unit id="New" xml:space="preserve">
 				<source>New</source>
 				<target>New</target>
 			</trans-unit>
-			<trans-unit id="de">
-				<source>de</source>
-				<target>Deutsch</target>
-			</trans-unit>
-			<trans-unit id="en">
-				<source>en</source>
-				<target>Englisch</target>
-			</trans-unit>			
-		</body>
-	</file>
+      <trans-unit id="de">
+        <source>de</source>
+        <target>Deutsch</target>
+      </trans-unit>
+      <trans-unit id="en">
+        <source>en</source>
+        <target>Englisch</target>
+      </trans-unit>
+      <trans-unit id="all">
+        <source>all</source>
+        <target>Englisch</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.label">
+        <source>Creditor</source>
+        <target>Creditor</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.label">
+        <source>Debtor</source>
+        <target>Debtor</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.label">
+        <source>reference</source>
+        <target>reference</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.label">
+        <source>Referenz</source>
+        <target>Referenz</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.label">
+        <source>Currency</source>
+        <target>Currency</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.label">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.label">
+        <source>Due date</source>
+        <target>Due date</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.label">
+        <source>Creation date</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.label">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.label">
+        <source>states</source>
+        <target>states</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.label">
+        <source>comments</source>
+        <target>comments</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.label">
+        <source>deletedAt</source>
+        <target>deletedAt</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.infotext">
+        <source/>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
 </xliff>

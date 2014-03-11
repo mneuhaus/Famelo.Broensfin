@@ -7,11 +7,13 @@ prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(T
 		currentState.ignore = true
 
 		creditor {
-			label = 'Gläubiger'
+			label = 'Creditor'
+			element = 'Famelo.Broensfin:Creditor'
 		}
 
 		debtor {
-			label = 'Schuldner'
+			label = 'Debtor'
+			element = 'Famelo.Broensfin:Debtor'
 		}
 
 		externalReference {
@@ -19,7 +21,7 @@ prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(T
 		}
 
 		currency {
-			label = 'Währung'
+			label = 'Currency'
 			element = 'TYPO3.Form:SingleSelectDropdown'
 			optionsProvider {
 				class = 'Array'
@@ -30,15 +32,15 @@ prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(T
 		}
 
 		amount {
-			label = 'Betrag'
+			label = 'Amount'
 		}
 
 		dueDate {
-			label = 'Fälligkeitsdatum'
+			label = 'Due date'
 		}
 
 		creationDate {
-			label = 'Erstellungsdatum'
+			label = 'Creation date'
 		}
 
 		currentState {
@@ -53,17 +55,39 @@ prototype(Famelo.Broensfin:DebtorClaims) {
 	}
 
 	prototype(TYPO3.Expose:GlobalControllerLinks) {
-		20 = TYPO3.Expose:ControllerLink
-		20.label = '<i class="fa fa-upload"></i>'
-		20.action = 'index'
-		20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
-		20.arguments.type = ${type}
+		10 = TYPO3.Expose:ControllerLink
+		10.label = '<i class="fa fa-download"></i>'
+		10.action = 'index'
+		10.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
+		10.arguments.type = ${type}
+	}
+
+	prototype(TYPO3.Expose:RecordList) {
+		topRegion = TYPO3.TypoScript:Array {
+			@position = 'start'
+
+			controllerLinks {
+				10 >
+			}
+		}
 	}
 }
 
 prototype(Famelo.Broensfin:CreditorClaims) {
 	prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) {
 		queryMethod = 'createCreditorQuery'
+	}
+
+	prototype(TYPO3.Expose:RecordList) {
+		topRegion {
+			controllerLinks {
+				20 = TYPO3.Expose:ControllerLink
+				20.label = '<i class="fa fa-upload"></i>'
+				20.action = 'index'
+				20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
+				20.arguments.type = ${type}
+			}
+		}
 	}
 }
 

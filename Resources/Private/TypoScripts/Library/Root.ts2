@@ -115,3 +115,8 @@ prototype(TYPO3.Neos:Plugin) {
 	@process.contentWrapper = Famelo.Broensfin:ContentWrapper
 	@process.contentWrapper.@position = 'start'
 }
+
+prototype(Famelo.Broensfin:Creditor) < prototype(TYPO3.Neos:Plugin) {
+	package = 'Famelo.Broensfin'
+	controller = 'Creditor'
+}

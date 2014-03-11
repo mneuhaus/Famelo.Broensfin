@@ -1,8 +1,9 @@
+{namespace s=Famelo\Saas\ViewHelpers}
 <dl class="dl-horizontal">
 	<dt>Fälligkeitsdatum</dt>
 	<dd>{claim.dueDate -> f:format.date(localeFormatType: 'date', forceLocale: true)}</dd>
 	<dt>Betrag</dt>
-	<dd>{claim.amount -> f:format.currency(currency: claim.currency)}</dd>
+	<dd>{claim.amount -> s:format.currency()}</dd>
 	<dt>Status</dt>
 	<dd>{claim.currentState}</dd>
 </dl>

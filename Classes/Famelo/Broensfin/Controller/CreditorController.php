@@ -1,5 +1,5 @@
 <?php
-namespace Famelo\Broensfin\Controller\Claim;
+namespace Famelo\Broensfin\Controller;
 
 /*                                                                        *
  * This script belongs to the TYPO3 Flow package "TYPO3.Expose".               *
@@ -15,14 +15,13 @@ use Doctrine\ORM\Mapping as ORM;
 use Famelo\Broensfin\Domain\Model\Claim;
 use Famelo\Broensfin\Domain\Model\ClaimComment;
 use Famelo\Broensfin\Domain\Model\ClaimState;
-use TYPO3\Expose\Controller\ExposeControllerInterface;
 use TYPO3\Flow\Annotations as Flow;
 
 /**
  * Action to create a new Being
  *
  */
-class DetailController extends \TYPO3\Flow\Mvc\Controller\ActionController implements ExposeControllerInterface {
+class CreditorController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 	/**
 	 * @var \TYPO3\Flow\Security\Context
 	 * @Flow\Inject
@@ -36,24 +35,13 @@ class DetailController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 	protected $claimRepository;
 
 	/**
-	 * @return void
-	 */
-	public function initializeIndexAction() {
-		$this->arguments['objects']->setDataType('Doctrine\Common\Collections\Collection<' . $this->request->getArgument('type') . '>');
-		$this->arguments['objects']->getPropertyMappingConfiguration()->allowAllProperties();
-	}
-
-	/**
-	 * Create a new object
 	 *
-	 * @param string $type
-	 * @param \Doctrine\Common\Collections\Collection $objects
 	 * @return void
 	 */
-	public function indexAction($type, $objects = NULL) {
-		$this->view->assign('className', $type);
-		$this->view->assign('claim', $objects->current());
-		$this->view->assign('user', $this->securityContext->getParty());
+	public function indexAction() {
+		// $this->view->assign('className', $type);
+		// $this->view->assign('claim', $objects->current());
+		// $this->view->assign('user', $this->securityContext->getParty());
 	}
 
 	/**
@@ -116,6 +104,7 @@ class DetailController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 		$this->persistenceManager->persistAll();
 		$this->redirect('index', 'list', 'TYPO3.Expose', array('type' => $type));
 	}
+
 }
 
 ?>

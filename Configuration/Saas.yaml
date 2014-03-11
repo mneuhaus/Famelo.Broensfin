@@ -1,0 +1,5 @@
+Broensfin_Claim:
+  note: 'Created a new Claim'
+  cost: 1
+  check: 'isController("New") && isType("Famelo\Broensfin\Domain\Model\Claim")'
+  bill: 'isController("New") && isMethod("createAction") && isType("Famelo\Broensfin\Domain\Model\Claim")'

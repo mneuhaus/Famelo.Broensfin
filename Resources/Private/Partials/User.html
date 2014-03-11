@@ -1,15 +1,15 @@
 {namespace e=TYPO3\Expose\ViewHelpers}
 
 <dl class="dl-horizontal">
-	<dt>Name</dt> 		<dd>{user.name.fullName}</dd>
-	<dt>Firma</dt> 		<dd>{user.team}</dd>
-	<f:if condition="{user.phone}">
-		<dt>Telefon</dt> 	<dd>{user.phone}</dd>
+	<dt>Name</dt> 		<dd>{team.mainUser.name.fullName}</dd>
+	<dt>Firma</dt> 		<dd>{team.mainUser.team}</dd>
+	<f:if condition="{team.mainUser.phone}">
+		<dt>Telefon</dt> 	<dd>{team.mainUser.phone}</dd>
 	</f:if>
-	<f:if condition="{user.mobile}">
-	<dt>Handy</dt> 		<dd>{user.mobile}</dd>
+	<f:if condition="{team.mainUser.mobile}">
+	<dt>Handy</dt> 		<dd>{team.mainUser.mobile}</dd>
 	</f:if>
-	<f:if condition="{user.email}">
-	<dt>E-Mail</dt> 	<dd>{user.email}</dd>
+	<f:if condition="{team.mainUser.email}">
+	<dt>E-Mail</dt> 	<dd>{team.mainUser.email}</dd>
 	</f:if>
 </dl>

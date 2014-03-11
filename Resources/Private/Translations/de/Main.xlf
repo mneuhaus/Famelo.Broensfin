@@ -6,6 +6,10 @@
 				<source>de</source>
 				<target>Deutsch</target>
 			</trans-unit>
+			<trans-unit id="all">
+				<source>all</source>
+				<target>Englisch</target>
+			</trans-unit>
 			<trans-unit id="en">
 				<source>en</source>
 				<target>Englisch</target>

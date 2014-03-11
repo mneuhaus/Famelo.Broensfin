@@ -1,0 +1,14 @@
+prototype(TYPO3.Form:Namespaces) < prototype(TYPO3.TypoScript:RawArray) {
+  3 = 'Famelo.Broensfin:Fields'
+}
+
+prototype(Famelo.Broensfin:Fields) < prototype(TYPO3.TypoScript:RawArray) {
+	Creditor = TYPO3.Form:Field {
+		superTypes.1 = 'TYPO3.Form:FormElement'
+		implementationClassName = 'Famelo\\Broensfin\\Form\\Elements\\Creditor'
+	}
+	Debtor = TYPO3.Form:Field {
+		superTypes.1 = 'TYPO3.Form:FormElement'
+		implementationClassName = 'Famelo\\Broensfin\\Form\\Elements\\Debtor'
+	}
+}

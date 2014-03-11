@@ -15,15 +15,15 @@ class ClaimRepository extends \TYPO3\Flow\Persistence\Repository {
 
 	public function createCreditorQuery() {
 		$query = $this->createQuery();
-		$user = $this->securityContext->getParty();
-		$query->matching($query->equals('creditor', $user));
+		$team = $this->securityContext->getParty()->getTeam();
+		$query->matching($query->equals('creditor', $team));
 		return $query;
 	}
 
 	public function createDebtorQuery() {
 		$query = $this->createQuery();
-		$user = $this->securityContext->getParty();
-		$query->matching($query->equals('debtor', $user));
+		$team = $this->securityContext->getParty()->getTeam();
+		$query->matching($query->equals('debtor', $team));
 		return $query;
 	}
 }

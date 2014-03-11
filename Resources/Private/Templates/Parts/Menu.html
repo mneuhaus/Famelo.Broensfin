@@ -28,13 +28,14 @@
       </li>
     </f:for>
   </ul>
-  <ul class="nav navbar-nav navbar-right fakemenu">
-    <li class="login">
-      <neos:link.node node="/sites/broensfin/login">Login</neos:link.node>
-    </li>
-    <li class="register">
-      <neos:link.node node="/sites/broensfin/anmelden">Anmelden <i class="fa fa-angle-right"></i></neos:link.node>
-    </li> 
-  </ul>
+  <f:security.ifAuthenticated>
+    <f:else>
+      <ul class="nav navbar-nav navbar-right fakemenu">
+        <li class="register">
+          <neos:link.node node="/sites/broensfin/anmelden">Anmelden <i class="fa fa-angle-right"></i></neos:link.node>
+        </li>
+      </ul>
+    </f:else>
+</f:security.ifAuthenticated>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->

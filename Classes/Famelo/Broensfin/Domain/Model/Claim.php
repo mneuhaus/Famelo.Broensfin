@@ -14,13 +14,13 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Claim {
 	/**
-	 * @var \Famelo\Saas\Domain\Model\User
+	 * @var \Famelo\Saas\Domain\Model\Team
 	 * @ORM\ManyToOne
 	 */
 	protected $creditor;
 
 	/**
-	 * @var \Famelo\Saas\Domain\Model\User
+	 * @var \Famelo\Saas\Domain\Model\Team
 	 * @ORM\ManyToOne
 	 */
 	protected $debtor;
@@ -81,14 +81,25 @@ class Claim {
      */
     protected $deletedAt;
 
-	public function __construct() {
+	public function __construct(\TYPO3\Flow\Security\Context $securityContext = NULL) {
 		$this->currentState = new ClaimState(ClaimState::STATE_PENDING);
 		$this->currentState->setClaim($this);
+		if ($securityContext !== NULL) {
+			$this->currency = $securityContext->getParty()->getTeam()->getCurrency();
+		}
 	}
 
 	public function __toString() {
 		return $this->externalReference;
 	}
+
+	/**
+     * @ORM\PrePersist
+     */
+    public function prePersist() {
+        // var_dump($this);
+        // exit();
+    }
 
 	// public function getCurrentState() {
 	// 	if ($this->getStates()->count() === 0) {

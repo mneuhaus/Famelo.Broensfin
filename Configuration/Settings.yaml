@@ -1,4 +1,8 @@
 TYPO3:
+  Flow:
+    i18n:
+      defaultLocale: en
+
   TYPO3CR:
     contentDimensions:
       locales:
@@ -8,4 +12,4 @@ TYPO3:
     localization:
       localeMapping:
         de: [de_DE, de_ZZ, mul_ZZ]
-        en: [en_ZZ, mul_ZZ]
+        all: [en_ZZ, mul_ZZ]

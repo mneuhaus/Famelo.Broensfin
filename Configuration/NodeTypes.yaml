@@ -93,3 +93,9 @@
       defaultValue: 'http://foo.bar.com/typo3'
       ui:
         inlineEditable: TRUE
+
+'Famelo.Broensfin:Creditor':
+  superTypes:
+    - 'TYPO3.Neos:Plugin'
+  ui:
+    label: 'Creditor Plugin'

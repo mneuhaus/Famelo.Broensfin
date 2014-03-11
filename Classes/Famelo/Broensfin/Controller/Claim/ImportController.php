@@ -12,14 +12,21 @@ namespace Famelo\Broensfin\Controller\Claim;
  *                                                                        */
 
 use Doctrine\ORM\Mapping as ORM;
-// use TYPO3\Expose\Controller\AbstractController;
+use EasyCSV\Reader;
+use TYPO3\Expose\Controller\ExposeControllerInterface;
 use TYPO3\Flow\Annotations as Flow;
 
 /**
  * Action to create a new Being
  *
  */
-class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController {
+class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController implements ExposeControllerInterface {
+
+	/**
+     * @Flow\Inject
+     * @var \TYPO3\Flow\Resource\ResourceManager
+     */
+    protected $resourceManager;
 
 	/**
 	 * Create a new object
@@ -35,6 +42,21 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 		$this->view->assign('className', $type);
 		$this->view->assign('objects', $objects);
 		$this->view->assign('callbackAction', 'create');
+	}
+
+    /**
+     * Imports an image
+     *
+     * @param \TYPO3\Flow\Resource\Resource $file
+     * @return void
+     */
+	public function checkAction($file) {
+		$reader = new Reader($file->getUri());
+		$rows = $reader->getAll();
+		if (array_keys(current($rows)) !== array('Creditor', 'Debtor', 'Reference', 'Currency', 'Amount', 'Due Date', 'Creation Date')) {
+
+		}
+		var_dump($reader->getAll());
 	}
 
 	/**

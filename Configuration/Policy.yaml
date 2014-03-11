@@ -4,9 +4,21 @@
 
 resources:
   methods:
-    Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import)Controller->.*Action())'
+    Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import|Creditor|New)Controller->.*Action())'
+    Famelo_Broensfin_CreditorPlugin: 'method(Famelo\Broensfin\Controller\CreditorController->.*Action())'
+
+  expose:
+    TYPO3_Expose_Claim: 'isType("Famelo\Broensfin\Domain\Model\Claim")'
+    Famelo_Saas_Registration: 'isTypoScriptPath("Famelo.Saas:Registration")'
+
 
 acls:
   Everybody:
     methods:
-      Famelo_Broensfin_PluginAccess: GRANT
+      TYPO3_Expose_PluginAccess: ABSTAIN
+    expose:
+      Famelo_Saas_Registration: GRANT
+
+  'Famelo.Saas:Customer':
+    expose:
+      TYPO3_Expose_Claim: GRANT

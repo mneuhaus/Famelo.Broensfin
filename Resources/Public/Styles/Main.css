@@ -7740,6 +7740,12 @@ figcaption p {
   width: 400px;
   margin: 0 auto;
 }
+.controls-debtor {
+  margin-right: 0;
+}
+.controls-debtor .form-group {
+  margin-left: 0;
+}
 @media (min-width: 768px) and (max-width: 992px) {
   img {
     width: 100%;
