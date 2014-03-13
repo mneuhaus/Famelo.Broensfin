@@ -94,11 +94,10 @@ class Claim {
 	}
 
 	/**
-     * @ORM\PrePersist
+     * @ORM\PostPersist
      */
-    public function prePersist() {
-        // var_dump($this);
-        // exit();
+    public function postPersist() {
+        $this->emitCreated($this);
     }
 
 	// public function getCurrentState() {
@@ -127,6 +126,15 @@ class Claim {
 	 * @Flow\Signal
 	 */
 	protected function emitStateUpdated($claim) {
+		return;
+	}
+
+	/**
+	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
+	 * @return void
+	 * @Flow\Signal
+	 */
+	protected function emitCreated($claim) {
 		return;
 	}
 }
