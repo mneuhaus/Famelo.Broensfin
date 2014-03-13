@@ -1,0 +1,6 @@
+{namespace m=Famelo\Messaging\ViewHelpers}
+<m:message
+	to="{claim.creditor.email}:{claim.creditor.name}"
+	subject="New Claim" />
+
+<f:render partial="Claim" arguments="{claim: claim}" />

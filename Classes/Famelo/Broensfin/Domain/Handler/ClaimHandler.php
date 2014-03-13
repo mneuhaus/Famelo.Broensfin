@@ -11,6 +11,17 @@ class ClaimHandler {
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
 	 * @return void
+	 * @Flow\Slot(class="Famelo\Broensfin\Domain\Model\Claim", signal="created")
+	 */
+	public function created($claim) {
+		$mail = new \Famelo\Messaging\Message();
+		$mail->setMessage('Famelo.Broensfin:Claim/Created')
+			 ->assign('claim', $claim)
+			 ->send();
+	}
+	/**
+	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
+	 * @return void
 	 * @Flow\Slot(class="Famelo\Broensfin\Domain\Model\Claim", signal="stateUpdated")
 	 */
 	public function stateUpdated($claim) {
