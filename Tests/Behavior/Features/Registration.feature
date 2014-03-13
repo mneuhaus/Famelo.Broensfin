@@ -17,7 +17,9 @@ Feature: Registration
     And I fill in "form-objects_0_users_0_accounts_0_credentialsSource-confirmation" with "tester"
     And I fill in "form-objects_0_users_0_email" with "apocalip+toni@gmail.com"
     And I press "Submit"
-    Then I should find a new Team "Toni GbR"
+    Then I should be on page "/login.html"
+    And I should be see a flash message "Account has been created."
+    And I should find a new Team "Toni GbR"
     And The team "Toni GbR" should have a subscription to the "Deposit" Plan
     And The team "Toni GbR" should have a "EUR" as default currency
     And The team "Toni GbR" should have a balance of "5"
@@ -31,5 +33,5 @@ Feature: Registration
     And I press "Login"
     And I wait 5 secs
     Then I should be logged in
-    And I should be on page "mein-konto.html"
+    And I should be on page "/mein-konto.html"
     And I should see my Transactions
