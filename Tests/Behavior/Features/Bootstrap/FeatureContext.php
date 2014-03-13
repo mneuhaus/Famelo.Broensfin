@@ -246,7 +246,8 @@ class FeatureContext extends MinkContext {
                     $this->iTakeAScreenshot();
                 }
                 if ($driver instanceof GoutteDriver) {
-                    $filename = sprintf('%s_%s_%s.%s', 'Goutte', date('c'), uniqid('', true), 'html');
+                    $currentUrl = parse_url($this->getSession()->getCurrentUrl(), PHP_URL_PATH);
+                    $filename = sprintf('%s_%s_%s.%s', $currentUrl, date('c'), uniqid('', true), 'html');
                     $filepath = FLOW_PATH_ROOT . '/Screenshots';
                     if (!is_dir($filepath)) {
                         mkdir($filepath);
@@ -300,5 +301,31 @@ class FeatureContext extends MinkContext {
         Assert::assertEquals($subscription->getPlan(), $plan);
     }
 
+    /**
+     * @Given /^I select the team "([^"]*)"$/
+     */
+    public function iISelectTheTeam($team) {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then /^I should have a claim with the reference "([^"]*)"$/
+     */
+    public function iShouldHaveAClaimWithTheReference($arg1) {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given /^"([^"]*)" has received an email with the subject "([^"]*)"$/
+     */
+    public function hasReceivedAnEmailWithTheSubject($email, $subject) {
+        $emails = DebugTransport::getEmails($email);
+        foreach ($emails as $email) {
+            if ($email['subject'] === $subject) {
+                return;
+            }
+        }
+        Assert::fail('Email with the subject "' . $subject . '" for "' . $email . '"" not found');
+    }
 }
 ?>
