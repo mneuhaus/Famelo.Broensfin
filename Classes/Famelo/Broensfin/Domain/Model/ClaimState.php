@@ -17,7 +17,6 @@ class ClaimState {
 
 	/**
 	 * @var \DateTime
-	 * @Flow\Identity
 	 */
 	protected $date;
 

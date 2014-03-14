@@ -6,11 +6,7 @@
 	<tr data-klove="row">
 		<f:for each="{schema.properties}" as="property" key="propertyName">
 			<f:if condition="{property.ignore} == 0">
-				<td>
-					<e:objectAccess object="{item}" property="{propertyName}">
-						{value -> e:formatAsString()}
-					</e:objectAccess>
-				</td>
+				<td class="{propertyName}"><e:objectAccess object="{item}" property="{propertyName}">{value -> e:formatAsString()}</e:objectAccess></td>
 			</f:if>
 		</f:for>
 		<td class="table-actions">

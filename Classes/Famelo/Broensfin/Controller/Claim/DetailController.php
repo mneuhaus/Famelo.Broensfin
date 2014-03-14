@@ -105,17 +105,17 @@ class DetailController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 		return;
 	}
 
-	/**
-	 * @param string $type
-	 */
-	public function createAction($type) {
-		$objects = $this->request->getInternalArgument('__objects');
-		foreach ($objects as $object) {
-			$this->persistenceManager->add($object);
-		}
-		$this->persistenceManager->persistAll();
-		$this->redirect('index', 'list', 'TYPO3.Expose', array('type' => $type));
-	}
+	// /**
+	//  * @param string $type
+	//  */
+	// public function createAction($type) {
+	// 	$objects = $this->request->getInternalArgument('__objects');
+	// 	foreach ($objects as $object) {
+	// 		$this->persistenceManager->add($object);
+	// 	}
+	// 	$this->persistenceManager->persistAll();
+	// 	$this->redirect('index', 'list', 'TYPO3.Expose', array('type' => $type));
+	// }
 }
 
 ?>

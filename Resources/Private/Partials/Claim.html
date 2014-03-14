@@ -2,8 +2,10 @@
 <dl class="dl-horizontal">
 	<dt>Fälligkeitsdatum</dt>
 	<dd>{claim.dueDate -> f:format.date(localeFormatType: 'date', forceLocale: true)}</dd>
+	<dt>Referenz</dt>
+	<dd>{claim.externalReference}</dd>
 	<dt>Betrag</dt>
 	<dd>{claim.amount -> s:format.currency()}</dd>
 	<dt>Status</dt>
-	<dd>{claim.currentState}</dd>
+	<dd class="currentState">{claim.currentState}</dd>
 </dl>

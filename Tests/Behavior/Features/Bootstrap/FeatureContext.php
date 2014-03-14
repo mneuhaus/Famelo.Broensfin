@@ -4,10 +4,12 @@ use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
 use Behat\Mink\Driver\GoutteDriver;
 use Behat\Mink\Driver\Selenium2Driver;
+use Famelo\Broensfin\Domain\Model\Claim;
 use Famelo\Messaging\Transport\DebugTransport;
 use Famelo\Saas\Domain\Model\Subscription;
 use Famelo\Saas\Domain\Model\Transaction;
 use PHPUnit_Framework_Assert as Assert;
+use Symfony\Component\DomCrawler\Crawler;
 use TYPO3\Flow\Utility\Arrays;
 
 require_once __DIR__ . '/../../../../../../Application/Flowpack.Behat/Tests/Behat/FlowContext.php';
@@ -57,9 +59,16 @@ class FeatureContext extends MinkContext {
      */
     public function beforeStep() {
         try {
-            preg_match('/<meta http-equiv="refresh" content="([0-9]*);url=([^"]*)/', $this->getSession()->getPage()->getHtml(), $match);
-            if (isset($match[2])) {
-                $this->visit($match[2]);
+            while (preg_match('/<meta http-equiv="refresh" content="([0-9]*);url=([^"]*)/', $this->getSession()->getPage()->getHtml(), $match) == 1) {
+                if (isset($match[2])) {
+                    $url = str_replace('&amp;', '&', $match[2]);
+                    // echo 'Redirecting to url: ' . $url . chr(10);
+                    $this->visit($url);
+                }
+            }
+
+            if (stristr($this->getSession()->getPage()->getHtml(), 'Uncaught Exception in Flow')) {
+                $this->iTakeAScreenshot();
             }
         } catch(\Exception $e) {}
     }
@@ -72,6 +81,52 @@ class FeatureContext extends MinkContext {
     }
 
     /**
+     * @When /^the following claims exist:$/
+     */
+    public function theFollowingClaimsExist(TableNode $table) {
+        $rows = $table->getHash();
+        $teamRepository = $this->objectManager->get('Famelo\\Saas\\Domain\\Repository\\TeamRepository');
+        $claimRepository = $this->objectManager->get('Famelo\\Broensfin\\Domain\\Repository\\ClaimRepository');
+        $propertyMapper = $this->objectManager->get('TYPO3\\Flow\\Property\\PropertyMapper');
+        $teams = array();
+        foreach ($rows as $row) {
+            $row['creditor'] = $this->getTeam($row['creditor'])->getIdentifier();
+            $row['debtor'] = $this->getTeam($row['debtor'])->getIdentifier();
+            $row['dueDate'] = array(
+                'date' => $row['dueDate'],
+                'dateFormat' => 'd.m.Y'
+            );
+            $row['creationDate'] = array(
+                'date' => $row['creationDate'],
+                'dateFormat' => 'd.m.Y'
+            );
+            $claim = $propertyMapper->convert($row, '\Famelo\Broensfin\Domain\Model\Claim');
+            $claimRepository->add($claim);
+        }
+        $this->getSubcontext('flow')->persistAll();
+    }
+
+    /**
+     * Looks for a table, then looks for a row that contains the given text.
+     * Once it finds the right row, it clicks a link in that row.
+     *
+     * Really handy when you have a generic "Edit" link on each row of
+     * a table, and you want to click a specific one (e.g. the "Edit" link
+     * in the row that contains "Item #2")
+     *
+     * @When /^I click on "([^"]*)" on the row containing "([^"]*)"$/
+     */
+    public function iClickOnOnTheRowContaining($linkName, $rowText) {
+        /** @var $row \Behat\Mink\Element\NodeElement */
+        $row = $this->getSession()->getPage()->find('css', sprintf('table tr:contains("%s")', $rowText));
+        if (!$row) {
+            throw new \Exception(sprintf('Cannot find any row on the page containing the text "%s"', $rowText));
+        }
+
+        $row->clickLink($linkName);
+    }
+
+    /**
     * TODO: Document this Method! ( createTeams )
     */
     public function createTeams($rows) {
@@ -80,10 +135,18 @@ class FeatureContext extends MinkContext {
         $accountRepository = $this->objectManager->get('TYPO3\\Flow\\Security\\AccountRepository');
         $teams = array();
         foreach ($rows as $row) {
-            $team = $teamFactory->create($row['team'], $row['username'], $row['password'], $row['email'], $row['firstname'], $row['lastname'], array($row['role']
-            ));
+            $team = $teamFactory->create(
+                $row['team'],
+                $row['username'],
+                $row['password'],
+                $row['email'],
+                $row['firstname'],
+                $row['lastname'],
+                array($row['role'])
+            );
             $teamFactory->preSave($team);
             $teamRepository->add($team);
+            $accountRepository->add($team->getMainUser()->getAccount());
             $teams[] = $team;
         }
         $this->getSubcontext('flow')->persistAll();
@@ -91,23 +154,13 @@ class FeatureContext extends MinkContext {
     }
 
     /**
-     * @Given /^I am logged in as a customer$/
+     * @Given /^I am logged in as "([^"]*)" "([^"]*)"$/
      */
-    public function iAmLoggedInAsACustomer() {
-        $teams = $this->createTeams(array(array('team' => 'Toni',
-                'username' => 'toni',
-                'password' => 'tester',
-                'email' => 'toni@foo.com',
-                'firstname' => 'Toni',
-                'lastname' => 'Toni',
-                'role' => 'Famelo.Saas:Customer'
-            )
-        ));
-        $team = current($teams);
-        $this->currentTeam = $team->getIdentifier();
+    public function iAmLoggedInAsACustomer($username, $password) {
+        $this->visit('/logout.html');
         $this->visit('/login.html');
-        $this->fillField('Username', 'toni');
-        $this->fillField('Password', 'tester');
+        $this->fillField('Username', $username);
+        $this->fillField('Password', $password);
         $this->pressButton('Login');
     }
 
@@ -154,6 +207,19 @@ class FeatureContext extends MinkContext {
     }
 
     /**
+     * @When /^i follow "([^"]*)" in the email "([^"]*)" to "([^"]*)"$/
+     */
+    public function iFollowInTheEmailTo($link, $subject, $email) {
+        $email = $this->hasReceivedAnEmailWithTheSubject($email, $subject);
+        $emailCrawler = new Crawler();
+        $emailCrawler->addHtmlContent($email['body']);
+        $url = $emailCrawler->selectLink($link)->attr('href');
+        if (strlen($url) > 0) {
+            $this->visit($url);
+        }
+    }
+
+    /**
      * @Given /^I imported the site "([^"]*)"$/
      */
     public function iImportedTheSite($packageKey) {
@@ -174,6 +240,13 @@ class FeatureContext extends MinkContext {
      */
     public function iShouldBeLoggedIn() {
         $this->assertSession()->elementExists('css', '.btn-logout');
+    }
+
+    /**
+     * @Then /^I log out$/
+     */
+    public function iLogOut() {
+        $this->visit('/login.html');
     }
 
     /**
@@ -217,12 +290,27 @@ class FeatureContext extends MinkContext {
      * @Then /^(?:|I )take a screenshot$/
      */
     public function iTakeAScreenshot() {
-        $filename = sprintf('%s_%s_%s.%s', $this->getMinkParameter('browser_name'), date('c'), uniqid('', true), 'png');
-        $filepath = FLOW_PATH_ROOT . '/Screenshots';
-        if (!is_dir($filepath)) {
-            mkdir($filepath);
-        }
-        file_put_contents($filepath . '/' . $filename, $this->getSession()->getScreenshot());
+        try {
+            $driver = $this->getSession()->getDriver();
+            if ($driver instanceof Selenium2Driver) {
+                $filename = sprintf('%s_%s_%s.%s', $this->getMinkParameter('browser_name'), date('c'), uniqid('', true), 'png');
+                $filepath = FLOW_PATH_ROOT . '/Screenshots';
+                if (!is_dir($filepath)) {
+                    mkdir($filepath);
+                }
+                file_put_contents($filepath . '/' . $filename, $this->getSession()->getScreenshot());
+            }
+            if ($driver instanceof GoutteDriver) {
+                $filename = sprintf('%s_%s_%s.%s', 'Goutte', date('c'), uniqid('', true), 'html');
+                $filepath = FLOW_PATH_ROOT . '/Screenshots';
+                if (!is_dir($filepath)) {
+                    mkdir($filepath);
+                }
+                $html = preg_replace('/<script[^>]*\/>/siu', '', $this->getSession()->getPage()->getHtml());
+                $html = '<a href="' . $this->getSession()->getCurrentUrl() . '">Request Url</a><br />' . $html;
+                file_put_contents($filepath . '/' . $filename, $html);
+            }
+        } catch(\Exception $e) {}
     }
 
     /**
@@ -240,21 +328,7 @@ class FeatureContext extends MinkContext {
      */
     public function takeScreenshotAfterFailedStep($event) {
         if ($event->getResult() === 4) {
-            try {
-                $driver = $this->getSession()->getDriver();
-                if ($driver instanceof Selenium2Driver) {
-                    $this->iTakeAScreenshot();
-                }
-                if ($driver instanceof GoutteDriver) {
-                    $currentUrl = parse_url($this->getSession()->getCurrentUrl(), PHP_URL_PATH);
-                    $filename = sprintf('%s_%s_%s.%s', $currentUrl, date('c'), uniqid('', true), 'html');
-                    $filepath = FLOW_PATH_ROOT . '/Screenshots';
-                    if (!is_dir($filepath)) {
-                        mkdir($filepath);
-                    }
-                    file_put_contents($filepath . '/' . $filename, $this->getSession()->getPage()->getHtml());
-                }
-            } catch(\Exception $e) {}
+            $this->iTakeAScreenshot();
         }
     }
 
@@ -302,30 +376,23 @@ class FeatureContext extends MinkContext {
     }
 
     /**
-     * @Given /^I select the team "([^"]*)"$/
-     */
-    public function iISelectTheTeam($team) {
-        throw new PendingException();
-    }
-
-    /**
-     * @Then /^I should have a claim with the reference "([^"]*)"$/
-     */
-    public function iShouldHaveAClaimWithTheReference($arg1) {
-        throw new PendingException();
-    }
-
-    /**
      * @Given /^"([^"]*)" has received an email with the subject "([^"]*)"$/
      */
     public function hasReceivedAnEmailWithTheSubject($email, $subject) {
         $emails = DebugTransport::getEmails($email);
         foreach ($emails as $email) {
             if ($email['subject'] === $subject) {
-                return;
+                return $email;
             }
         }
         Assert::fail('Email with the subject "' . $subject . '" for "' . $email . '"" not found');
+    }
+
+    /**
+     * @Given /^the status should be "([^"]*)"$/
+     */
+    public function theStatusShouldBe($status) {
+        $this->assertSession()->elementTextContains('css', '.currentState', $status);
     }
 }
 ?>

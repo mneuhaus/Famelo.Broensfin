@@ -1,7 +1,5 @@
 {namespace m=Famelo\Messaging\ViewHelpers}
-<m:message
-	to="{claimComment.claim.debtor.email}:{claimComment.claim.debtor.name}"
-	subject="{claimComment.claim.debtor.name} hat ein Kommentar hinterlassen " />
+<m:message subject="{name} hat ein Kommentar hinterlassen" />
 
 <f:render partial="Claim" arguments="{claim: claimComment.claim}" />
 

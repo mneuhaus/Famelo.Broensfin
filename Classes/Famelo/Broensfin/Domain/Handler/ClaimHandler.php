@@ -26,7 +26,7 @@ class ClaimHandler {
 	 */
 	public function stateUpdated($claim) {
 		$mail = new \Famelo\Messaging\Message();
-		$mail->setMessage('Famelo.Broensfin:Claim/Accepted')
+		$mail->setMessage('Famelo.Broensfin:Claim/StateUpdated')
 			 ->assign('claim', $claim)
 			 ->send();
 	}
@@ -37,9 +37,18 @@ class ClaimHandler {
 	 * @Flow\Slot(class="Famelo\Broensfin\Controller\Claim\DetailController", signal="claimCommentAdded")
 	 */
 	public function commentAdded($claimComment) {
+		if ($claimComment->getUser()->getTeam() !== $claimComment->getClaim()->getCreditor()) {
+			$recipient = $claimComment->getClaim()->getCreditor();
+		} else {
+			$recipient = $claimComment->getClaim()->getDebtor();
+		}
+		$name = $claimComment->getUser()->getTeam()->__toString();
+		$email = $recipient->getMainUser()->getEmail();
 		$mail = new \Famelo\Messaging\Message();
 		$mail->setMessage('Famelo.Broensfin:Claim/Comment')
+			 ->setTo(array($email => $name))
 			 ->assign('claimComment', $claimComment)
+			 ->assign('name', $name)
 			 ->send();
 	}
 }

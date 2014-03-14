@@ -100,13 +100,6 @@ class Claim {
         $this->emitCreated($this);
     }
 
-	// public function getCurrentState() {
-	// 	if ($this->getStates()->count() === 0) {
-	// 		return ClaimState::STATE_PENDING;
-	// 	}
-	// 	return $this->getStates()->current()->getState();
-	// }
-
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
 	 * @return void
