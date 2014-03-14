@@ -33,18 +33,18 @@ Feature: Transactions
     And I should be see a flash message "Payment successful"
     And I have a balance of "15"
     And the last transaction amount is "10"
-    And I have received an email with the subject "Rechnung"
+    And "toni@foo.com" has received an email with the subject "Rechnung"
 
-  @fixtures
-  Scenario: Basic EUR transaction
-    Given I am logged in as "toni" "tester"
-    And I have a balance of "5"
-    When i execute an action that costs "0.1" "EUR"
-    Then I have a balance of "4.9"
+  # @fixtures
+  # Scenario: Basic EUR transaction
+  #   Given I am logged in as "toni" "tester"
+  #   And I have a balance of "5"
+  #   When i execute an action that costs "0.1" "EUR"
+  #   Then I have a balance of "4.9"
 
-  @fixtures
-  Scenario: Basic Point transaction
-    Given I am logged in as "toni" "tester"
-    And I have a balance of "5"
-    When i execute an action that costs "1" "POINT"
-    Then I have a balance of "4.9"
+  # @fixtures
+  # Scenario: Basic Point transaction
+  #   Given I am logged in as "toni" "tester"
+  #   And I have a balance of "5"
+  #   When i execute an action that costs "1" "POINT"
+  #   Then I have a balance of "4.9"

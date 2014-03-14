@@ -51,7 +51,7 @@ class FeatureContext extends MinkContext {
             return $teams->getFirst();
         }
 
-        return $teamRepository->findByIdentifier($this->currentTeam);
+        return $this->currentTeam;
     }
 
     /**
@@ -157,6 +157,9 @@ class FeatureContext extends MinkContext {
      * @Given /^I am logged in as "([^"]*)" "([^"]*)"$/
      */
     public function iAmLoggedInAsACustomer($username, $password) {
+        $accountRepository = $this->objectManager->get('TYPO3\\Flow\\Security\\AccountRepository');
+        $account = $accountRepository->findOneByAccountIdentifier($username);
+        $this->currentTeam = $account->getParty()->getTeam();
         $this->visit('/logout.html');
         $this->visit('/login.html');
         $this->fillField('Username', $username);
