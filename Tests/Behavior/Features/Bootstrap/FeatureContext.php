@@ -8,6 +8,7 @@ use Famelo\Broensfin\Domain\Model\Claim;
 use Famelo\Messaging\Transport\DebugTransport;
 use Famelo\Saas\Domain\Model\Subscription;
 use Famelo\Saas\Domain\Model\Transaction;
+use League\Csv\Writer;
 use PHPUnit_Framework_Assert as Assert;
 use Symfony\Component\DomCrawler\Crawler;
 use TYPO3\Flow\Utility\Arrays;
@@ -29,6 +30,11 @@ class FeatureContext extends MinkContext {
     protected $currentTeam;
 
     /**
+     * @var string
+     */
+    protected $csvPath;
+
+    /**
      * Initializes the context
      *
      * @param array $parameters Context parameters (configured through behat.yml)
@@ -36,6 +42,10 @@ class FeatureContext extends MinkContext {
     public function __construct(array $parameters) {
         $this->useContext('flow', new \Flowpack\Behat\Tests\Behat\FlowContext($parameters));
         $this->objectManager = $this->getSubcontext('flow')->getObjectManager();
+        $this->csvPath = FLOW_PATH_ROOT . 'Data/Temporary/Testing/SubContextBehat/Csv/';
+        if (!is_dir($this->csvPath)) {
+            mkdir($this->csvPath);
+        }
     }
 
     /**
@@ -396,6 +406,34 @@ class FeatureContext extends MinkContext {
      */
     public function theStatusShouldBe($status) {
         $this->assertSession()->elementTextContains('css', '.currentState', $status);
+    }
+
+    /**
+     * @Given /^I have a csv file "([^"]*)" with this content:$/
+     */
+    public function iHaveACsvFileWithThisContent($filename, TableNode $table) {
+        $rows = $table->getHash();
+        $file = $this->csvPath . $filename;
+        $csv = new Writer($file);
+        $csv->insertOne(array_keys(current($rows)));
+        $csv->insertAll($rows);
+    }
+
+    /**
+     * @Given /^I upload the file "([^"]*)"$/
+     */
+    public function iUploadTheFile($filename) {
+        $file = $this->csvPath . $filename;
+        $this->getSession()->getPage()->attachFileToField('--typo3_neos_expose-plugin[file]', $file);
+        $this->getSession()->getPage()->pressButton('Absenden');
+    }
+
+    /**
+     * @Given /^I should see "([^"]*)" claims$/
+     */
+    public function iShouldSeeClaims($amount) {
+        $rows = $this->getSession()->getPage()->findAll('css', '.t3-records tbody tr');
+        Assert::assertEquals($amount, count($rows));
     }
 }
 ?>

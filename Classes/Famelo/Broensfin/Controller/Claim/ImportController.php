@@ -12,7 +12,7 @@ namespace Famelo\Broensfin\Controller\Claim;
  *                                                                        */
 
 use Doctrine\ORM\Mapping as ORM;
-use EasyCSV\Reader;
+use Famelo\Saas\Csv\Reader;
 use TYPO3\Expose\Controller\ExposeControllerInterface;
 use TYPO3\Flow\Annotations as Flow;
 
@@ -27,6 +27,12 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
      * @var \TYPO3\Flow\Resource\ResourceManager
      */
     protected $resourceManager;
+
+    /**
+     * @var \Famelo\Saas\Domain\Repository\TeamRepository
+     * @Flow\Inject
+     */
+    protected $teamRepository;
 
 	/**
 	 * Create a new object
@@ -52,11 +58,28 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
      */
 	public function checkAction($file) {
 		$reader = new Reader($file->getUri());
-		$rows = $reader->getAll();
-		if (array_keys(current($rows)) !== array('Creditor', 'Debtor', 'Reference', 'Currency', 'Amount', 'Due Date', 'Creation Date')) {
-
+		$columns = array(
+			'Debtor',
+			'Reference',
+			'Currency',
+			'Amount',
+			'Due Date',
+			'Creation Date'
+		);
+		if ($reader->validate($columns) === FALSE) {
+			$this->view->assign('error', 'invalid csv');
+			return;
 		}
-		var_dump($reader->getAll());
+
+		$rows = array();
+		foreach ($reader->fetchAllAssoc() as $row) {
+			$team = $this->teamRepository->findOneByName($row['Debtor']);
+			d($team);
+			$rows[] = $row;
+			// $claim = new Claim();
+		}
+		$this->view->assign('columns', $columns);
+		$this->view->assign('rows', $rows);
 	}
 
 	/**

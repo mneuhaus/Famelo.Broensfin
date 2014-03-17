@@ -1,0 +1,28 @@
+Feature: Import Claims
+  In order to create many claims quickly
+  As a Customer
+  I need a way to upload a csv file with claims
+
+  Background:
+    Given I imported the site "Famelo.Broensfin"
+    And the following teams exist:
+      | team  | username | password | firstname | lastname | email         | role                 |
+      | Toni  | toni     | tester   | Toni      | Tester   | toni@foo.com  | Famelo.Saas:Customer |
+      | Randy | russel   | russel   | Russel    | Randy    | randy@foo.com | Famelo.Saas:Customer |
+      | Henry | henry    | ford     | Henry     | Ford     | henry@foo.com | Famelo.Saas:Customer |
+
+    And I have a csv file "Claims.csv" with this content:
+      | Debtor | Reference | Currency | Amount | Due Date   | Creation Date |
+      | Randy  | R2001     | EUR      | 3234   | 20.03.2014 | 01.03.2014    |
+      | Henry  | R3001     | EUR      | 1234   | 1.02.2014  | 01.01.2014    |
+
+  @fixtures @email
+  Scenario: Create new Claims
+    Given I am logged in as "toni" "tester"
+    And I am on "/mein-konto/meine-transaktionen.html"
+    When I follow "Import"
+    And I upload the file "Claims.csv"
+    Then I should see "R2001"
+    And I should see "2" claims
+    And "randy@foo.com" has received an email with the subject "New Claim"
+    And "henry@foo.com" has received an email with the subject "New Claim"

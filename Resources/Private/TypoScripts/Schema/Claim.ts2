@@ -60,6 +60,7 @@ prototype(Famelo.Broensfin:DebtorClaims) {
 		10.action = 'index'
 		10.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
 		10.arguments.type = ${type}
+		10.title = 'Import'
 	}
 
 	prototype(TYPO3.Expose:RecordList) {
@@ -86,6 +87,7 @@ prototype(Famelo.Broensfin:CreditorClaims) {
 				20.action = 'index'
 				20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
 				20.arguments.type = ${type}
+				20.title = 'Import'
 			}
 		}
 	}

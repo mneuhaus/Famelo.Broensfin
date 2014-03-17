@@ -1,0 +1,21 @@
+<f:if condition="{error}">
+	<f:then>
+		{error}
+	</f:then>
+	<f:else>
+		<table class="table table-bordered table-striped">
+			<tr>
+				<f:for each="{columns}" as="column">
+					<th>{column}</th>
+				</f:for>
+			</tr>
+		<f:for each="{rows}" as="row">
+			<tr>
+				<f:for each="{row}" as="column">
+					<td>{column}</td>
+				</f:for>
+			</tr>
+		</f:for>
+		</table>
+	</f:else>
+</f:if>
