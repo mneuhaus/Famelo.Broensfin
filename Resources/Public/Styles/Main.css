@@ -7480,6 +7480,7 @@ body {
   padding-bottom: 5px;
 }
 header {
+  margin-bottom: 30px;
   background: #ffffff;
 }
 header .logo {
@@ -7653,6 +7654,7 @@ div.advantages h4 {
   margin: 20px 0;
 }
 footer {
+  margin-top: 50px;
   padding: 15px 0;
   background: #eeeeee;
 }
@@ -7745,6 +7747,299 @@ figcaption p {
 }
 .controls-debtor .form-group {
   margin-left: 0;
+}
+/*
+	 	written by: Sven Steinker and Marc Neuhaus
+		Web: http://svensteinker.de , Mail: sven{at}svensteinker.de
+		Web: http://famelo.com , Mail: mneuhaus@famelo.com
+
+	take a look and learn, but never copy n paste!
+
+*/
+h2 {
+  margin-bottom: 20px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  margin: 10px 0;
+  color: #95a5a6;
+}
+hr {
+  border: 0px;
+  border-top: 1px solid #cfd4d7;
+  margin: 20px 0;
+}
+p.label {
+  color: #95a5a6;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 0px;
+}
+section[role="claim"],
+section[role="comments"],
+section[role="history"] {
+  margin: 50px 0;
+}
+section[role="claim"] {
+  margin-top: 0px;
+}
+.open-claim button {
+  border-radius: 0px;
+}
+.square {
+  border-radius: 0px;
+}
+.open-claim button {
+  border-radius: 0px;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 10px 10px;
+}
+.open-claim button.accept {
+  width: 80%;
+}
+.open-claim button.reject {
+  width: 20%;
+  float: left;
+}
+.user-center {
+  background: #eeeeee;
+  border: 1px solid #d5d5d5;
+  padding: 10px;
+}
+.open-claim h3 {
+  color: #ffffff;
+  font-weight: 400;
+}
+.open-claim h3 span {
+  font-weight: 600;
+}
+.open-claim h3 .current-state {
+  font-size: 13px;
+  line-height: 16px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.open-claim h3 .current-state i {
+  line-height: 35px;
+}
+.open-claim h3 .current-state span {
+  font-weight: 400;
+}
+.open-claim p {
+  color: #555e5f;
+}
+.open-claim .open-claim-body,
+.open-claim .open-claim-head {
+  background: #2d884b;
+  padding: 10px;
+}
+.open-claim .open-claim-head.rejected {
+  background: #d9534f;
+}
+.open-claim .open-claim-head.pending {
+  background: #f0ad4e;
+}
+.open-claim .open-claim-head.accepted {
+  background: #5cb85c;
+}
+.open-claim .open-claim-body {
+  background: #ebedee;
+}
+.open-claim .open-claim-body .wrapper {
+  margin: 10px 0px;
+  padding: 0px;
+}
+.open-claim .open-claim-body .value {
+  padding: 10px;
+  background: #ccd4d5;
+  color: #555e5f;
+  font-weight: 600;
+}
+#myModal .modal-content {
+  border-radius: 0px;
+  text-align: center;
+}
+#myModal h3 {
+  color: #555e5f;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.media {
+  padding: 10px;
+}
+.media:nth-child(even) {
+  background: #ebedee;
+}
+form {
+  display: block;
+  overflow: hidden;
+}
+form button {
+  margin-top: 10px;
+}
+.form-control.square {
+  background: #ccd4d5;
+  color: #555e5f;
+  outline: none;
+  border: 0px;
+}
+.form-control.square:focus {
+  box-shadow: 0 0 5px #555e5f;
+  outline: none;
+}
+.new-comment {
+  padding-top: 0px;
+}
+.userbar-info {
+  margin-bottom: 15px;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+.userbar-info .value {
+  float: right;
+}
+nav.submenu {
+  margin-bottom: 20px;
+}
+nav.submenu .nav-stacked > li + li {
+  margin-top: 0px;
+}
+nav.submenu ul {
+  margin: 0px;
+  padding: 0px;
+}
+nav.submenu ul:before,
+nav.submenu ul:after {
+  content: " ";
+  display: table;
+}
+nav.submenu ul:after {
+  clear: both;
+}
+nav.submenu ul:before,
+nav.submenu ul:after {
+  content: " ";
+  display: table;
+}
+nav.submenu ul:after {
+  clear: both;
+}
+nav.submenu ul li {
+  width: 50%;
+  float: left;
+}
+nav.submenu ul li a {
+  border-radius: 0px;
+  background: #dde1e2;
+  text-align: center;
+  font-size: 30px;
+  line-height: 33px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+nav.submenu ul li a:hover {
+  background: #cfd4d7;
+  color: #667184;
+}
+nav.submenu ul li:first-child {
+  border-right: 1px solid #ffffff;
+}
+nav.submenu ul .current a {
+  background: #cfd4d7;
+}
+section.payment {
+  background: #ebedee;
+  padding: 20px;
+}
+.radio {
+  padding: 0px;
+  border: 1px solid #808b9d;
+  text-align: center;
+  background: #ffffff;
+}
+.radio input[type="radio"] {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.radio .header {
+  background: #808b9d;
+}
+.radio .header .title {
+  padding: 20px 0;
+  font-size: 60px;
+  line-height: 63px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 100;
+  color: #ffffff;
+}
+.radio .body {
+  padding: 15px;
+}
+.radio .body .credits {
+  font-size: 40px;
+  line-height: 43px;
+  color: #808b9d;
+  margin: 0px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.radio .body .order {
+  text-align: left;
+  padding-top: 10px;
+  border-top: 1px solid #808b9d;
+}
+.payment-second label {
+  margin-right: 20px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   img {
