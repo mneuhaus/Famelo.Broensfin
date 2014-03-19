@@ -2,6 +2,8 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 {namespace a=TYPO3\Asset\ViewHelpers}
+{namespace s=Famelo\Saas\ViewHelpers}
+{namespace c=Famelo\Common\ViewHelpers}
 <html>
 <head>
 	<f:section name="stylesheets">
@@ -50,9 +52,33 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3">
-				{parts.submenu -> f:format.raw()}
+				<div class="user-center">
+					<h3>Willkommen Randy Random</h3>
+					<hr />
+					<div class="account-info">
+						<h5 class="">Meine Übersicht</h5>
+
+						<div class="userbar-info">
+							<p class="label">Forderungen / Verbindlichkeiten</p>
+							<p>Forderungen:<a href="#" title="Offene Forderungen: 10" class="value"><strong>10</strong></a><br />
+							Verbindlichkeiten:<span class="value"><strong>0</strong></span></p>
+						</div>
+
+						<div class="userbar-info">
+							<p class="label">Credits</p>
+							<p>Credits:<span class="value"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
+							Balance in €:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>		
+						</div>
+					</div>
+					<hr />
+					<p class="clearfix"><small><a href="#" title="Credits kaufen" class="pull-right">Credits kaufen</a></small></p>
+					<small><f:link.action action="choosePayment" class="pull-right">Credits kaufen</f:link.action></small>
+				</div>
 			</div>
 			<div class="col-sm-9">
+				<nav class="submenu">
+					{parts.submenu -> f:format.raw()}
+				</nav>
 				{content.main -> f:format.raw()}
 			</div>
 		</div>

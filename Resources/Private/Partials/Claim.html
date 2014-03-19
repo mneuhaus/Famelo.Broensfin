@@ -1,9 +1,14 @@
 {namespace s=Famelo\Saas\ViewHelpers}
-<dl class="dl-horizontal">
-	<dt>Fälligkeitsdatum</dt>
-	<dd>{claim.dueDate -> f:format.date(localeFormatType: 'date', forceLocale: true)}</dd>
-	<dt>Betrag</dt>
-	<dd>{claim.amount -> s:format.currency()}</dd>
-	<dt>Status</dt>
-	<dd>{claim.currentState}</dd>
-</dl>
+
+<div class="wrapper">
+	<p class="label">Betrag in Höhe von</p>
+	<div class="value">
+		{claim.amount -> s:format.currency()}
+	</div>
+</div>					
+<div class="wrapper">
+	<p class="label">Fällig zum</p>
+	<div class="value">
+		{claim.dueDate -> f:format.date(localeFormatType: 'date', forceLocale: true)}
+	</div>
+</div>

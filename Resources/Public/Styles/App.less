@@ -1,0 +1,319 @@
+/*
+	 	written by: Sven Steinker and Marc Neuhaus
+		Web: http://svensteinker.de , Mail: sven{at}svensteinker.de
+		Web: http://famelo.com , Mail: mneuhaus@famelo.com
+
+	take a look and learn, but never copy n paste!
+
+*/
+
+// mixins, functions, operations
+
+@white:			#ffffff;
+@black: 		#2d3138;
+@grey: 			#808b9d;;
+@beige: 		#f3ece9;
+@red: 			#cb101b;
+@light-grey: 	#eeeeee;
+@gold: 			rgba(236, 193, 116, 0.7);
+@lightGrey: 	#f6f6f6;
+@footer: 		#eeeeee;
+@superlight: 	#b9bdc2;
+@BShover: 		#555555;
+
+
+// App colors
+@AppGrey: 		#ebedee;
+@AppDarkGrey: 	#555e5f;
+@AppLightGrey: 	#95a5a6;
+@AppGreen: 		#2D884B;
+
+
+
+h2 {
+	margin-bottom: 20px;
+}
+
+h4{
+	.font(20px;);
+	.light;
+	margin: 10px 0;
+	color:@AppLightGrey;
+}
+
+
+hr {
+	border: 0px;
+	border-top: 1px solid darken(@AppGrey, 10%);
+	margin: 20px 0;
+}
+
+p.label {
+	color:@AppLightGrey;
+	text-transform: uppercase;
+	.regular;
+	padding:0px;
+}
+
+// Claim/Debt Detail
+	section[role="claim"],
+	section[role="comments"],
+	section[role="history"] {
+		margin: 50px 0;
+	}
+
+	section[role="claim"] {
+		margin-top: 0px;
+	}
+
+	.open-claim button {
+		border-radius: 0px;
+	}
+
+	.square {
+		border-radius: 0px;
+	}
+
+	.open-claim button {
+		border-radius: 0px;	
+		margin:0px;
+		.font(20px;);
+		color:@white;
+		.regular;
+		padding:10px 10px;
+	}
+	.open-claim button.accept{
+		width:80%;
+		
+	}
+	.open-claim button.reject{
+		width:20%;
+		float: left;
+	}
+
+	.user-center {
+		background: @light-grey; 
+		border: 1px solid darken(@light-grey, 10%);
+		padding: 10px;
+
+	}
+
+
+	.open-claim {
+		h3 {
+			color:@white;
+			.regular;
+			span {
+				.bold;
+			}
+			.current-state { 
+				.font(13px;);
+				line-height: 30px;
+				color:@white;
+				.bold;
+
+				i {
+					line-height: 35px;
+				}
+
+				span {
+					.regular;
+				}			
+			}					
+		}
+		p {
+			color:@AppDarkGrey;
+		}
+
+		.open-claim-body,
+		.open-claim-head {
+			background: @AppGreen;
+			padding: 10px;
+		}
+
+		.open-claim-head.rejected {
+			background: @brand-danger;
+		}
+		.open-claim-head.pending {
+			background: @brand-warning;
+		}
+		.open-claim-head.accepted {
+			background: @brand-success;
+		}
+
+		.open-claim-body {
+			background: @AppGrey;
+			
+			.wrapper {
+				margin: 10px 0px;
+				padding:0px;
+			}
+			.value {
+				padding: 10px; 
+				background: lighten(@AppLightGrey, 20%);
+				color:@AppDarkGrey;
+				.bold;
+			}
+		}		
+	}
+
+
+
+	#myModal {
+		.modal-content {
+			border-radius: 0px;
+			text-align: center;
+		}
+
+		h3 {
+			color:@AppDarkGrey;
+			margin-bottom: 15px;
+			.light;
+		}
+	}
+
+	.media{
+		padding:10px;
+
+		&:nth-child(even){
+			background: @AppGrey;
+		} 
+	}
+
+
+	form {
+		display: block;
+		overflow: hidden;
+	}
+
+	form button {
+		margin-top: 10px;
+	}
+	.form-control.square {
+			background: lighten(@AppLightGrey, 20%);
+			color:@AppDarkGrey;
+			outline: none;
+			border:0px;
+		
+		&:focus {
+			box-shadow: 0 0 5px @AppDarkGrey;
+			outline: none;
+		}
+	}
+
+	.new-comment {
+		padding-top: 0px;
+	}
+
+
+// Sidebar 
+	.userbar-info {
+		margin-bottom:15px; 
+		padding: 0 10px;
+		margin-right: 10px;
+
+		.value {
+			float: right;
+		}
+	}
+
+
+
+//Submenu 
+
+nav.submenu {
+	margin-bottom: 20px;
+	.nav-stacked > li + li {
+		margin-top: 0px;
+	}
+	ul {
+		margin:0px;
+		padding:0px;
+		.clearfix();
+		li {
+			width:50%;
+			float:left;
+			a {
+				
+				border-radius: 0px;
+				background: darken(@AppGrey, 5%);
+				text-align: center;
+				.font(30px;);
+				.light;
+			
+				&:hover {
+					background: darken(@AppGrey, 10%);
+					color: darken(@grey, 10%)
+				}
+			}
+			
+			&:first-child {
+				border-right: 1px solid @white;
+			}
+		}
+		.current {
+			a {
+				background: darken(@AppGrey, 10%);
+			}
+		}
+	}
+}
+
+
+
+//pricing 
+	section.payment {
+		background: @AppGrey;
+		padding:20px;
+	}
+
+	.radio {
+		padding:0px;
+		border: 1px solid @grey;
+		text-align: center;
+		background: @white;
+		
+
+		input[type="radio"] {
+			margin-left: 0px;
+			margin-right: 10px;
+		}
+
+		.header {
+			background: @grey;
+			
+			.title {
+				padding: 20px 0;
+				.font(60px;);
+				.ultralight;
+				color:@white;
+			}
+		}
+
+		.body {
+			padding:15px;
+			
+			.credits {
+				.font(40px;);
+				.light;	
+				margin-bottom: 10px;			
+			}
+
+			.order {
+				text-align: left;
+				padding-top: 10px;
+				border-top: 1px solid @grey;
+			}
+
+		}
+
+	}
+
+.payment-second {
+	label {
+		margin-right: 20px;
+	}
+}
+
+
+

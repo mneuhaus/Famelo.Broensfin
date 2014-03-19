@@ -1,15 +1,13 @@
 {namespace e=TYPO3\Expose\ViewHelpers}
 
-<dl class="dl-horizontal">
-	<dt>Name</dt> 		<dd>{team.mainUser.name.fullName}</dd>
-	<dt>Firma</dt> 		<dd>{team.mainUser.team}</dd>
-	<f:if condition="{team.mainUser.phone}">
-		<dt>Telefon</dt> 	<dd>{team.mainUser.phone}</dd>
-	</f:if>
-	<f:if condition="{team.mainUser.mobile}">
-	<dt>Handy</dt> 		<dd>{team.mainUser.mobile}</dd>
-	</f:if>
-	<f:if condition="{team.mainUser.email}">
-	<dt>E-Mail</dt> 	<dd>{team.mainUser.email}</dd>
-	</f:if>
-</dl>
+<p><strong>{team.mainUser.team}</strong></p>
+<p>{team.mainUser.name.fullName}</p>
+<!--
+<p><i class="fa fa-phone"></i> {team.mainUser.phone} 0521 337 89 669</p>
+<p><i class="fa fa-mobile"></i> {team.mainUser.mobile}0170 738 44 65</p>
+<p>
+	<a href="mailto:{team.mainUser.email}" title="{team.mainUser.name.fullName} eine E-Mail schreiben">
+		<i class="fa fa-envelope-o"></i> E-Mail Schreiben
+	</a>
+</p>
+-->
