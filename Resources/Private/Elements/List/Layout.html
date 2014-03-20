@@ -1,0 +1,19 @@
+{namespace cm=TYPO3\Expose\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+
+<!-- RecordList/Layout.html -->
+<div class="t3-expose-recordlist">
+	<h3 style="color:red;">Meine Forderungen (Achtung muss variabel werden)</h3>
+
+	<div class="btn-toolbar t3-expose-btn-toolbar-top">
+		<ts:render path="topRegion" />
+	</div>
+
+	<div data-area="main">
+		<div class="t3-records" data-area="records">
+			<ts:render path="recordList.{currentFormat}" />
+		</div>
+	</div>
+
+	<div class="btn-toolbar  t3-expose-btn-toolbar-bottom"><ts:render path="bottomRegion" /></div>
+</div>
