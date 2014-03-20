@@ -17,6 +17,7 @@ use TYPO3\Flow\Security\Authorization\AccessDecisionManagerInterface;
 use TYPO3\Neos\Domain\Exception;
 use TYPO3\Neos\Domain\Service\ContentContext;
 use TYPO3\Neos\Service\ContentElementWrappingService;
+use TYPO3\TYPO3CR\Domain\Model\Node;
 use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
 use TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject;
 
@@ -41,6 +42,9 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 	public function evaluate() {
 		$content = $this->getValue();
 		$node = $this->tsValue('node');
+		if (!$node instanceof Node) {
+			return '';
+		}
 		if ($node->isRemoved()) {
 			return '';
 		}

@@ -13,7 +13,7 @@ Feature: Claims
   @fixtures @email
   Scenario: Create a new Claim
     When I am logged in as "toni" "tester"
-    And I am on "/mein-konto/meine-transaktionen.html"
+    And I am on "/de/mein-konto/meine-transaktionen.html"
     And I follow "New"
     And I select "Randy" from "--form[objects][0][debtor][existing]"
     And I fill in "--form[objects][0][externalReference]" with "R1000"
@@ -29,7 +29,7 @@ Feature: Claims
   @fixtures @email
   Scenario: Create a new Claim for new Team
     When I am logged in as "toni" "tester"
-    And I am on "/mein-konto/meine-transaktionen.html"
+    And I am on "/de/mein-konto/meine-transaktionen.html"
     And I follow "New"
     When I fill in "--form[objects][0][debtor][company]" with "Henry"
     And I fill in "--form[objects][0][debtor][firstname]" with "Henry"
@@ -56,7 +56,7 @@ Feature: Claims
     And I fill in "form-objects_0_users_0_email" with "henry@foo.com"
     And I press "Submit"
     Then I should see "Account has been created."
-    When I am on "/mein-konto/meine-transaktionen.html"
+    When I am on "/de/mein-konto/meine-transaktionen.html"
     Then I should see "Henry GbR"
     When I am logged in as "henry" "ford"
     Then I should be on page "/mein-konto.html"
@@ -68,7 +68,7 @@ Feature: Claims
       | Toni      | Randy  | R2001             | EUR      | 3234   | 20.03.2014 | 01.03.2014   |
       | Randy     | Toni   | R3001             | EUR      | 1234   | 1.02.2014  | 01.01.2014   |
     And I am logged in as "toni" "tester"
-    Then I should be on page "/mein-konto.html"
+    Then I should be on page "/de/mein-konto.html"
     And I follow "My Claims"
     And I click on "Detail" on the row containing "R2001"
     Then I should see "Claim Details"
@@ -84,7 +84,7 @@ Feature: Claims
       | Toni      | Randy  | R2001             | EUR      | 3234   | 20.03.2014 | 01.03.2014   |
       | Randy     | Toni   | R3001             | EUR      | 1234   | 1.02.2014  | 01.01.2014   |
     And I am logged in as "randy" "russel"
-    Then I should be on page "/mein-konto.html"
+    Then I should be on page "/de/mein-konto.html"
     And I follow "My Debts"
     And I click on "Detail" on the row containing "R2001"
     Then I should see "Claim Details"
@@ -100,7 +100,7 @@ Feature: Claims
       | Toni      | Randy  | R2001             | EUR      | 3234   | 20.03.2014 | 01.03.2014   |
       | Randy     | Toni   | R3001             | EUR      | 1234   | 1.02.2014  | 01.01.2014   |
     And I am logged in as "toni" "tester"
-    Then I should be on page "/mein-konto.html"
+    Then I should be on page "/de/mein-konto.html"
     And I follow "My Debts"
     And I click on "Detail" on the row containing "R3001"
     Then I should see "Claim Details"

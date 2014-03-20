@@ -7,20 +7,12 @@
 		<table class="table table-striped t3-expose-table" >
 			<thead>
 				<tr>
-					<cm:schema object="{objects.0}">
-						<f:for each="{schema.properties}" as="property" key="propertyName">
-							<f:if condition="{property.ignore} == 0">
-								<f:if condition="{sorting.property} == {property}">
-									<f:then><th class="sort-{sorting.direction}"></f:then>
-									<f:else><th></f:else>
-								</f:if>
-									{f:translate(value: property.label, package: 'TYPO3.Expose')}
-								</th>
-							</f:if>
-						</f:for>
-					</cm:schema>
-					<th>
-					</th>
+					<th>{f:translate(id: 'claim.creditor', value: 'Creditor')}</th>
+					<th>{f:translate(id: 'claim.debtor', value: 'Debtor')}</th>
+					<th>{f:translate(id: 'claim.reference', value: 'Reference')}</th>
+					<th>{f:translate(id: 'claim.amount', value: 'Amount')}</th>
+					<th>{f:translate(id: 'claim.dueDate', value: 'Due date')}</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -29,6 +21,6 @@
 		</table>
 	</f:then>
 	<f:else>
-		No Objects found
+		<th>{f:translate(id: 'claim.noObjects', value: 'No Objects found')}</th>
 	</f:else>
 </f:if>

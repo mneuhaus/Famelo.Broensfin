@@ -1,14 +1,15 @@
 {namespace e=TYPO3\Expose\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace s=Famelo\Saas\ViewHelpers}
 
 <!-- List/Row.html -->
 <e:schema object="{item}">
 	<tr data-klove="row">
-		<f:for each="{schema.properties}" as="property" key="propertyName">
-			<f:if condition="{property.ignore} == 0">
-				<td class="{propertyName}"><e:objectAccess object="{item}" property="{propertyName}">{value -> e:formatAsString()}</e:objectAccess></td>
-			</f:if>
-		</f:for>
+		<td>{item.creditor}</td>
+		<td>{item.debtor}</td>
+		<td>{item.externalReference}</td>
+		<td>{item.amount -> s:format.currency(currency: item.currency)}</td>
+		<td>{item.dueDate -> f:format.date(forceLocale: true, localeFormatType: 'date')}</td>
 		<td class="table-actions">
 			<ts:render path="controllerLinks" />
 		</td>
