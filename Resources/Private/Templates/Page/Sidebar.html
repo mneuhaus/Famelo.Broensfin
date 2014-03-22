@@ -53,27 +53,29 @@
 		<div class="row">
 			<div class="col-sm-3">
 				<div class="user-center">
-					<h3>Willkommen Randy Random</h3>
-					<hr />
-					<s:saas>
-					<div class="account-info">
-						<h5 class="">Meine Übersicht</h5>
+					<s:user>
+						<h3>Willkommen {user}</h3>
+						<hr />
+						<s:saas>
+						<div class="account-info">
+							<h5 class="">Meine Übersicht</h5>
 
-						<!-- <div class="userbar-info">
-							<p class="label">Forderungen / Verbindlichkeiten</p>
-							<p>Forderungen:<a href="#" title="Offene Forderungen: 10" class="value"><strong>{transactionService.balance -> f:count()}</strong></a><br />
-							Verbindlichkeiten:<span class="value"><strong>0</strong></span></p>
-						</div> -->
+							<!-- <div class="userbar-info">
+								<p class="label">Forderungen / Verbindlichkeiten</p>
+								<p>Forderungen:<a href="#" title="Offene Forderungen: 10" class="value"><strong>{transactionService.balance -> f:count()}</strong></a><br />
+								Verbindlichkeiten:<span class="value"><strong>0</strong></span></p>
+							</div> -->
 
-						<div class="userbar-info">
-							<p class="label">Credits</p>
-							<p>Credits:<span class="value"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
-							Balance in €:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>
+							<div class="userbar-info">
+								<p class="label">Credits</p>
+								<p>Credits:<span class="value balance" data-balance="{transactionService.balance}"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
+								Balance in €:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>
+							</div>
 						</div>
-					</div>
-					<hr />
-					<p class="clearfix"><small><a href="{s:target(name: 'payment')}" title="Credits kaufen" class="pull-right">Credits kaufen</a></small></p>
-					</s:saas>
+						<hr />
+						<p class="clearfix"><small><a href="{s:target(name: 'payment')}" title="Credits kaufen" class="pull-right">Credits kaufen</a></small></p>
+						</s:saas>
+					</s:user>
 				</div>
 			</div>
 			<div class="col-sm-9">

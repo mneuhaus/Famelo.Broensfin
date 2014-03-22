@@ -72,6 +72,7 @@ class FeatureContext extends MinkContext {
             while (preg_match('/<meta http-equiv="refresh" content="([0-9]*);url=([^"]*)/', $this->getSession()->getPage()->getHtml(), $match) == 1) {
                 if (isset($match[2])) {
                     $url = str_replace('&amp;', '&', $match[2]);
+                    $this->printDebug('Redirecting to url: ' . $url);
                     // echo 'Redirecting to url: ' . $url . chr(10);
                     $this->visit($url);
                 }
@@ -171,7 +172,7 @@ class FeatureContext extends MinkContext {
         $account = $accountRepository->findOneByAccountIdentifier($username);
         $this->currentTeam = $account->getParty()->getTeam();
         $this->visit('/logout.html');
-        $this->visit('/login.html');
+        $this->visit('/de/login.html');
         $this->fillField('Username', $username);
         $this->fillField('Password', $password);
         $this->pressButton('Login');
@@ -200,8 +201,9 @@ class FeatureContext extends MinkContext {
      * @Given /^I have a balance of "([^"]*)"$/
      */
     public function iHaveABalanceOf($balance) {
-        if ($this->getSession()->getCurrentUrl() !== '/mein-konto.html') {
-            $this->visit('/mein-konto.html');
+        $currentBalance = $this->getSession()->getPage()->find('css', '.balance');
+        if (!is_object($currentBalance)) {
+            Assert::fail('.balance not found!');
         }
         Assert::assertEquals($balance, $this->getSession()->getPage()->find('css', '.balance')->getAttribute('data-balance'));
     }
@@ -259,7 +261,7 @@ class FeatureContext extends MinkContext {
      * @Then /^I log out$/
      */
     public function iLogOut() {
-        $this->visit('/login.html');
+        $this->visit('/de/login.html');
     }
 
     /**
@@ -357,7 +359,11 @@ class FeatureContext extends MinkContext {
      * @Given /^the last transaction amount is "([^"]*)"$/
      */
     public function theLastTransactionAmountIs($amount) {
-        Assert::assertEquals($amount, $this->getSession()->getPage()->find('css', '.transactions .first .transaction-amount')->getAttribute('data-amount'));
+        $lastTransactionAmount = $this->getSession()->getPage()->find('css', '.transactions .first .transaction-amount');
+        if (!is_object($lastTransactionAmount)) {
+            Assert::fail('".transactions .first .transaction-amount" not found!');
+        }
+        Assert::assertEquals($amount, $lastTransactionAmount->getAttribute('data-amount'));
     }
 
     /**
@@ -405,7 +411,7 @@ class FeatureContext extends MinkContext {
      * @Given /^the status should be "([^"]*)"$/
      */
     public function theStatusShouldBe($status) {
-        $this->assertSession()->elementTextContains('css', '.currentState', $status);
+        $this->assertSession()->elementTextContains('css', '.current-state', $status);
     }
 
     /**

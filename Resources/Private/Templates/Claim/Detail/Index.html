@@ -2,19 +2,9 @@
 
 <section role="claim">
 	<div class="open-claim">
-		<div class="open-claim-head pending">
-			<h3>Forderung <span>#{claim.externalReference}</span>
+		<div class="open-claim-head {claim.currentState}">
+			<h3>Forderung <span>{claim.externalReference}</span>
 				<small class="pull-right current-state"><i class="fa fa-dot-circle-o"></i> {claim.currentState}</small>
-			</h3>
-		</div>
-		<div class="open-claim-head accepted">
-			<h3>Forderung <span>#{claim.externalReference}</span>
-				<small class="pull-right current-state"><i class="fa fa-check-circle"></i> {claim.currentState}</small>
-			</h3>
-		</div>
-		<div class="open-claim-head rejected">
-			<h3>Forderung <span>#{claim.externalReference}</span>
-				<small class="pull-right current-state"><i class="fa fa-times-circle"></i> {claim.currentState}</small>
 			</h3>
 		</div>
 		<div class="open-claim-body">
@@ -45,21 +35,27 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-danger reject"  data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Ablehnen</button>
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-body">
-		        <h3>Sind Sie sicher, dass Sie die Forderung #{claim.externalReference} ablehnen möchten? </h3>
-		      	<button type="submit" class="btn btn-success "><i class="fa fa-check"></i>Ja, Forderung ablehnen</button>
-		      	<button type="button" class="btn btn-danger " data-dismiss="modal">Nein</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+		<f:if condition="{claim.debtor} == {user.team}">
+			<button type="submit" class="btn btn-danger reject"  data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Ablehnen</button>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+			    	<div class="modal-content">
+			      		<div class="modal-body">
+			        		<h3>Sind Sie sicher, dass Sie die Forderung #{claim.externalReference} ablehnen möchten? </h3>
+			        		<f:form action="reject" method="post" arguments="{claim: claim}">
+								<button type="submit" class="btn btn-success " id="reject-claim"><i class="fa fa-check"></i>Ja, Forderung ablehnen</button>
+							</f:form>
+			      			<button type="button" class="btn btn-danger " data-dismiss="modal">Nein</button>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
 
-		<button type="submit" class="btn btn-success accept"><i class="fa fa-check"></i> Anerkennen</button>
+			<f:form action="accept" method="post" arguments="{claim: claim}">
+				<button type="submit" class="btn btn-success accept" id="accept-claim"><i class="fa fa-check"></i> Anerkennen</button>
+			</f:form>
+		</f:if>
 
 	</div>
 

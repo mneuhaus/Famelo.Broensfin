@@ -19,7 +19,7 @@ Feature: Import Claims
   @fixtures @email
   Scenario: Create new Claims
     Given I am logged in as "toni" "tester"
-    And I am on "/mein-konto/meine-transaktionen.html"
+    And I am on "/mein-konto/meine-forderungen.html"
     When I follow "Import"
     And I upload the file "Claims.csv"
     Then I should see "R2001"

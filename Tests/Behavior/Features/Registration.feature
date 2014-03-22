@@ -18,7 +18,7 @@ Feature: Registration
     And I fill in "form-objects_0_users_0_email" with "apocalip+toni@gmail.com"
     And I press "Absenden"
     Then I should be on page "/de/login.html"
-    And I should be see a flash message "Account has been created."
+    And I should see "Account has been created."
     And I should find a new Team "Toni GbR"
     And The team "Toni GbR" should have a subscription to the "Deposit" Plan
     And The team "Toni GbR" should have a "EUR" as default currency

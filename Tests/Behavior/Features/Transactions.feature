@@ -13,23 +13,22 @@ Feature: Transactions
   @fixtures
   Scenario: Login to customer area
     And I am not authenticated
-    When I go to "/login.html"
+    When I go to "/de/login.html"
     And I fill in "Username" with "toni"
     And I fill in "Password" with "tester"
     And I press "Login"
     Then I should be logged in
-    And I should be on page "/mein-konto.html"
+    And I should be on page "/de/mein-konto.html"
 
   @fixtures @email
   Scenario: Buy more credit
     Given I am logged in as "toni" "tester"
     And I have a balance of "5"
-    When I go to "/mein-konto.html"
-    And I follow "Buy more Points"
+    When I follow "Credits kaufen"
     And I select "10" from "--famelo_saas-transactions[amount]"
     And I select "Invoice" from "--famelo_saas-transactions[paymentGateway]"
-    And I press "Buy"
-    Then I should be on page "/mein-konto.html"
+    And I press "Jetzt kaufen"
+    Then I should be on page "/de/mein-konto.html"
     And I should be see a flash message "Payment successful"
     And I have a balance of "15"
     And the last transaction amount is "10"
