@@ -117,4 +117,6 @@ prototype(Famelo.Broensfin:ClaimRow) < prototype(TYPO3.Expose:RecordList.Table.R
 		action = 'index'
 		controller = 'Famelo\\Broensfin\\Controller\\Claim\\DetailController'
 	}
+	controllerLinks.20 >
+	controllerLinks.30 >
 }
