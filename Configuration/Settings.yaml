@@ -2,6 +2,19 @@ TYPO3:
   Flow:
     i18n:
       defaultLocale: de
+      translationFallbacks:
+        TYPO3.Form:
+          - Famelo.Broensfin
+          - TYPO3.Expose
+          - TYPO3.Form
+        TYPO3.Party:
+          - Famelo.Saas
+          - Famelo.Broensfin
+          - TYPO3.Party
+        TYPO3.Flow:
+          - Famelo.Saas
+          - Famelo.Broensfin
+          - TYPO3.Party
 
   TYPO3CR:
     contentDimensions:
@@ -15,3 +28,10 @@ TYPO3:
         de: [de_DE, de_ZZ, mul_ZZ]
         en: [en_ZZ, mul_ZZ]
       defaultLocaleIdentifier: de
+
+Famelo:
+  TranslationHelper:
+    autoCreateTranslations: true
+    autoCreationWhitelist:
+      - Famelo.Saas
+      - TYPO3.Expose

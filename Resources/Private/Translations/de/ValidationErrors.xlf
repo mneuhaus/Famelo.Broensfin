@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" source-language="en" target-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1221560718">
+        <source>This property is required.</source>
+        <target>Dieses Feld muss ausgefüllt werden.</target>
+      </trans-unit>
+      <trans-unit id="1221560718">
+        <source>This property is required.</source>
+        <target>Dieses Feld muss ausgefüllt werden.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -3,14 +3,14 @@
 <li class="dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 		<!-- <img src="Media/Flags/de_DE.png" width="20" /> -->
-		{f:translate(value: currentLocale, package: 'Famelo.Broensfin')}
+		{f:translate(id: currentLocale, value: currentLocale, package: 'Famelo.Broensfin')}
 	<b class="caret"></b>
 	</a>
 	<ul class="dropdown-menu">
 		<f:for each="{items}" as="item" key="locale">
 			<f:if condition="{0: locale} == {0: 'all'}">
 				<f:else>
-					<li><neos:link.node node="{item.node}">{f:translate(value: locale, package: 'Famelo.Broensfin')}</neos:link.node></li>
+					<li><neos:link.node node="{item.node}">{f:translate(id: currentLocale, value: locale, package: 'Famelo.Broensfin')}</neos:link.node></li>
 				</f:else>
 			</f:if>
 		</f:for>
