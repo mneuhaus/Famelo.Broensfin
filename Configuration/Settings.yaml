@@ -22,12 +22,27 @@ TYPO3:
         default: de_DE
 
   Neos:
-    localization:
-      localeMapping:
-        all: ~
-        de: [de_DE, de_ZZ, mul_ZZ]
-        en: [en_ZZ, mul_ZZ]
-      defaultLocaleIdentifier: de
+    contentDimensions:
+      dimensions:
+        'locales':
+          # The default preset to use if no URI segment was given when resolving locales in the routing
+          defaultPreset: 'de_DE'
+          label: 'Locales'
+          icon: 'icon-language'
+          presets:
+            'all': ~
+              # label: 'All languages'
+              # values: ['mul_ZZ']
+              # uriSegment: 'all'
+            'en_GB':
+              label: 'English'
+              values: ['en_GB', 'en_ZZ', 'mul_ZZ']
+              uriSegment: 'en'
+            'de_DE':
+              label: 'Deutsch'
+              values: ['de_DE', 'de_ZZ', 'mul_ZZ']
+              uriSegment: 'de'
+
 
 Famelo:
   TranslationHelper:
