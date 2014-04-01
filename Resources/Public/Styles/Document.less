@@ -1,0 +1,184 @@
+@import "../Components/bootstrap/less/variables.less";
+@import "../Components/bootstrap/less/mixins.less";
+@import "../Components/bootstrap/less/normalize.less";
+@import "../Components/bootstrap/less/type.less";
+@import "../Components/bootstrap/less/tables.less";
+
+@white:			#ffffff;
+@black: 		#2d3138;
+@grey: 			#808b9d;;
+@beige: 		#f3ece9;
+@red: 			#cb101b;
+@light-grey: 	#eeeeee;
+@gold: 			rgba(236, 193, 116, 0.7);
+@lightGrey: 	#f6f6f6;
+@footer: 		#eeeeee;
+@superlight: 	#b9bdc2;
+@BShover: 		#555555;
+
+body {
+	width: 710px;
+	padding: 30px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+
+.font (@fontsize:13px) {
+	font-size: @fontsize;
+	line-height: @fontsize + 3;
+	color: @black;
+	margin: 0px 0;
+	font-family: verdana;
+	font-weight: 400;
+	font-style: normal;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ultralight {
+	font-weight: 100;
+}
+.light {
+	font-weight: 300;
+}
+
+.regular {
+	font-weight: 400;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+td, p, address, a{
+	.font(15px);
+}
+
+th, strong {
+	.font(15px);
+	.bold;
+}
+
+th {
+	padding-right: 10px;
+}
+
+h1 {
+	.font(65px);
+	.light;
+	margin-bottom: 20px;
+}
+
+
+h2 {
+	.font(55px);
+	.ultralight;
+	margin-bottom: 20px;
+}
+
+h3 {
+	.font(25px);
+	.light;
+	margin-bottom: 20px;
+}
+
+
+h4, h5, h6 {
+	color: @grey;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		color:@grey;
+		text-decoration: none;
+	}
+}
+
+
+.container {
+  	.container-fixed();
+  	margin-left: 20px;
+	width: 640px;
+}
+
+.container-fluid {
+  .container-fixed();
+}
+
+.row {
+  .make-row();
+  padding:0 -20px;
+}
+
+.make-grid-columns();
+
+.make-grid(xs);
+
+.col-xs-6 {
+	width: 320px;
+}
+.col-xs-4 {
+	width: 29%;
+}
+
+.table-bordered {
+	td, th {
+		padding: 5px 10px;
+		border-bottom: 1px solid @table-border-color;
+		border-right: 1px solid @table-border-color;
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 20px;
+}
+
+address {
+	width: 310px;
+	height: 170px;
+	float: left;
+
+	.return {
+		.font(12px);
+		color: @grey;
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+
+.document-information {
+	width: 280px;
+	float: right;
+	margin-left: 30px;
+}
+
+header {
+	height: 110px;
+	margin-bottom: 20px;
+}
+
+.content {
+	clear: both;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.pull-right {
+	float: right;
+	border: 1px solid green;
+}
+
+.pull-left {
+	float: left;
+	border: 1px solid blue;
+}
+
+@page{
+    // background-image: url("http://dl.dropbox.com/u/314491/Screenshots/mfb2~jdzkdcc.png");
+    // background-image-resize: 6;
+    margin: 40px 40px 0 80px;
+}

@@ -7748,6 +7748,25 @@ figcaption p {
 .controls-debtor .form-group {
   margin-left: 0;
 }
+.document .recipient {
+  float: left;
+}
+.document .sender {
+  float: right;
+  width: 40%;
+}
+.document .row {
+  border: blue;
+  clear: both;
+  display: block;
+}
+.document .row > div {
+  background: red;
+}
+.document .col-xs-6 {
+  background: red !important;
+  width: 300px;
+}
 /*
 	 	written by: Sven Steinker and Marc Neuhaus
 		Web: http://svensteinker.de , Mail: sven{at}svensteinker.de
