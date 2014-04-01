@@ -28,8 +28,8 @@ Feature: Registration
     Given I imported the site "Famelo.Broensfin"
     And I am not authenticated
     When I go to "/de/login.html"
-    And I fill in "Username" with "toni"
-    And I fill in "Password" with "tester"
+    And I fill in "username" with "toni"
+    And I fill in "password" with "tester"
     And I press "Login"
     And I wait 5 secs
     Then I should be logged in

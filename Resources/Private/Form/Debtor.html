@@ -2,12 +2,21 @@
 <f:section name="field">
 	<div class="row controls-debtor">
 		<div class="col-sm-4">
-			<f:form.select property="{element.identifier}.existing" id="{element.uniqueIdentifier}" options="{element.properties.options}" class="xlarge chosen form-control" errorClass="{element.properties.elementErrorClassAttribute}" />
+			<f:form.select property="{element.identifier}.existing" id="{element.uniqueIdentifier}" options="{element.properties.options}" class="xlarge form-control" errorClass="{element.properties.elementErrorClassAttribute}" />
 		</div>
 		<div class="col-sm-8 invite-form" style="display: none;">
 			<h4>Invite</h4>
 			<div class="form-group">
 				<f:form.textfield property="{element.identifier}.company" placeholder="Company Name" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.street" placeholder="Street" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.city" placeholder="City" class="form-control" />
+			</div>
+			<div class="form-group">
+				<f:form.textfield property="{element.identifier}.zip" placeholder="ZIP" class="form-control" />
 			</div>
 			<div class="form-group">
 				<f:form.textfield property="{element.identifier}.firstname" placeholder="Firstname" class="form-control" />
@@ -23,11 +32,20 @@
 
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
-			jQuery('#form_objects_0_debtor_chzn input').keyup(function(){
-				if (jQuery('#form_objects_0_debtor_chzn .no-results').length > 0) {
-					jQuery('.invite-form').show();
-				} else {
+			$('#form-objects_0_debtor').selectize({
+			    create: false,
+			    render: {
+			        option: function(item, escape) {
+			        	return '<div>' + item.text.replace(/,/g, '<br />') + '</div>';
+			        }
+			    }
+			});
+
+			jQuery('.selectize-control input').keyup(function(){
+				if (jQuery('.selectize-dropdown-content div').length > 0) {
 					jQuery('.invite-form').hide();
+				} else {
+					jQuery('.invite-form').show();
 				}
 			})
 		});

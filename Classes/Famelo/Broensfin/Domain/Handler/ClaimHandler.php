@@ -14,6 +14,9 @@ class ClaimHandler {
 	 * @Flow\Slot(class="Famelo\Broensfin\Domain\Model\Claim", signal="created")
 	 */
 	public function created($claim) {
+		if ($claim->getDebtor()->getNotify() === FALSE) {
+			return;
+		}
 		$mail = new \Famelo\Messaging\Message();
 		$mail->setMessage('Famelo.Broensfin:Claim/Created')
 			 ->assign('claim', $claim)

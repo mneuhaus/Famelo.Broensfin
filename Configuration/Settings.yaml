@@ -42,11 +42,39 @@ TYPO3:
               label: 'Deutsch'
               values: ['de_DE', 'de_ZZ', 'mul_ZZ']
               uriSegment: 'de'
-
+    modules:
+      management:
+        submodules:
+          customers:
+            label: 'Customers'
+            controller: '\TYPO3\Neos\Expose\Controller\ModuleController'
+            description: 'Broensfin Customers'
+            # icon: 'icon-th-large'
+            resource: 'TYPO3_Neos_Backend_Module_Management_Workspaces'
+            exposeController: 'List'
+            exposeArguments:
+              type: \Famelo\Saas\Domain\Model\User
+          claims:
+            label: 'Forderungen'
+            controller: '\TYPO3\Neos\Expose\Controller\ModuleController'
+            # icon: 'icon-th-large'
+            resource: 'TYPO3_Neos_Backend_Module_Management_Workspaces'
+            exposeController: 'List'
+            exposeArguments:
+              type: \Famelo\Broensfin\Domain\Model\Claim
+          transactions:
+            label: 'Transaktionen'
+            controller: '\TYPO3\Neos\Expose\Controller\ModuleController'
+            # icon: 'icon-th-large'
+            resource: 'TYPO3_Neos_Backend_Module_Management_Workspaces'
+            exposeController: 'List'
+            exposeArguments:
+              type: \Famelo\Saas\Domain\Model\Transaction
 
 Famelo:
   TranslationHelper:
     autoCreateTranslations: true
     autoCreationWhitelist:
       - Famelo.Saas
+      - Famelo.Broensfin
       - TYPO3.Expose

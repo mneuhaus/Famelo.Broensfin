@@ -11,24 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="{a:uri(path: 'Components/font-awesome/css/font-awesome.css', package: 'Famelo.Broensfin')}" />
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,300italic' rel='stylesheet' type='text/css'>
 	</f:section>
-	<f:section name="scripts">
-		<script type="text/javascript">
-		document.baseUrl = "{f:uri.resource(path: '', package: 'Famelo.Broensfin')}";
-		</script>
-		<script type="text/javascript" src="{f:uri.resource(path: 'Components/jquery/jquery.js', package: 'Famelo.Broensfin')}"></script>
-		<script type="text/javascript" src="{f:uri.resource(path: 'Components/bootstrap/dist/js/bootstrap.min.js', package: 'Famelo.Broensfin')}"></script>
-		<script type="text/javascript" src="{f:uri.resource(path: 'Scripts/Main.js', package: 'Famelo.Broensfin')}"></script>
-
-
-		<script src="{f:uri.resource(path: 'Scripts/Main.min.js', package: 'TYPO3.Expose')}"></script>
-
-
-		<link rel="stylesheet" href="{f:uri.resource(path: 'Components/chosen/chosen/chosen.css', package: 'TYPO3.Expose')}" />
-		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Main.css', package: 'TYPO3.Expose')}" />
-
-	</f:section>
 </head>
-<body>
+<body>{f:uri.resource(path: 'Components/selectize.js/dist/js/selectize.js', package: 'Famelo.Broensfin')}
 <f:section name="body">
 	<div class="navbar navbar-default navbar-small navbar-static-top">
 		<div class="container">

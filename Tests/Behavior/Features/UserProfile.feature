@@ -14,3 +14,12 @@ Feature: UserProfile
     When I am logged in as "toni" "tester"
     And I am on "/mein-konto/meine-profil.html"
     Then I should see "My Profile"
+
+  @fixtures
+  Scenario: Change password
+    Given I am logged in as "toni" "tester"
+    And I am on "/mein-konto/change-password.html"
+    When I fill in "form-objects_0_users_0_accounts_0_credentialsSource" with "newPassword"
+    And I fill in "form-objects_0_users_0_accounts_0_credentialsSource-confirmation" with "newPassword"
+    And I press "Absenden"
+    Then I should be able to log in with "toni" "newPassword"

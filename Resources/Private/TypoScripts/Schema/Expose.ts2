@@ -1,0 +1,6 @@
+
+prototype(TYPO3.Expose:RecordList) < prototype(TYPO3.TypoScript:Template) {
+	topRegion = TYPO3.TypoScript:Array {
+		controllerLinks.@process.1 = ${'<div class="pull-left">' + value + '</div>'}
+	}
+}

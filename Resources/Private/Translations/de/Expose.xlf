@@ -58,6 +58,22 @@
         <source>deletedAt</source>
         <target>Gel&#xF6;scht am</target>
       </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.status.label">
+        <source>State</source>
+        <target>State</target>
+      </trans-unit>
+      <trans-unit id="accepted">
+        <source>accepted</source>
+        <target>accepted</target>
+      </trans-unit>
+      <trans-unit id="pending">
+        <source>pending</source>
+        <target>pending</target>
+      </trans-unit>
+      <trans-unit id="rejected">
+        <source>rejected</source>
+        <target>rejected</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -1,4 +1,12 @@
 prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(TYPO3.Expose:Schema) {
+	factory = '\\Famelo\\Broensfin\\Domain\\Factory\\ClaimFactory'
+	searchPaths {
+		1 = "externalReference"
+		2 = "debtor.name"
+		3 = "debtor.city"
+		4 = "debtor.zip"
+		5 = "debtor.street"
+	}
 	properties {
 		reference.ignore = true
 		states.ignore = true
@@ -81,6 +89,7 @@ prototype(Famelo.Broensfin:CreditorClaims) {
 
 	prototype(TYPO3.Expose:RecordList) {
 		topRegion {
+			search = TYPO3.Expose:SearchPartial
 			controllerLinks {
 				# 20 = TYPO3.Expose:ControllerLink
 				# 20.label = '<i class="fa fa-upload"></i>'

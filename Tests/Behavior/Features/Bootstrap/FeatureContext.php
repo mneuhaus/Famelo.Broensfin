@@ -173,8 +173,8 @@ class FeatureContext extends MinkContext {
         $this->currentTeam = $account->getParty()->getTeam();
         $this->visit('/logout.html');
         $this->visit('/de/login.html');
-        $this->fillField('Username', $username);
-        $this->fillField('Password', $password);
+        $this->fillField('username', $username);
+        $this->fillField('password', $password);
         $this->pressButton('Login');
     }
 

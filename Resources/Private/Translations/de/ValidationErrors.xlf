@@ -4,11 +4,15 @@
     <body>
       <trans-unit id="1221560718">
         <source>This property is required.</source>
-        <target>Dieses Feld muss ausgefüllt werden.</target>
+        <target>Dieses Feld muss ausgef&#xFC;llt werden.</target>
       </trans-unit>
       <trans-unit id="1221560718">
         <source>This property is required.</source>
-        <target>Dieses Feld muss ausgefüllt werden.</target>
+        <target>Dieses Feld muss ausgef&#xFC;llt werden.</target>
+      </trans-unit>
+      <trans-unit id="1241099149">
+        <source>Object expected, string given.</source>
+        <target>Object expected, string given.</target>
       </trans-unit>
     </body>
   </file>

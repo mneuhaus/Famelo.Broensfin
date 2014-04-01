@@ -42,6 +42,9 @@ class Debtor extends OptionsFormElement {
 			$this->persistenceManager->add($user);
 			$team = new Team();
 			$team->setName($elementValue['company']);
+			$team->setStreet($elementValue['street']);
+			$team->setCity($elementValue['city']);
+			$team->setZip($elementValue['zip']);
 			$team->setUsers(array($user));
 			$this->persistenceManager->add($team);
 			$this->persistenceManager->persistAll();

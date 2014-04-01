@@ -87,6 +87,7 @@ class Claim {
 		if ($securityContext !== NULL) {
 			$this->currency = $securityContext->getParty()->getTeam()->getCurrency();
 		}
+		$this->creationDate = new \DateTime();
 	}
 
 	public function __toString() {
