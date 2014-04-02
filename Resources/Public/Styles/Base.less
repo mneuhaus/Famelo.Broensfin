@@ -25,7 +25,7 @@
 //font defaults
 	.font (@fontsize:13px) {
 		font-size: @fontsize;
-		line-height: @fontsize + 3;
+		line-height: @fontsize + 10;
 		color:@grey;
 		margin: 0px 0;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -155,10 +155,10 @@
 			color: @BShover;
 		}
 		.navbar-nav > li > a {
-			padding: 8px 15px;
+			padding: 8px 12px;
 		}
 		.mainnav {
-			margin-left: 40px;
+			margin-left: 30px;
 		}
 		.navbar-collapse {
 			padding-top: 18px;
@@ -365,6 +365,57 @@
 	.controls-debtor .form-group {
 		margin-left: 0;
 	}
+
+
+	section[role="service"] {
+
+		h2 {
+			text-align: center;
+			font-size: 45px;
+			line-height: 55px;
+		}
+
+		a {
+			margin-top: 20px;
+			display: block;
+			text-align: center;
+		}
+	}
+
+section[role="aufgabenstellung"] {
+
+	h3, h4 {
+		color: @black;
+	}
+
+	h4 {
+		margin-top: 50px;
+	}
+
+	a {
+		margin-top: 20px;
+		display: block;
+		text-align: center;
+	}
+}
+
+ol {
+	margin-bottom: 50px;
+	color:@grey;
+
+	li {
+		ol {
+			list-style-type: lower-alpha;
+		}
+	}
+}
+
+ul {
+	list-style: none;
+}
+.margin-bottom {
+	margin-bottom: 50px;
+}
 
 
 

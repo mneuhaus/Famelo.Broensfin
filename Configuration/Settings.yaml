@@ -25,6 +25,10 @@ TYPO3:
         default: de_DE
 
   Neos:
+    userInterface:
+      # should minified JavaScript be loaded? For developing the TYPO3 Neos
+      # Content Module, this should be set to FALSE.
+      loadMinifiedJavascript: FALSE
     contentDimensions:
       dimensions:
         'locales':
