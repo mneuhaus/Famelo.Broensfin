@@ -91,12 +91,19 @@ prototype(Famelo.Broensfin:CreditorClaims) {
 		topRegion {
 			search = TYPO3.Expose:SearchPartial
 			controllerLinks {
-				# 20 = TYPO3.Expose:ControllerLink
-				# 20.label = '<i class="fa fa-upload"></i>'
-				# 20.action = 'index'
-				# 20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
-				# 20.arguments.type = ${type}
-				# 20.title = 'Import'
+				20 = TYPO3.Expose:ControllerLink
+				20.label = '<i class="fa fa-upload"></i>'
+				20.action = 'index'
+				20.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ImportController'
+				20.arguments.type = ${type}
+				20.title = 'Import'
+
+				30 = TYPO3.Expose:ControllerLink
+				30.label = '<i class="fa fa-download"></i>'
+				30.action = 'index'
+				30.controller = 'Famelo\\Broensfin\\Controller\\Claim\\ExportController'
+				30.arguments.type = ${type}
+				30.title = 'Export'
 			}
 		}
 	}

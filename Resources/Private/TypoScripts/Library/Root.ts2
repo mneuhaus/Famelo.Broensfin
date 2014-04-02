@@ -66,6 +66,15 @@ sidebar.body {
     templatePath = 'resource://Famelo.Broensfin/Private/Templates/Page/Sidebar.html'
 }
 
+management < page
+management.body {
+    templatePath = 'resource://Famelo.Broensfin/Private/Templates/Page/Management.html'
+}
+managment < page
+managment.body {
+    templatePath = 'resource://Famelo.Broensfin/Private/Templates/Page/Management.html'
+}
+
 
 print < page
 print {

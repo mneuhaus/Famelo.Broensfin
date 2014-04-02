@@ -1,21 +1,53 @@
+{namespace s=Famelo\Saas\ViewHelpers}
+
 <f:if condition="{error}">
 	<f:then>
 		{error}
 	</f:then>
 	<f:else>
-		<table class="table table-bordered table-striped">
-			<tr>
-				<f:for each="{columns}" as="column">
-					<th>{column}</th>
+		<f:form action="import">
+			<f:form.hidden name="file" value="{file}" />
+			<table class="table table-bordered table-striped">
+				<tr>
+					<th>Schuldner</th>
+					<th>Referenz</th>
+					<th>Betrag</th>
+				</tr>
+				<f:for each="{rows}" as="row" key="index">
+					<tr>
+						<td>
+							<f:if condition="{0: row.status} == {0: 'one'}">
+								<p class="text-success">{row.team}</p>
+								<f:form.hidden name="teams[{index}]" value="{row.team.identifier}" />
+							</f:if>
+							<f:if condition="{0: row.status} == {0: 'none'}">
+								<span class="text-danger">Der Schuldner "{row.debtor}" konnte nicht gefunden werden.</span>
+							</f:if>
+							<f:if condition="{0: row.status} == {0: 'multiple'}">
+								<span class="text-warning">Es wurden mehrere Schuldner mit dem Namen "{row.debtor}" gefunden:</span>
+								<ul>
+								<f:for each="{row.teams}" as="team">
+									<li>
+										<label>
+											<f:form.radio name="teams[{index}]" value="{team.identifier}" />
+											{team}
+										</label>
+									</li>
+								</f:for>
+								</ul>
+							</f:if>
+						</td>
+						<td>{row.reference}</td>
+						<td>{row.amount -> s:format.currency(currency: row.currency)}</td>
+					</tr>
 				</f:for>
-			</tr>
-		<f:for each="{rows}" as="row">
-			<tr>
-				<f:for each="{row}" as="column">
-					<td>{column}</td>
-				</f:for>
-			</tr>
-		</f:for>
-		</table>
+			</table>
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-default pull-right">Importieren</button>
+				</div>
+			</div>
+		</f:form>
 	</f:else>
 </f:if>

@@ -8,7 +8,8 @@
 		<td>{item.creditor}</td>
 		<td>{item.debtor}</td>
 		<td>{item.externalReference}</td>
-		<td>{item.amount -> s:format.currency(currency: item.currency)}</td>
+		<td>{item.amount -> s:format.currency(currencySign: '')}</td>
+		<td>{item.currency}</td>
 		<td>{item.dueDate -> f:format.date(forceLocale: true, localeFormatType: 'date')}</td>
 		<td>
 			{f:translate(id: item.currentState, value: item.currentState, source: 'Expose', package: 'Famelo.Broensfin')}

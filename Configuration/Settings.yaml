@@ -3,6 +3,9 @@ TYPO3:
     i18n:
       defaultLocale: de
       translationFallbacks:
+        TYPO3.Expose:
+          - Famelo.Broensfin
+          - TYPO3.Expose
         TYPO3.Form:
           - Famelo.Broensfin
           - TYPO3.Expose

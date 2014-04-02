@@ -4,13 +4,14 @@
 
 resources:
   methods:
-    Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import|Creditor|New)Controller->.*Action())'
+    Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import|Export|Creditor|New)Controller->.*Action())'
     Famelo_Broensfin_CreditorPlugin: 'method(Famelo\Broensfin\Controller\CreditorController->.*Action())'
 
   expose:
     TYPO3_Expose_Claim: 'isType("Famelo\Broensfin\Domain\Model\Claim")'
     Famelo_Saas_Registration: 'isTypoScriptPath("Famelo.Saas:Registration")'
     Famelo_Saas_Profile: 'isTypoScriptPath("Famelo.Saas:Profile")'
+    Famelo_Saas_Invoices: 'isTypoScriptPath("Famelo.Broensfin:Invoices")'
 
 acls:
   Everybody:
@@ -27,3 +28,7 @@ acls:
   'Famelo.Saas:Customer':
     expose:
       TYPO3_Expose_Claim: GRANT
+
+  'Famelo.Saas:Administrator':
+    expose:
+      Famelo_Saas_Invoices: GRANT

@@ -15,6 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Famelo\Broensfin\Domain\Model\Claim;
 use Famelo\Saas\Csv\Reader;
 use Famelo\Saas\Domain\Model\Transaction;
+use League\Csv\Writer;
 use TYPO3\Expose\Controller\ExposeControllerInterface;
 use TYPO3\Flow\Annotations as Flow;
 use TYPO3\Flow\Error\Message;
@@ -23,7 +24,7 @@ use TYPO3\Flow\Error\Message;
  * Action to create a new Being
  *
  */
-class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController implements ExposeControllerInterface {
+class ExportController extends \TYPO3\Flow\Mvc\Controller\ActionController implements ExposeControllerInterface {
 
 	/**
      * @Flow\Inject
@@ -32,10 +33,10 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
     protected $resourceManager;
 
     /**
-     * @var \Famelo\Saas\Domain\Repository\TeamRepository
+     * @var \Famelo\Broensfin\Domain\Repository\ClaimRepository
      * @Flow\Inject
      */
-    protected $teamRepository;
+    protected $claimRepository;
 
     /**
 	 * @var \Famelo\Saas\Domain\Service\TransactionService
@@ -53,16 +54,42 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 	 * Create a new object
 	 *
 	 * @param string $type
-	 * @param \Doctrine\Common\Collections\Collection $objects
 	 * @return void
 	 */
-	public function indexAction($type, $objects = NULL) {
-		if ($objects === NULL) {
-			$objects = array(new $type());
+	public function indexAction($type) {
+		$query = $this->claimRepository->createCreditorQuery();
+
+		$userAgent = \parse_user_agent();
+
+		$csv = new Writer(new \SplTempFileObject);
+		$csv->setDelimiter(';');
+		$csv->setNullHandlingMode(Writer::NULL_AS_EMPTY);
+		$csv->insertOne(array(
+			'debtor' => 'Debtor',
+			'street' => 'Street',
+			'city' => 'City',
+			'zip' => 'Zip',
+			'reference' => 'Reference',
+			'currency' => 'Currency',
+			'amount' => 'Amount',
+			'dueDate' => 'Due Date',
+			'creationDate' => 'Creation Date'
+		));
+		foreach ($query->execute() as $claim) {
+			$csv->insertOne(array(
+				$claim->getDebtor()->getName(),
+				$claim->getDebtor()->getStreet(),
+				$claim->getDebtor()->getCity(),
+				$claim->getDebtor()->getZip(),
+				$claim->getExternalReference(),
+				$claim->getCurrency(),
+				$claim->getAmount(),
+				$claim->getDueDate()->format('d.m.Y'),
+				$claim->getCreationDate()->format('d.m.Y')
+			));
 		}
-		$this->view->assign('className', $type);
-		$this->view->assign('objects', $objects);
-		$this->view->assign('callbackAction', 'create');
+		$csv->output('Forderungen - ' . date('d.m.Y') . ' -  UTF-8.csv');
+		die;
 	}
 
     /**

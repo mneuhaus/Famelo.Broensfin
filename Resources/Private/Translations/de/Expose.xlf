@@ -60,19 +60,19 @@
       </trans-unit>
       <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.status.label">
         <source>State</source>
-        <target>State</target>
+        <target>Status</target>
       </trans-unit>
       <trans-unit id="accepted">
         <source>accepted</source>
-        <target>accepted</target>
+        <target>Akzeptiert</target>
       </trans-unit>
       <trans-unit id="pending">
         <source>pending</source>
-        <target>pending</target>
+        <target>Ausstehend</target>
       </trans-unit>
       <trans-unit id="rejected">
         <source>rejected</source>
-        <target>rejected</target>
+        <target>Abgelehnt</target>
       </trans-unit>
     </body>
   </file>

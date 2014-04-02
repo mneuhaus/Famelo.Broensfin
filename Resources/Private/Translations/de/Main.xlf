@@ -30,6 +30,18 @@
         <source>rejected</source>
         <target>abgelehnt</target>
       </trans-unit>
+      <trans-unit id="transaction.state.paid">
+        <source>paid</source>
+        <target>Bezahlt</target>
+      </trans-unit>
+      <trans-unit id="transaction.state.open">
+        <source>open</source>
+        <target>Offen</target>
+      </trans-unit>
+      <trans-unit id="transaction.state.canceled">
+        <source>canceled</source>
+        <target>Abgebrochen</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

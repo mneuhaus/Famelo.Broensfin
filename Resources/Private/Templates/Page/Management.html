@@ -35,43 +35,12 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3">
-				<div class="user-center">
-					<s:user>
-						<h3>Willkommen <br />{user}</h3>
-						<hr />
-						<s:saas>
-						<div class="account-info">
-							<h5 class="">Meine Übersicht</h5>
-
-							<!-- <div class="userbar-info">
-								<p class="label">Forderungen / Verbindlichkeiten</p>
-								<p>Forderungen:<a href="#" title="Offene Forderungen: 10" class="value"><strong>{transactionService.balance -> f:count()}</strong></a><br />
-								Verbindlichkeiten:<span class="value"><strong>0</strong></span></p>
-							</div> -->
-
-							<div class="userbar-info">
-								<p class="label">Credits</p>
-								<p>Credits:<span class="value balance" data-balance="{transactionService.balance}"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
-								Balance in €:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>
-							</div>
-						</div>
-						<hr />
-						<p class="clearfix">
-							<div clas="pull-right">
-								<small><a href="http://broensfin.flow/de/mein-konto/einstellungen.html" title="Einstellungen">Einstellungen</a></small>
-								-
-								<small><a href="{s:target(name: 'payment')}" title="Credits kaufen">Credits kaufen</a></small>
-							</div>
-						</p>
-						</s:saas>
-					</s:user>
-				</div>
-			</div>
-			<div class="col-sm-9">
-				<nav class="submenu">
+			<div class="col-sm-3 col-sidebar">
+				<nav>
 					{parts.submenu -> f:format.raw()}
 				</nav>
+			</div>
+			<div class="col-sm-9">
 				{content.main -> f:format.raw()}
 			</div>
 		</div>

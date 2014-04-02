@@ -7767,6 +7767,13 @@ figcaption p {
   background: red !important;
   width: 300px;
 }
+.form-search {
+  width: 300px;
+  margin-right: 20px;
+}
+.input-group .btn {
+  margin-top: 0;
+}
 /*
 	 	written by: Sven Steinker and Marc Neuhaus
 		Web: http://svensteinker.de , Mail: sven{at}svensteinker.de

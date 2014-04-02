@@ -9,6 +9,8 @@
                 label: 'Default'
               'sidebar':
                 label: 'With sidebar'
+              'management':
+                label: 'Verwaltung'
     subpageLayout:
       ui:
         inspector:
@@ -18,6 +20,8 @@
                 label: 'Default'
               'sidebar':
                 label: 'With sidebar'
+              'management':
+                label: 'Verwaltung'
 
 'TYPO3.Neos.NodeTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.NodeTypes:Column']
