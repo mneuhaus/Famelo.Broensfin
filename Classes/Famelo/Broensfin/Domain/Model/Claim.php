@@ -14,6 +14,12 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Claim {
 	/**
+	 * @var \DateTime
+	 * @Gedmo\Timestampable(on="create")
+	 */
+	protected $created;
+
+	/**
 	 * @var \Famelo\Saas\Domain\Model\Team
 	 * @ORM\ManyToOne
 	 */
@@ -89,6 +95,10 @@ class Claim {
 		}
 		$this->creationDate = new \DateTime();
 	}
+
+    public function getIdentifier() {
+        return $this->Persistence_Object_Identifier;
+    }
 
 	public function __toString() {
 		return $this->externalReference;

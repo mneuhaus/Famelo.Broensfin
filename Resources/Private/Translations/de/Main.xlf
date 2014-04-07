@@ -42,6 +42,22 @@
         <source>canceled</source>
         <target>Abgebrochen</target>
       </trans-unit>
+      <trans-unit id="balance-history">
+        <source>Balance history</source>
+        <target>Balance history</target>
+      </trans-unit>
+      <trans-unit id="balance.date">
+        <source>Date</source>
+        <target>Datum</target>
+      </trans-unit>
+      <trans-unit id="balance.note">
+        <source>Note</source>
+        <target>Notiz</target>
+      </trans-unit>
+      <trans-unit id="balance.invoice">
+        <source>Invoice</source>
+        <target>Rechnung</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

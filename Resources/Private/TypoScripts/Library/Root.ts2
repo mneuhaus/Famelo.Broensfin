@@ -28,7 +28,7 @@ page = Page {
 			menu = Menu {
 				entryLevel = 1
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/Menu.html'
-				maximumLevels = 1
+				maximumLevels = 2
 				@cache.mode = 'uncached'
 			}
 			submenu = Menu {
@@ -128,4 +128,14 @@ prototype(TYPO3.Neos:Plugin) {
 prototype(Famelo.Broensfin:Creditor) < prototype(TYPO3.Neos:Plugin) {
 	package = 'Famelo.Broensfin'
 	controller = 'Creditor'
+}
+
+prototype(Famelo.Broensfin:ClaimOverview) < prototype(TYPO3.Neos:Plugin) {
+	package = 'Famelo.Broensfin'
+	controller = 'ClaimOverview'
+}
+
+prototype(Famelo.Broensfin:Contact) < prototype(TYPO3.Neos:Plugin) {
+	package = 'Famelo.Broensfin'
+	controller = 'Contact'
 }

@@ -74,6 +74,10 @@
         <source>rejected</source>
         <target>Abgelehnt</target>
       </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.created.label">
+        <source>created</source>
+        <target>created</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

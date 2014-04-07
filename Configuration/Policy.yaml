@@ -1,34 +1,30 @@
-#                                                                        #
-# Security policy for the TYPO3.NeosDemoTypo3Org package                 #
-#                                                                        #
-
 resources:
   methods:
     Famelo_Broensfin_PluginAccess: 'method(Famelo\Broensfin\Controller\Claim\(Detail|Import|Export|Creditor|New)Controller->.*Action())'
     Famelo_Broensfin_CreditorPlugin: 'method(Famelo\Broensfin\Controller\CreditorController->.*Action())'
-
+    Famelo_Broensfin_ClaimOverviewPlugin: 'method(Famelo\Broensfin\Controller\ClaimOverviewController->.*Action())'
+    Famelo_Broensfin_ContactPlugin: 'method(Famelo\Broensfin\Controller\ContactController->.*Action())'
   expose:
     TYPO3_Expose_Claim: 'isType("Famelo\Broensfin\Domain\Model\Claim")'
     Famelo_Saas_Registration: 'isTypoScriptPath("Famelo.Saas:Registration")'
     Famelo_Saas_Profile: 'isTypoScriptPath("Famelo.Saas:Profile")'
     Famelo_Saas_Invoices: 'isTypoScriptPath("Famelo.Broensfin:Invoices")'
-
 acls:
   Everybody:
     methods:
       TYPO3_Expose_PluginAccess: ABSTAIN
+      Famelo_Broensfin_ContactPlugin: GRANT
     expose:
       Famelo_Saas_Registration: GRANT
       Famelo_Saas_Profile: GRANT
-
   'TYPO3.Neos:Administrator':
     methods:
       TYPO3_Expose_PluginAccess: GRANT
-
   'Famelo.Saas:Customer':
+    methods:
+      Famelo_Broensfin_ClaimOverviewPlugin: GRANT
     expose:
       TYPO3_Expose_Claim: GRANT
-
   'Famelo.Saas:Administrator':
     expose:
       Famelo_Saas_Invoices: GRANT

@@ -65,7 +65,7 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 			return TRUE;
 		}
 		if ($node->getNodeType()->isOfType('TYPO3.Neos.NodeTypes:Page')) {
-			if ($this->getPageLayout($node) === 'sidebar') {
+			if ($this->getPageLayout($node) === 'sidebar' || $this->getPageLayout($node) === 'management') {
 				return TRUE;
 			}
 			return FALSE;

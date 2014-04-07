@@ -1,4 +1,4 @@
-{namespace cm=TYPO3\Expose\ViewHelpers}
+{namespace e=TYPO3\Expose\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 
 <!-- List/Table.html -->
@@ -7,13 +7,37 @@
 		<table class="table table-striped t3-expose-table" >
 			<thead>
 				<tr>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.creditor.label', value: 'Creditor', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.debtor.label', value: 'Debtor', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.reference.label', value: 'Reference', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.amount.label', value: 'Amount', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.currency.label', value: 'Currency', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.dueDate.label', value: 'Due date', source: 'Expose', package: 'Famelo.Broensfin')}</th>
-					<th>{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.status.label', value: 'State', source: 'Expose', package: 'Famelo.Broensfin')}</th>
+					<th>
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.creditor.label', value: 'Creditor', source: 'Expose', package: 'Famelo.Broensfin')}
+					</th>
+					<th>
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.debtor.label', value: 'Debtor', source: 'Expose', package: 'Famelo.Broensfin')}
+					</th>
+					<th>
+						<e:link.sort property="externalReference">
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.reference.label', value: 'Reference', source: 'Expose', package: 'Famelo.Broensfin')}
+						</e:link.sort>
+					</th>
+					<th>
+						<e:link.sort property="amount">
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.amount.label', value: 'Amount', source: 'Expose', package: 'Famelo.Broensfin')}
+						</e:link.sort>
+					</th>
+					<th>
+						<e:link.sort property="currency">
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.currency.label', value: 'Currency', source: 'Expose', package: 'Famelo.Broensfin')}
+						</e:link.sort>
+					</th>
+					<th>
+						<e:link.sort property="dueDate">
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.dueDate.label', value: 'Due date', source: 'Expose', package: 'Famelo.Broensfin')}
+						</e:link.sort>
+					</th>
+					<th>
+						<e:link.sort property="status">
+						{f:translate(id: 'Famelo.Broensfin.Domain.Model.Claim.status.label', value: 'State', source: 'Expose', package: 'Famelo.Broensfin')}
+						</e:link.sort>
+					</th>
 					<th></th>
 				</tr>
 			</thead>

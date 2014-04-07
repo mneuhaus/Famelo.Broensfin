@@ -1,0 +1,89 @@
+{namespace s=Famelo\Saas\ViewHelpers}
+{namespace b=Famelo\Bootstrap\ViewHelpers}
+{namespace c=Famelo\Common\ViewHelpers}
+
+
+<b:flashMessages />
+
+<h2>Dashboard</h2>
+
+<div class="row">
+	<div class="col-xs-6">
+		<h4>Meine Forderungen</h4>
+		<f:for each="{stats.claims}" as="stat" key="name">
+			<f:translate id="status.{name}" package="Famelo.Broensfin">{name}</f:translate>: {stat} <br />
+		</f:for>
+	</div>
+	<div class="col-xs-6">
+		<h4>Meine Verbindlichkeiten</h4>
+		<f:for each="{stats.debts}" as="stat" key="name">
+			<f:translate id="status.{name}" package="Famelo.Broensfin">{name}</f:translate>: {stat} <br />
+		</f:for>
+	</div>
+</div>
+
+<hr />
+<div class="transactions">
+	<h3><f:translate id="balance-history">Balance history</f:translate></h3>
+	<c:query.paginate objects="{claims}" as="paginatedClaims">
+		<table class="table table-striped">
+			<thead>
+			      <tr>
+			        <th>
+			        	<f:translate id="balance.date">Date</f:translate>
+			        </th>
+			        <th>
+			        	<f:translate>Reference</f:translate>
+			        </th>
+			        <th>
+			        	<f:translate>Debtor</f:translate>
+			        </th>
+			        <th>
+			        	<f:translate>Amount</f:translate>
+			        </th>
+			        <th>
+			        	<f:translate>Currency</f:translate>
+			        </th>
+			        <th>
+			        	<f:translate>Status</f:translate>
+			        </th>
+			      </tr>
+			    </thead>
+			<f:for each="{paginatedClaims}" as="claim" iteration="iteration">
+				<tr{f:if(condition: iteration.isFirst, then: ' class="first"')}>
+					<td>{claim.created -> f:format.date(localeFormatType: 'date', forceLocale: true)}</td>
+					<td>
+						<f:if condition="{user.team} == {claim.debtor}">
+							<f:then>
+								<a href="{s:target(name: 'debtDetail')}{claim.identifier}">
+								{claim.externalReference}
+								</a>
+							</f:then>
+							<f:else>
+								<a href="{s:target(name: 'claimDetail')}{claim.identifier}">
+								{claim.externalReference}
+								</a>
+							</f:else>
+						</f:if>
+					</td>
+					<td>
+						<strong>{claim.debtor.name}</strong><br />
+						{claim.debtor.street}<br />
+						{claim.debtor.zip} {claim.debtor.city}
+					</td>
+					<td>{claim.amount -> s:format.currency()}</td>
+					<td>{claim.currency}</td>
+					<td>{f:translate(id: claim.currentState, value: claim.currentState, source: 'Expose', package: 'Famelo.Broensfin')}</td>
+					<td>
+						<f:if condition="{transaction.invoiceNumber}">
+							<f:link.action action="index" controller="Invoice" package="Famelo.Saas" arguments="{transaction: transaction}">
+								 <f:translate>Download invoice</f:translate>
+							</f:link.action>
+						</f:if>
+					</td>
+				</tr>
+			</f:for>
+		</table>
+		<f:render partial="Pagination" arguments="{action: 'index', pagination: pagination}" />
+	</c:query.paginate>
+</div>

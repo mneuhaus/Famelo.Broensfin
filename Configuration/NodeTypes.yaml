@@ -103,3 +103,16 @@
     - 'TYPO3.Neos:Plugin'
   ui:
     label: 'Creditor Plugin'
+
+'Famelo.Broensfin:ClaimOverview':
+  superTypes:
+    - 'TYPO3.Neos:Plugin'
+  ui:
+    label: 'Claim Overview'
+
+
+'Famelo.Broensfin:Contact':
+  superTypes:
+    - 'TYPO3.Neos:Plugin'
+  ui:
+    label: 'Contact Form'

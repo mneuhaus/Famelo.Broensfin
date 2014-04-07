@@ -19,6 +19,11 @@ TYPO3:
           - Famelo.Broensfin
           - TYPO3.Party
 
+  # persistence:
+    # doctrine:
+      # filters:
+        # 'my-filter-name': 'Acme\Demo\Filters\MyFilter'
+
   TYPO3CR:
     contentDimensions:
       locales:
