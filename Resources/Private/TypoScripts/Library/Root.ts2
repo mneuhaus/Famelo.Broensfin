@@ -1,7 +1,17 @@
 namespace: TypoScript=TYPO3.TypoScript
 
-root.@cache.mode = 'uncached'
-page.@cache.mode = 'uncached'
+root.@cache{
+	mode = 'uncached'
+	context {
+		1 = 'object'
+	}
+}
+page.@cache{
+	mode = 'uncached'
+	context {
+		1 = 'object'
+	}
+}
 
 /**
  * Root TypoScript template for the Broensfin Site
@@ -29,7 +39,12 @@ page = Page {
 				entryLevel = 1
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/Menu.html'
 				maximumLevels = 2
-				@cache.mode = 'uncached'
+				@cache{
+					mode = 'uncached'
+					context {
+						1 = 'object'
+					}
+				}
 			}
 			submenu = Menu {
 				entryLevel = 2
@@ -44,7 +59,12 @@ page = Page {
 			userMenu = TypoScript:Template
 			userMenu {
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/UserMenu.html'
-				@cache.mode = 'uncached'
+				@cache{
+					mode = 'uncached'
+					context {
+						1 = 'object'
+					}
+				}
 			}
 
 			breadcrumb = Breadcrumb
