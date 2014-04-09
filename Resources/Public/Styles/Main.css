@@ -7516,7 +7516,7 @@ header .navbar-nav > li.current a {
   color: #555555;
 }
 header .navbar-nav > li > a {
-  padding: 8px 10px;
+  padding: 8px 12px;
 }
 header .mainnav {
   margin-left: 30px;
@@ -7808,6 +7808,9 @@ ul {
 }
 .input-group .btn {
   margin-top: 0;
+}
+.dropdown-menu:first-child li.divider {
+  display: none;
 }
 /*
 	 	written by: Sven Steinker and Marc Neuhaus

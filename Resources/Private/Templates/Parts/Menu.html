@@ -18,21 +18,27 @@
 <div class="collapse navbar-collapse" id="mainnav">
   <ul class="nav navbar-nav mainnav">
     <f:for each="{items}" as="item" iteration="menuItemIterator">
-      <li class="{item.state}">
-        <f:if condition="{item.subItems}">
-          <f:then>
+      <f:if condition="{item.subItems}">
+        <f:then>
+          <li class="{item.state} dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{item.label}</a>
             <ul class="dropdown-menu">
-              <li><neos:link.node node="{item.node}">{item.label}</neos:link.node></li>
-              <li class="divider"></li>
+              <f:if condition="{0: item.label} == {0: 'Unser Service'}">
+                <f:else>
+                  <li><neos:link.node node="{item.node}">{item.label}</neos:link.node></li>
+                  <li class="divider"></li>
+                </f:else>
+              </f:if>
               <f:render section="subList" arguments="{items: item.subItems}" />
             </ul>
-          </f:then>
-          <f:else>
+          </li>
+        </f:then>
+        <f:else>
+          <li class="{item.state}">
             <neos:link.node node="{item.node}">{item.label}</neos:link.node>
-          </f:else>
-        </f:if>
-      </li>
+          </li>
+        </f:else>
+      </f:if>
     </f:for>
   </ul>
   <f:security.ifAuthenticated>
