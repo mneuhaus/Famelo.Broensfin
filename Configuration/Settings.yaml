@@ -46,14 +46,14 @@ TYPO3:
               # label: 'All languages'
               # values: ['mul_ZZ']
               # uriSegment: 'all'
-            'en_GB':
-              label: 'English'
-              values: ['en_GB', 'en_ZZ', 'mul_ZZ']
-              uriSegment: 'en'
             'de_DE':
               label: 'Deutsch'
               values: ['de_DE', 'de_ZZ', 'mul_ZZ']
               uriSegment: 'de'
+            'en_GB':
+              label: 'English'
+              values: ['en_GB', 'en_ZZ', 'mul_ZZ']
+              uriSegment: 'en'
     modules:
       management:
         submodules:

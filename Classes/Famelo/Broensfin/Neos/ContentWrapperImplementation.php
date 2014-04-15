@@ -61,7 +61,7 @@ class ContentWrapperImplementation extends AbstractTypoScriptObject {
 	}
 
 	public function isParentAlreadyWrapped($node) {
-		if ($node->getParent()->hasProperty('wrapper')) {
+		if ($node->getParent() instanceof Node && $node->getParent()->hasProperty('wrapper')) {
 			return TRUE;
 		}
 		if ($node->getNodeType()->isOfType('TYPO3.Neos.NodeTypes:Page')) {

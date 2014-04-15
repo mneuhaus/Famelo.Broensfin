@@ -58,6 +58,42 @@
         <source>Invoice</source>
         <target>Rechnung</target>
       </trans-unit>
+      <trans-unit id="slug.reference">
+        <source>Reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="slug.debtor">
+        <source>Debtor</source>
+        <target>Debtor</target>
+      </trans-unit>
+      <trans-unit id="slug.amount">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="slug.currency">
+        <source>Currency</source>
+        <target>Currency</target>
+      </trans-unit>
+      <trans-unit id="slug.status">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-plus-i">
+        <source>&lt;i class="fa fa-plus"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-plus"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-upload-i">
+        <source>&lt;i class="fa fa-upload"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-upload"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-download-i">
+        <source>&lt;i class="fa fa-download"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-download"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="en_GB">
+        <source>en_GB</source>
+        <target>English</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
