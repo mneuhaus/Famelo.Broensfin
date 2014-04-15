@@ -23,11 +23,9 @@
           <li class="{item.state} dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{item.label}</a>
             <ul class="dropdown-menu">
-              <f:if condition="{0: item.label} == {0: 'Unser Service'}">
-                <f:else>
-                  <li><neos:link.node node="{item.node}">{item.label}</neos:link.node></li>
-                  <li class="divider"></li>
-                </f:else>
+              <f:if condition="{item.node.properties.showInDropdown}">
+                <li><neos:link.node node="{item.node}">{item.label}</neos:link.node></li>
+                <li class="divider"></li>
               </f:if>
               <f:render section="subList" arguments="{items: item.subItems}" />
             </ul>

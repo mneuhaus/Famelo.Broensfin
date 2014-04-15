@@ -22,6 +22,13 @@
                 label: 'With sidebar'
               'management':
                 label: 'Verwaltung'
+    showInDropdown:
+      type: boolean
+      ui:
+        label: 'Show in Dropdown'
+        inspector:
+          group: 'visibility'
+          position: 30
 
 'TYPO3.Neos.NodeTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.NodeTypes:Column']
