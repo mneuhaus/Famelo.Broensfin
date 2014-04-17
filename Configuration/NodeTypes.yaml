@@ -29,6 +29,25 @@
         inspector:
           group: 'visibility'
           position: 30
+    submenu:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Submenu'
+        reloadIfChanged: TRUE
+        inspector:
+          group: visibility
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              legal:
+                label: 'Rechtliches'
+              broensfin:
+                label: 'Broensfin'
+              service:
+                label: 'Site Service'
 
 'TYPO3.Neos.NodeTypes:TwoColumn':
   superTypes: ['TYPO3.Neos.NodeTypes:Column']

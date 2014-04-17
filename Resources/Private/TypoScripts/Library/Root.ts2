@@ -1,5 +1,10 @@
 namespace: TypoScript=TYPO3.TypoScript
 
+prototype(Famelo.Broensfin:Language) {
+	@class = 'Famelo\\Broensfin\\Neos\\LanguageImplementation'
+	node = ${node}
+}
+
 root.@cache{
 	mode = 'uncached'
 	context {
@@ -52,6 +57,43 @@ page = Page {
 				maximumLevels = 1
 			}
 
+			legalMenu = Menu {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/FooterMenu.html'
+				maximumLevels = 1
+        		startingPoint = ${q(site).children('rechtliches').get(0)}
+				@cache{
+					mode = 'uncached'
+					context {
+						1 = 'object'
+					}
+				}
+			}
+
+			broensfinMenu = Menu {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/FooterMenu.html'
+				maximumLevels = 1
+        		startingPoint = ${q(site).children('Broensfin').get(0)}
+        		filter = 'TYPO3.Neos:Shortcut'
+				@cache{
+					mode = 'uncached'
+					context {
+						1 = 'object'
+					}
+				}
+			}
+
+			serviceMenu = Menu {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/FooterMenu.html'
+				maximumLevels = 1
+        		startingPoint = ${q(site).children('site-service').get(0)}
+				@cache{
+					mode = 'uncached'
+					context {
+						1 = 'object'
+					}
+				}
+			}
+
 			languageMenu = TYPO3.Neos:LanguageMenu {
 				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/LanguageMenu.html'
 			}
@@ -68,6 +110,8 @@ page = Page {
 			}
 
 			breadcrumb = Breadcrumb
+
+			language = Famelo.Broensfin:Language
 		}
 			// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {
