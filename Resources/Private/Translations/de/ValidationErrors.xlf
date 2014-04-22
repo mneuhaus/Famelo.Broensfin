@@ -14,6 +14,10 @@
         <source>Object expected, string given.</source>
         <target>Object expected, string given.</target>
       </trans-unit>
+      <trans-unit id="1334768052">
+        <source>Password doesn't match confirmation</source>
+        <target>Password doesn't match confirmation</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

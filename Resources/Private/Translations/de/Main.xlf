@@ -94,6 +94,22 @@
         <source>en_GB</source>
         <target>English</target>
       </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-check-i">
+        <source>&lt;i class="fa fa-check"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-check"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-undo-i">
+        <source>&lt;i class="fa fa-undo"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-undo"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-trash-o-i">
+        <source>&lt;i class="fa fa-trash-o"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-trash-o"&gt;&lt;/i&gt;</target>
+      </trans-unit>
+      <trans-unit id="slug.-i-class-fa-fa-eye-i">
+        <source>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</source>
+        <target>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
