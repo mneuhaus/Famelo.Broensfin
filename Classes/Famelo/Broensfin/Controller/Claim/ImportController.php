@@ -74,6 +74,7 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 	public function checkAction($file) {
 		$this->persistenceManager->add($file);
 		$reader = new Reader($file->getUri());
+		$reader->setDelimiter(';');
 		$columns = array(
 			'debtor' => 'Debtor',
 			'street' => 'Street',
@@ -134,6 +135,7 @@ class ImportController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
      */
 	public function importAction($file, $teams) {
 		$reader = new Reader($file);
+		$reader->setDelimiter(';');
 		$columns = array(
 			'debtor' => 'Debtor',
 			'street' => 'Street',
