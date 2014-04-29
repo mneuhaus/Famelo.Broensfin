@@ -75,24 +75,25 @@ p.label {
 	}
 
 	.open-claim button {
-		border-radius: 0px;	
+		border-radius: 0px;
 		margin:0px;
 		.font(20px;);
 		color:@white;
 		.regular;
-		padding:10px 10px;
+		padding:10px 20px;
 	}
 	.open-claim button.accept{
-		width:80%;
-		
+		width:60%;
 	}
 	.open-claim button.reject{
 		width:20%;
 		float: left;
 	}
+	.open-claim button.bpo {
+	}
 
 	.user-center {
-		background: @light-grey; 
+		background: @light-grey;
 		border: 1px solid darken(@light-grey, 10%);
 		padding: 10px;
 
@@ -106,7 +107,7 @@ p.label {
 			span {
 				.bold;
 			}
-			.current-state { 
+			.current-state {
 				.font(13px;);
 				line-height: 30px;
 				color:@white;
@@ -118,8 +119,8 @@ p.label {
 
 				span {
 					.regular;
-				}			
-			}					
+				}
+			}
 		}
 		p {
 			color:@AppDarkGrey;
@@ -134,6 +135,9 @@ p.label {
 		.open-claim-head.rejected {
 			background: @brand-danger;
 		}
+		.open-claim-head.bpo {
+			background: @brand-info;
+		}
 		.open-claim-head.pending {
 			background: @brand-warning;
 		}
@@ -143,18 +147,18 @@ p.label {
 
 		.open-claim-body {
 			background: @AppGrey;
-			
+
 			.wrapper {
 				margin: 10px 0px;
 				padding:0px;
 			}
 			.value {
-				padding: 10px; 
+				padding: 10px;
 				background: lighten(@AppLightGrey, 20%);
 				color:@AppDarkGrey;
 				.bold;
 			}
-		}		
+		}
 	}
 
 
@@ -177,7 +181,7 @@ p.label {
 
 		&:nth-child(even){
 			background: @AppGrey;
-		} 
+		}
 	}
 
 
@@ -194,7 +198,7 @@ p.label {
 			color:@AppDarkGrey;
 			outline: none;
 			border:0px;
-		
+
 		&:focus {
 			box-shadow: 0 0 5px @AppDarkGrey;
 			outline: none;
@@ -206,9 +210,9 @@ p.label {
 	}
 
 
-// Sidebar 
+// Sidebar
 	.userbar-info {
-		margin-bottom:15px; 
+		margin-bottom:15px;
 		padding: 0 10px;
 		margin-right: 10px;
 
@@ -219,7 +223,7 @@ p.label {
 
 
 
-//Submenu 
+//Submenu
 
 nav.submenu {
 	margin-bottom: 20px;
@@ -234,19 +238,19 @@ nav.submenu {
 			width:50%;
 			float:left;
 			a {
-				
+
 				border-radius: 0px;
 				background: darken(@AppGrey, 5%);
 				text-align: center;
 				.font(30px;);
 				.light;
-			
+
 				&:hover {
 					background: darken(@AppGrey, 10%);
 					color: darken(@grey, 10%)
 				}
 			}
-			
+
 			&:first-child {
 				border-right: 1px solid @white;
 			}
@@ -261,7 +265,7 @@ nav.submenu {
 
 
 
-//pricing 
+//pricing
 	section.payment {
 		background: @AppGrey;
 		padding:20px;
@@ -272,7 +276,7 @@ nav.submenu {
 		border: 1px solid @grey;
 		text-align: center;
 		background: @white;
-		
+
 
 		input[type="radio"] {
 			margin-left: 0px;
@@ -281,7 +285,7 @@ nav.submenu {
 
 		.header {
 			background: @grey;
-			
+
 			.title {
 				padding: 20px 0;
 				.font(60px;);
@@ -292,11 +296,11 @@ nav.submenu {
 
 		.body {
 			padding:15px;
-			
+
 			.credits {
 				.font(40px;);
-				.light;	
-				margin-bottom: 10px;			
+				.light;
+				margin-bottom: 10px;
 			}
 
 			.order {

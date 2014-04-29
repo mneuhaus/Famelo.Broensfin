@@ -4,7 +4,7 @@
 	<div class="open-claim">
 		<div class="open-claim-head {claim.currentState}">
 			<h3>Forderung <span>{claim.externalReference}</span>
-				<small class="pull-right current-state"><i class="fa fa-dot-circle-o"></i> {claim.currentState}</small>
+				<small class="pull-right current-state"><i class="fa fa-dot-circle-o"></i> {claim.currentState.state -> f:translate()}</small>
 			</h3>
 		</div>
 		<div class="open-claim-body">
@@ -52,6 +52,10 @@
 			  	</div>
 			</div>
 
+			<f:form action="bpo" method="post" class="pull-left" arguments="{claim: claim}">
+				<button type="submit" class="btn btn-info bpo" id="accept-claim"><i class="fa fa-check"></i> BPO-bestätigt</button>
+			</f:form>
+
 			<f:form action="accept" method="post" arguments="{claim: claim}">
 				<button type="submit" class="btn btn-success accept" id="accept-claim"><i class="fa fa-check"></i> Anerkennen</button>
 			</f:form>
@@ -93,7 +97,7 @@
 	<table class="table table-striped">
 		<f:for each="{claim.states}" as="state">
 		<tr>
-			<td>{state.state}</td>
+			<td>{state.state -> f:translate()}</td>
 			<td>{state.date -> f:format.date(forceLocale: true)}</td>
 		</tr>
 		</f:for>

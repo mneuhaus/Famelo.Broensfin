@@ -82,6 +82,18 @@ class DetailController extends \TYPO3\Flow\Mvc\Controller\ActionController imple
 
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
+	 * @return void
+	 */
+	public function bpoAction($claim) {
+		$claim->updateState(ClaimState::STATE_BPOACCEPTED);
+		$this->claimRepository->update($claim);
+		$this->redirect('index', NULL, NULL, array(
+			'objects' => array($claim)
+		));
+	}
+
+	/**
+	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
 	 * @param string $comment
 	 * @return void
 	 */

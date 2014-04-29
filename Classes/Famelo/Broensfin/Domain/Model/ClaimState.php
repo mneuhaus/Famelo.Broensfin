@@ -14,6 +14,7 @@ class ClaimState {
 	const STATE_PENDING = 'pending';
 	const STATE_ACCEPTED = 'accepted';
 	const STATE_REJECTED = 'rejected';
+	const STATE_BPOACCEPTED = 'bpo';
 
 	/**
 	 * @var \DateTime

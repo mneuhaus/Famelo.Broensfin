@@ -7877,10 +7877,10 @@ section[role="claim"] {
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
   font-weight: 400;
-  padding: 10px 10px;
+  padding: 10px 20px;
 }
 .open-claim button.accept {
-  width: 80%;
+  width: 60%;
 }
 .open-claim button.reject {
   width: 20%;
@@ -7929,6 +7929,9 @@ section[role="claim"] {
 }
 .open-claim .open-claim-head.rejected {
   background: #d9534f;
+}
+.open-claim .open-claim-head.bpo {
+  background: #5bc0de;
 }
 .open-claim .open-claim-head.pending {
   background: #f0ad4e;

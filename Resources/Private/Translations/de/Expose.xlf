@@ -78,6 +78,10 @@
         <source>created</source>
         <target>created</target>
       </trans-unit>
+      <trans-unit id="bpo">
+        <source>bpo</source>
+        <target>bpo</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

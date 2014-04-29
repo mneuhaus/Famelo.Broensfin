@@ -118,6 +118,18 @@
         <source>Register</source>
         <target>Anmelden</target>
       </trans-unit>
+      <trans-unit id="slug.bpo">
+        <source>bpo</source>
+        <target>BPO-best&#xE4;tigt</target>
+      </trans-unit>
+      <trans-unit id="slug.accepted">
+        <source>accepted</source>
+        <target>anerkannt</target>
+      </trans-unit>
+      <trans-unit id="status.bpo">
+        <source>bpo</source>
+        <target>BPO-best&#xE4;tigt</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
