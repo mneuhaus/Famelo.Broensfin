@@ -114,6 +114,10 @@
         <source>Login</source>
         <target>Anmelden</target>
       </trans-unit>
+      <trans-unit id="slug.register">
+        <source>Register</source>
+        <target>Anmelden</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

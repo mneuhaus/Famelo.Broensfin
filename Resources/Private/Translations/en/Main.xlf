@@ -86,6 +86,10 @@
         <source>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</source>
         <target>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</target>
       </trans-unit>
+      <trans-unit id="slug.register">
+        <source>Register</source>
+        <target>Register</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
