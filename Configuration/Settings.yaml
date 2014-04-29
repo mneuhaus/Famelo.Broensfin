@@ -18,6 +18,9 @@ TYPO3:
           - Famelo.Saas
           - Famelo.Broensfin
           - TYPO3.Party
+        TYPO3.Neos:
+          - Famelo.Broensfin
+          - TYPO3.Neos
 
   # persistence:
     # doctrine:

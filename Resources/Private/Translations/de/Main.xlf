@@ -110,6 +110,10 @@
         <source>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</source>
         <target>&lt;i class="fa fa-eye"&gt;&lt;/i&gt;</target>
       </trans-unit>
+      <trans-unit id="slug.login">
+        <source>Login</source>
+        <target>Anmelden</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
