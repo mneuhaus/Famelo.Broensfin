@@ -1,0 +1,45 @@
+{namespace s=Famelo\Saas\ViewHelpers}
+
+<f:if condition="{error}">
+	<f:then>
+		{error}
+	</f:then>
+	<f:else>
+		<f:form action="import">
+			<f:form.hidden name="file" value="{file}" />
+			<table class="table table-bordered table-striped">
+				<tr>
+					<th>Verbindlichkeit</th>
+					<th>Betrag</th>
+					<th>Status</th>
+				</tr>
+				<f:for each="{rows}" as="row" key="index">
+					<tr>
+						<td>
+							<f:if condition="{0: row.status} == {0: 'one'}">
+								<p class="text-success">
+									{row.claim}
+								</p>
+								<f:form.hidden name="claims[{index}]" value="{row.claim.identifier}" />
+							</f:if>
+							<f:if condition="{0: row.status} == {0: 'none'}">
+								<span class="text-danger">Die Forderung "{row.reference}" konnte nicht gefunden werden.</span>
+							</f:if>
+							<f:if condition="{0: row.status} == {0: 'unkownState'}">
+								<span class="text-danger">Der Status der Forderung konnte nicht erkannt werden. Verfügbar: accepted, rejected order bpo</span>
+							</f:if>
+						</td>
+						<td>{row.amount -> s:format.currency(currency: row.currency)}</td>
+						<td>{row.state}</td>
+					</tr>
+				</f:for>
+			</table>
+
+			<div class="form-group">
+				<div class="col-sm-12">
+					<button type="submit" class="btn btn-default pull-right">Importieren</button>
+				</div>
+			</div>
+		</f:form>
+	</f:else>
+</f:if>

@@ -37,5 +37,29 @@ class ClaimRepository extends \TYPO3\Flow\Persistence\Repository {
 		$query->setOrderings(array('created' => 'DESC'));
 		return $query->execute();
 	}
+
+	public function findByCsv($row) {
+		$query = $this->createQuery();
+
+		$constraints = array();
+
+		$identifiers = array(
+			'creditor.name' => 'Creditor',
+			'creditor.street' => 'Street',
+			'creditor.city' => 'City',
+			'creditor.zip' => 'Zip',
+			'externalReference' => 'Reference'
+		);
+
+		foreach ($identifiers as $internal => $external) {
+			if (!empty($row[$external])) {
+				$constraints[] = $query->equals($internal, $row[$external]);
+			}
+		}
+
+		$query->matching($query->logicalAnd($constraints));
+
+		return $query->execute();
+	}
 }
 ?>

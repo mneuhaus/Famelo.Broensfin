@@ -112,7 +112,7 @@ class Claim {
     }
 
 	/**
-	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
+	 * @param string $state
 	 * @return void
 	 */
 	public function updateState($state) {

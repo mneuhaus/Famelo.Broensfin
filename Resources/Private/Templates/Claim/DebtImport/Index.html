@@ -1,18 +1,11 @@
 <p>
-	Hier können Sie mehrere Forderungen auf einmal importieren.<br />
+	Hier können Sie mehrere Verbindlichkeiten gleichzeitig aktualisieren.<br />
 	Als Format dient eine "csv" Datei mit den Spalten: <br />
-	<b>"Debtor,Street,City,Zip,Reference,Currency,Amount,Due Date,Creation Date"</b>
+	<b>"Creditor;Street;City;Zip;Reference;Currency;Amount;Status"</b>
 </p>
 
-Beispiel:
-
-<pre>
-<b>Debtor,Street,City,Zip,Reference,Currency,Amount,Due Date,Creation Date</b>
-Gibson GbR,,Bielefeld,,r23e423,EUR,2312,17.03.2014,17.03.2014
-</pre>
-
 <p>
-<strong>Vorlage:</strong> <a href="{f:uri.resource(path: 'Templates/ReceivableImport.csv')}">ReceivableImport.csv</a>
+<strong>Vorlage:</strong> <a href="{f:uri.resource(path: 'Templates/PayablesImport.csv')}">PayablesImport.csv</a>
 </p>
 
 <f:form action="check" class="form-horizontal t3-expose-form" enctype="multipart/form-data">
