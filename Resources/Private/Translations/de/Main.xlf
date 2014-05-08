@@ -64,15 +64,15 @@
       </trans-unit>
       <trans-unit id="slug.debtor">
         <source>Debtor</source>
-        <target>Debtor</target>
+        <target>Schuldner</target>
       </trans-unit>
       <trans-unit id="slug.amount">
         <source>Amount</source>
-        <target>Amount</target>
+        <target>Betrag</target>
       </trans-unit>
       <trans-unit id="slug.currency">
         <source>Currency</source>
-        <target>Currency</target>
+        <target>W&#xE4;hrung</target>
       </trans-unit>
       <trans-unit id="slug.status">
         <source>Status</source>
@@ -129,6 +129,172 @@
       <trans-unit id="status.bpo">
         <source>bpo</source>
         <target>BPO-best&#xE4;tigt</target>
+      </trans-unit>
+      <trans-unit id="slug.my-receivables">
+        <source>My receivables</source>
+        <target>Meine Forderungen</target>
+      </trans-unit>
+      <trans-unit id="slug.my-payables">
+        <source>My payables</source>
+        <target>Meine Verbindlichkeiten</target>
+      </trans-unit>
+      <trans-unit id="slug.dashboard">
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="slug.welcome">
+        <source>Welcome</source>
+        <target>Willkommen</target>
+      </trans-unit>
+      <trans-unit id="slug.my-overview">
+        <source>My Overview</source>
+        <target>Meine &#xDC;bersicht</target>
+      </trans-unit>
+      <trans-unit id="slug.credits">
+        <source>Credits</source>
+        <target>Credits</target>
+      </trans-unit>
+      <trans-unit id="slug.balance-in">
+        <source>Balance in &#x20AC;</source>
+        <target>Kontostand in &#x20AC;</target>
+      </trans-unit>
+      <trans-unit id="slug.transactions">
+        <source>Transactions</source>
+        <target>Transaktionen</target>
+      </trans-unit>
+      <trans-unit id="slug.preferences">
+        <source>Preferences</source>
+        <target>Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="slug.buy-credits">
+        <source>Buy Credits</source>
+        <target>Credits kaufen</target>
+      </trans-unit>
+      <trans-unit id="slug.search">
+        <source>Search</source>
+        <target>Suche</target>
+      </trans-unit>
+      <trans-unit id="slug.receivable">
+        <source>Receivable</source>
+        <target>Forderung</target>
+      </trans-unit>
+      <trans-unit id="slug.owner">
+        <source>Owner</source>
+        <target>Gl&#xE4;ubiger</target>
+      </trans-unit>
+      <trans-unit id="slug.total-amount-of">
+        <source>Total amount of</source>
+        <target>BETRAG IN H&#xD6;HE VON</target>
+      </trans-unit>
+      <trans-unit id="slug.due-on">
+        <source>Due on</source>
+        <target>F&#xE4;llig zum</target>
+      </trans-unit>
+      <trans-unit id="slug.comments">
+        <source>Comments</source>
+        <target>Kommentare</target>
+      </trans-unit>
+      <trans-unit id="slug.new-comment">
+        <source>New comment</source>
+        <target>Neues Kommentar schreiben</target>
+      </trans-unit>
+      <trans-unit id="slug.submit">
+        <source>Submit</source>
+        <target>Absenden</target>
+      </trans-unit>
+      <trans-unit id="slug.history">
+        <source>History</source>
+        <target>Verlauf</target>
+      </trans-unit>
+      <trans-unit id="slug.reject">
+        <source>Reject</source>
+        <target>Ablehnen</target>
+      </trans-unit>
+      <trans-unit id="slug.yes-reject-this">
+        <source>Yes, reject this</source>
+        <target>Ja, Forderung ablehnen</target>
+      </trans-unit>
+      <trans-unit id="slug.no">
+        <source>No</source>
+        <target>Nein</target>
+      </trans-unit>
+      <trans-unit id="slug.bpo-accepted">
+        <source>BPO-accepted</source>
+        <target>BPO-best&#xE4;tigt</target>
+      </trans-unit>
+      <trans-unit id="slug.accept">
+        <source>accept</source>
+        <target>akzeptieren</target>
+      </trans-unit>
+      <trans-unit id="reject-claim-confirmation">
+        <source>
+						Are you sure, that you want to reject the payable #{0}?
+					</source>
+        <target>
+						Sind Sie sicher, dass Sie die Forderung #{0} ablehnen m&#xF6;chten?
+					</target>
+      </trans-unit>
+      <trans-unit id="slug.account-has-been-updated">
+        <source>Account has been updated.</source>
+        <target>Profil wurde aktualisiert.</target>
+      </trans-unit>
+      <trans-unit id="message.claim.created.body">
+        <source>
+          {0} has added a receivables of {1} {2} . It is due {3}.
+          Please add your comment in the portal.
+        </source>
+        <target><![CDATA[
+          {0} hat eine Forderung &#xFC;ber {1} {2} eingestellt. Diese ist am {3}
+          f&#xE4;llig. W&#xFC;rden Sie die Daten bitte erg&#xE4;nzen mit Ihrem Kommentar.
+        ]]></target>
+      </trans-unit>
+      <trans-unit id="slug.new-claim">
+        <source>New Claim</source>
+        <target>Es wurde eine neue Forderung an Sie erstellt</target>
+      </trans-unit>
+      <trans-unit id="slug.has-updated-a-claim">
+        <source>has updated a claim</source>
+        <target>hat eine Forderung aktualisiert</target>
+      </trans-unit>
+      <trans-unit id="message.claim.stateUpdated.body">
+        <source>
+          {0} has updated the receivable {1} over {2} {3}.
+        </source>
+        <target>
+          {0} hat die Forderung {1} &#xFC;ber {3} {2} aktualisiert.
+        </target>
+      </trans-unit>
+      <trans-unit id="slug.has-left-a-comment">
+        <source>has left a comment</source>
+        <target>hat ein Kommentar hinterlassen</target>
+      </trans-unit>
+      <trans-unit id="message.claim.comment.body">
+        <source>
+          {0} has commented your receivables over {1} {2}.
+        </source>
+        <target>
+          {0} hat ihre Forderung &#xFC;ber {2} {1} kommentiert.
+        </target>
+      </trans-unit>
+      <trans-unit id="slug.payment-successful">
+        <source>Payment successful</source>
+        <target>Payment successful</target>
+      </trans-unit>
+      <trans-unit id="slug.name">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="slug.e-mail">
+        <source>E-Mail</source>
+        <target>E-Mail</target>
+      </trans-unit>
+      <trans-unit id="slug.message">
+        <source>Message</source>
+        <target>Nachricht</target>
+      </trans-unit>
+      <trans-unit id="slug.phone">
+        <source>Phone</source>
+        <target>Telefon</target>
       </trans-unit>
     </body>
   </file>

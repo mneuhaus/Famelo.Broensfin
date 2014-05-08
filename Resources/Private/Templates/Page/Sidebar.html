@@ -38,11 +38,11 @@
 			<div class="col-sm-3">
 				<div class="user-center">
 					<s:user>
-						<h3>Willkommen <br />{user}</h3>
+						<h3>{f:translate(value: 'Welcome')} <br />{user}</h3>
 						<hr />
 						<s:saas>
 						<div class="account-info">
-							<h5 class="">Meine Übersicht</h5>
+							<h5 class="">{f:translate(value: 'My Overview')}</h5>
 
 							<!-- <div class="userbar-info">
 								<p class="label">Forderungen / Verbindlichkeiten</p>
@@ -51,19 +51,19 @@
 							</div> -->
 
 							<div class="userbar-info">
-								<p class="label">Credits</p>
-								<p>Credits:<span class="value balance" data-balance="{transactionService.balance}"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
-								Balance in €:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>
+								<p class="label">{f:translate(value: 'Credits')}</p>
+								<p>{f:translate(value: 'Credits')}:<span class="value balance" data-balance="{transactionService.balance}"><strong>{transactionService.balance -> s:format.points()}</strong></span><br />
+								{f:translate(value: 'Balance in €')}:<span class="value"><strong>{transactionService.balance -> s:format.currency()}</strong></span></p>
 							</div>
 						</div>
 						<hr />
 						<p class="clearfix">
 							<div clas="pull-right">
-								<small><a href="/de/mein-konto/transaktionen.html" title="Transaktionen">Transaktionen</a></small>
+								<small><s:link.node path="mein-konto/transaktionen">{f:translate(value: 'Transactions')}</s:link.node></small>
 								-
-								<small><a href="/de/mein-konto/einstellungen.html" title="Einstellungen">Einstellungen</a></small>
+								<small><s:link.node path="mein-konto/einstellungen">{f:translate(value: 'Preferences')}</s:link.node></small>
 								-
-								<small><a href="{s:target(name: 'payment')}" title="Credits kaufen">Credits kaufen</a></small>
+								<small><s:link.node path="mein-konto/transaktionen" appendix="?--famelo_saas-transactions%5B%40package%5D=famelo.saas&--famelo_saas-transactions%5B%40controller%5D=transaction&--famelo_saas-transactions%5B%40action%5D=choosepayment">{f:translate(value: 'Buy Credits')}</s:link.node></small>
 							</div>
 						</p>
 						</s:saas>

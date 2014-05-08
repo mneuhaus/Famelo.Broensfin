@@ -4,7 +4,67 @@
     <body>
       <trans-unit id="bpo">
         <source>bpo</source>
-        <target>bpo</target>
+        <target>BPO</target>
+      </trans-unit>
+      <trans-unit id="pending">
+        <source>pending</source>
+        <target>Pending</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creditor.label">
+        <source>Creditor</source>
+        <target>Owner</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.debtor.label">
+        <source>Debtor</source>
+        <target>Debtor</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.reference.label">
+        <source>Reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.amount.label">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currency.label">
+        <source>Currency</source>
+        <target>Currency</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.dueDate.label">
+        <source>Due date</source>
+        <target>Due date</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.status.label">
+        <source>State</source>
+        <target>State</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.created.label">
+        <source>created</source>
+        <target>created</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.externalReference.label">
+        <source>Referenz</source>
+        <target>Referenz</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.creationDate.label">
+        <source>Creation date</source>
+        <target>Creation date</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.currentState.label">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.states.label">
+        <source>states</source>
+        <target>states</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.comments.label">
+        <source>comments</source>
+        <target>comments</target>
+      </trans-unit>
+      <trans-unit id="Famelo.Broensfin.Domain.Model.Claim.deletedAt.label">
+        <source>deletedAt</source>
+        <target>deletedAt</target>
       </trans-unit>
     </body>
   </file>

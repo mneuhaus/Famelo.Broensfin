@@ -1,6 +1,8 @@
 {namespace m=Famelo\Messaging\ViewHelpers}
 <m:message
 	to="{claim.creditor.mainUser.email}:{claim.creditor.mainUser.name}"
-	subject="{claim.debtor.name} has updated a claim" />
+	subject="{claim.debtor.name} {f:translate(value: 'has updated a claim')}" />
 
-<f:render partial="Claim" arguments="{claim: claim}" />
+<f:translate id="message.claim.stateUpdated.body" arguments="{0: claim.debtor, 1: claim.externalReference, 2: claim.currency, 3: claim.amount}"><![CDATA[
+{0} has updated the receivable {1} over {2} {3}.
+]]></f:translate>

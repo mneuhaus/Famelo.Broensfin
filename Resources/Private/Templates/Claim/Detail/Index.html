@@ -3,7 +3,7 @@
 <section role="claim">
 	<div class="open-claim">
 		<div class="open-claim-head {claim.currentState}">
-			<h3>Forderung <span>{claim.externalReference}</span>
+			<h3>{f:translate(value: 'Receivable')} <span>{claim.externalReference}</span>
 				<small class="pull-right current-state"><i class="fa fa-dot-circle-o"></i> {claim.currentState.state -> f:translate()}</small>
 			</h3>
 		</div>
@@ -13,7 +13,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="wrapper">
-								<p class="label">Gläubiger</p>
+								<p class="label">{f:translate(value: 'Owner')}</p>
 								<div class="value">
 									<f:render partial="User" arguments="{team: claim.creditor}" />
 								</div>
@@ -21,7 +21,7 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="wrapper">
-								<p class="label">Schuldner</p>
+								<p class="label">{f:translate(value: 'Debtor')}</p>
 								<div class="value">
 									<f:render partial="User" arguments="{team: claim.debtor}" />
 								</div>
@@ -36,28 +36,32 @@
 		</div>
 
 		<f:if condition="{claim.debtor} == {user.team}">
-			<button type="submit" class="btn btn-danger reject"  data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Ablehnen</button>
+			<button type="submit" class="btn btn-danger reject"  data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> {f:translate(value: 'Reject')}</button>
 			<!-- Modal -->
 			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 			    	<div class="modal-content">
 			      		<div class="modal-body">
-			        		<h3>Sind Sie sicher, dass Sie die Forderung #{claim.externalReference} ablehnen möchten? </h3>
+			        		<h3>
+			        			<f:translate id="reject-claim-confirmation" arguments="{0: claim.externalReference}"><![CDATA[
+			        				Are you sure, that you want to reject the payable #{0}?
+			        			]]></f:translate>
+			        		</h3>
 			        		<f:form action="reject" method="post" arguments="{claim: claim}">
-								<button type="submit" class="btn btn-success " id="reject-claim"><i class="fa fa-check"></i>Ja, Forderung ablehnen</button>
+								<button type="submit" class="btn btn-success " id="reject-claim"><i class="fa fa-check"></i>{f:translate(value: 'Yes, reject this')}</button>
 							</f:form>
-			      			<button type="button" class="btn btn-danger " data-dismiss="modal">Nein</button>
+			      			<button type="button" class="btn btn-danger " data-dismiss="modal">{f:translate(value: 'No')}</button>
 			      		</div>
 			    	</div>
 			  	</div>
 			</div>
 
 			<f:form action="bpo" method="post" class="pull-left" arguments="{claim: claim}">
-				<button type="submit" class="btn btn-info bpo" id="accept-claim"><i class="fa fa-check"></i> BPO-bestätigt</button>
+				<button type="submit" class="btn btn-info bpo" id="accept-claim"><i class="fa fa-check"></i> {f:translate(value: 'BPO-accepted')}</button>
 			</f:form>
 
 			<f:form action="accept" method="post" arguments="{claim: claim}">
-				<button type="submit" class="btn btn-success accept" id="accept-claim"><i class="fa fa-check"></i> Anerkennen</button>
+				<button type="submit" class="btn btn-success accept" id="accept-claim"><i class="fa fa-check"></i> {f:translate(value: 'accept')}</button>
 			</f:form>
 		</f:if>
 
@@ -68,14 +72,16 @@
 <hr />
 <section role="comments">
 	<div class="wrapper new-comment">
-		<h3>Kommentare</h3>
-		<f:for each="{claim.comments}" as="comment">
+		<h3>{f:translate(value: 'Comments')}</h3>
+		<f:for each="{claim.comments}" as="comment" iteration="iteration">
 		<!-- even odd feature -->
 			<div class="media">
 			  <div class="pull-left">
 			    {comment.user}
-				<br /><small>17.03.14<br />
-			    #123 </small>
+				<br /><small>
+				{comment.date -> f:format.date(forceLocale: true)}
+				<br />
+			    #{iteration.cycle} </small>
 			  </div>
 			  <div class="media-body">
 			    {comment.message}
@@ -84,16 +90,16 @@
 		</f:for>
 	</div>
 	<div class="wrapper new-comment">
-		<h4>Neuen Kommentar schreiben</h4>
+		<h4>{f:translate(value: 'New comment')}</h4>
 		<f:form action="comment" method="post" arguments="{claim: claim}" class="form-horizontal">
 		    <f:form.textarea name="comment" class="form-control square" rows="3" />
-			<button type="submit" class="btn btn-default square pull-right">Absenden</button>
+			<button type="submit" class="btn btn-default square pull-right">{f:translate(value: 'Submit')}</button>
 		</f:form>
 	</div>
 </section>
 
 <section role="history">
-	<h3>Verlauf</h3>
+	<h3>{f:translate(value: 'History')}</h3>
 	<table class="table table-striped">
 		<f:for each="{claim.states}" as="state">
 		<tr>

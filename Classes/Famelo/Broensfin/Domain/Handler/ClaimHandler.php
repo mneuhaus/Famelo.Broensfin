@@ -11,7 +11,6 @@ class ClaimHandler {
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
 	 * @return void
-	 * @Flow\Slot(class="Famelo\Broensfin\Domain\Model\Claim", signal="created")
 	 */
 	public function created($claim) {
 		if ($claim->getDebtor()->getNotify() === FALSE) {
@@ -25,7 +24,6 @@ class ClaimHandler {
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\Claim $claim
 	 * @return void
-	 * @Flow\Slot(class="Famelo\Broensfin\Domain\Model\Claim", signal="stateUpdated")
 	 */
 	public function stateUpdated($claim) {
 		$mail = new \Famelo\Messaging\Message();
@@ -37,7 +35,6 @@ class ClaimHandler {
 	/**
 	 * @param \Famelo\Broensfin\Domain\Model\ClaimComment $claimComment
 	 * @return void
-	 * @Flow\Slot(class="Famelo\Broensfin\Controller\Claim\DetailController", signal="claimCommentAdded")
 	 */
 	public function commentAdded($claimComment) {
 		if ($claimComment->getUser()->getTeam() !== $claimComment->getClaim()->getCreditor()) {

@@ -1,6 +1,9 @@
 {namespace m=Famelo\Messaging\ViewHelpers}
 <m:message
 	to="{claim.debtor.mainUser.email}:{claim.debtor.mainUser.name}"
-	subject="New Claim" />
+	subject="{f:translate(value: 'New Claim')}" />
 
-<f:render partial="Claim" arguments="{claim: claim}" />
+<f:translate id="message.claim.created.body" arguments="{0: claim.creditor, 1: claim.currency, 2: claim.amount, 3: '{claim.dueDate -> f:format.date(localeFormatType: \'date\', forceLocale: true)}'}"><![CDATA[
+{0} has added a receivables of {1} {2} . It is due {3}.
+Please add your comment in the portal.
+]]></f:translate>

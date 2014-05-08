@@ -1,12 +1,12 @@
 {namespace s=Famelo\Saas\ViewHelpers}
 <div class="wrapper">
-	<p class="label">Betrag in Höhe von</p>
+	<p class="label">{f:translate(value: 'Total amount of')}</p>
 	<div class="value">
 		{claim.amount -> s:format.currency()}
 	</div>
 </div>
 <div class="wrapper">
-	<p class="label">Fällig zum</p>
+	<p class="label">{f:translate(value: 'Due on')}</p>
 	<div class="value">
 		{claim.dueDate -> f:format.date(localeFormatType: 'date', forceLocale: true)}
 	</div>

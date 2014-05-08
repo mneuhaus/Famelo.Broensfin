@@ -1,6 +1,6 @@
 {namespace m=Famelo\Messaging\ViewHelpers}
-<m:message subject="{name} hat ein Kommentar hinterlassen" />
+<m:message subject="{name} {f:translate(value: 'has left a comment')}" />
 
-<f:render partial="Claim" arguments="{claim: claimComment.claim}" />
-
-{claimComment.message}
+<f:translate id="message.claim.comment.body" arguments="{0: name, 1: claimComment.claim.currency, 2: claimComment.claim.amount}"><![CDATA[
+{0} has commented your receivables over {1} {2}.
+]]></f:translate>

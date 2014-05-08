@@ -12,7 +12,7 @@
 			</trans-unit>
       <trans-unit id="de">
         <source>de</source>
-        <target>Deutsch</target>
+        <target>German</target>
       </trans-unit>
       <trans-unit id="en">
         <source>en</source>
@@ -36,7 +36,7 @@
       </trans-unit>
       <trans-unit id="status.pending">
         <source>pending</source>
-        <target>pending</target>
+        <target>Pending</target>
       </trans-unit>
       <trans-unit id="balance-history">
         <source>Balance history</source>
@@ -89,6 +89,136 @@
       <trans-unit id="slug.register">
         <source>Register</source>
         <target>Register</target>
+      </trans-unit>
+      <trans-unit id="slug.welcome">
+        <source>Welcome</source>
+        <target>Welcome</target>
+      </trans-unit>
+      <trans-unit id="slug.my-overview">
+        <source>My Overview</source>
+        <target>My Overview</target>
+      </trans-unit>
+      <trans-unit id="slug.credits">
+        <source>Credits</source>
+        <target>Credits</target>
+      </trans-unit>
+      <trans-unit id="slug.balance-in">
+        <source>Balance in €</source>
+        <target>Balance in €</target>
+      </trans-unit>
+      <trans-unit id="slug.transactions">
+        <source>Transactions</source>
+        <target>Transactions</target>
+      </trans-unit>
+      <trans-unit id="slug.preferences">
+        <source>Preferences</source>
+        <target>Preferences</target>
+      </trans-unit>
+      <trans-unit id="slug.buy-credits">
+        <source>Buy Credits</source>
+        <target>Buy Credits</target>
+      </trans-unit>
+      <trans-unit id="slug.dashboard">
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="slug.my-receivables">
+        <source>My receivables</source>
+        <target>My receivables</target>
+      </trans-unit>
+      <trans-unit id="status.bpo">
+        <source>bpo</source>
+        <target>BPO</target>
+      </trans-unit>
+      <trans-unit id="slug.my-payables">
+        <source>My payables</source>
+        <target>My payables</target>
+      </trans-unit>
+      <trans-unit id="slug.search">
+        <source>Search</source>
+        <target>Search</target>
+      </trans-unit>
+      <trans-unit id="slug.receivable">
+        <source>Receivable</source>
+        <target>Receivable</target>
+      </trans-unit>
+      <trans-unit id="slug.owner">
+        <source>Owner</source>
+        <target>Owner</target>
+      </trans-unit>
+      <trans-unit id="slug.comments">
+        <source>Comments</source>
+        <target>Comments</target>
+      </trans-unit>
+      <trans-unit id="slug.new-comment">
+        <source>New comment</source>
+        <target>New comment</target>
+      </trans-unit>
+      <trans-unit id="slug.history">
+        <source>History</source>
+        <target>History</target>
+      </trans-unit>
+      <trans-unit id="slug.total-amount-of">
+        <source>Total amount of</source>
+        <target>Total amount of</target>
+      </trans-unit>
+      <trans-unit id="slug.due-on">
+        <source>Due on</source>
+        <target>Due on</target>
+      </trans-unit>
+      <trans-unit id="slug.reject">
+        <source>Reject</source>
+        <target>Reject</target>
+      </trans-unit>
+      <trans-unit id="reject-claim-confirmation">
+        <source>
+			        				Are you sure, that you want to reject the payable #{0}?
+			        			</source>
+        <target>
+			        				Are you sure, that you want to reject the payable #{0}?
+			        			</target>
+      </trans-unit>
+      <trans-unit id="slug.yes-reject-this">
+        <source>Yes, reject this</source>
+        <target>Yes, reject this</target>
+      </trans-unit>
+      <trans-unit id="slug.no">
+        <source>No</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="slug.bpo-accepted">
+        <source>BPO-accepted</source>
+        <target>BPO-accepted</target>
+      </trans-unit>
+      <trans-unit id="slug.accept">
+        <source>accept</source>
+        <target>accept</target>
+      </trans-unit>
+      <trans-unit id="slug.accepted">
+        <source>accepted</source>
+        <target>accepted</target>
+      </trans-unit>
+      <trans-unit id="slug.rejected">
+        <source>rejected</source>
+        <target>rejected</target>
+      </trans-unit>
+      <trans-unit id="slug.account-has-been-updated">
+        <source>Account has been updated.</source>
+        <target>Account has been updated.</target>
+      </trans-unit>
+      <trans-unit id="slug.payment-successful">
+        <source>Payment successful</source>
+        <target>Payment successful</target>
+      </trans-unit>
+      <trans-unit id="message.claim.created.body">
+        <source>
+            {0} has added a receivables of {1} {2} . It is due {3}.
+            Please add your comment in the portal.
+        </source>
+        <target>
+            {0} has added a receivables of {1} {2} . It is due {3}.
+            Please add your comment in the portal.asdas
+        </target>
       </trans-unit>
     </body>
   </file>

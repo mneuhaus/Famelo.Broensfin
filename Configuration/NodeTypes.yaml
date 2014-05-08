@@ -11,6 +11,13 @@
                 label: 'With sidebar'
               'management':
                 label: 'Verwaltung'
+    targetName:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'targetName'
+        inspector:
+          group: document
     subpageLayout:
       ui:
         inspector:
