@@ -1,16 +1,15 @@
+{namespace s=Famelo\Saas\ViewHelpers}
 <li class="current">
 <f:security.ifAuthenticated>
-		<f:then>
-		<a href="/logout.html" class="current btn-logout">
-			<i class="fa fa-user"></i>
-			Logout
-		</a>
-		</f:then>
-		<f:else>
-		<a href="/de/login.html" class="current">
-			<i class="fa fa-user"></i>
-			Login
-		</a>
+	<f:then>
+	<a href="/logout.html" class="current btn-logout">
+		<i class="fa fa-user"></i>
+		Logout
+	</a>
+	</f:then>
+	<f:else>
+		<s:link.node path="Login"><i class="fa fa-user"></i>
+		Login</s:link.node>
 	</f:else>
 </f:security.ifAuthenticated>
 </li>

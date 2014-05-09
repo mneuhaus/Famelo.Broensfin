@@ -66,6 +66,10 @@
         <source>deletedAt</source>
         <target>deletedAt</target>
       </trans-unit>
+      <trans-unit id="rejected">
+        <source>rejected</source>
+        <target>rejected</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

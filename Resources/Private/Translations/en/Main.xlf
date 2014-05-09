@@ -220,6 +220,10 @@
             Please add your comment in the portal.asdas
         </target>
       </trans-unit>
+      <trans-unit id="status.rejected">
+        <source>rejected</source>
+        <target>rejected</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
