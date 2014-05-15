@@ -224,6 +224,38 @@
         <source>rejected</source>
         <target>rejected</target>
       </trans-unit>
+      <trans-unit id="slug.design-and-development-by">
+        <source>Design and Development by</source>
+        <target>Design and Development by</target>
+      </trans-unit>
+      <trans-unit id="slug.terms-of-use">
+        <source>Terms of use</source>
+        <target>Terms of use</target>
+      </trans-unit>
+      <trans-unit id="slug.legal">
+        <source>Legal</source>
+        <target>Legal</target>
+      </trans-unit>
+      <trans-unit id="slug.imprint">
+        <source>Imprint</source>
+        <target>Imprint</target>
+      </trans-unit>
+      <trans-unit id="slug.privacy-policy">
+        <source>Privacy Policy</source>
+        <target>Privacy Policy</target>
+      </trans-unit>
+      <trans-unit id="slug.about-us">
+        <source>About us</source>
+        <target>About us</target>
+      </trans-unit>
+      <trans-unit id="slug.site-service">
+        <source>Site Service</source>
+        <target>Site Service</target>
+      </trans-unit>
+      <trans-unit id="slug.help">
+        <source>Help</source>
+        <target>Help</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

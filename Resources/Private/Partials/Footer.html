@@ -1,0 +1,63 @@
+{namespace s=Famelo\Saas\ViewHelpers}
+<footer>
+	<div class="container">
+		<div class="col-sm-3">
+			<img src="{f:uri.resource(path: 'Media/Broensfin-Logo.png', package: 'Famelo.Broensfin')}" width="200" alt="{node.properties.title}" style="margin-top:30px;"/>
+		</div>
+        <div class="col-sm-3">
+            <h5>{f:translate(value: 'Legal')}</h5>
+            <ul>
+                <li>
+                    <s:link.node path="/sites/broensfin/nutzungsbedingungen">
+                        {f:translate(value: 'Terms of use')}
+                    </s:link.node>
+                </li>
+                <li>
+                    <s:link.node path="/sites/broensfin/impressum">
+                        {f:translate(value: 'Imprint')}
+                    </s:link.node>
+                </li>
+                <li>
+                    <s:link.node path="/sites/broensfin/datenschutz">
+                        {f:translate(value: 'Privacy Policy')}
+                    </s:link.node>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h5>Broensfin</h5>
+            <ul>
+                <li>
+                    <s:link.node path="/sites/broensfin/ueber-uns">
+                        {f:translate(value: 'About us')}
+                    </s:link.node>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h5>{f:translate(value: 'Site Service')}</h5>
+            <ul>
+                <li>
+                    <s:link.node path="/sites/broensfin/hilfe">
+                        {f:translate(value: 'Help')}
+                    </s:link.node>
+                </li>
+                <li>
+                    <s:link.node path="/sites/broensfin/anmelden">
+                        {f:translate(value: 'Register')}
+                    </s:link.node>
+                </li>
+                <li>
+                    <s:link.node path="/sites/broensfin/login">
+                        {f:translate(value: 'Login')}
+                    </s:link.node>
+                </li>
+            </ul>
+        </div>
+	</div>
+</footer>
+<div class="footerwrapper">
+	<p><s:link.node path="/sites/broensfin/impressum">{f:translate(value: 'Imprint')}</s:link.node> . © Copyright 2014 BROENSFIN</p>
+
+	<p class="copyright">{f:translate(value: 'Design and Development by')} <a href="http://www.famelo.com" title="Webentwicklung und IT-Service">Famelo OHG</a> & <a href="http://www.svensteinker.de" title="Sven Steinker - Webdesign und Frontendentwicklung">Sven Steinker </a></p>
+</div>

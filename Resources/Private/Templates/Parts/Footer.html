@@ -1,16 +1,91 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace a=TYPO3\Asset\ViewHelpers}
+<footer>
+	<div class="container">
+		<div class="col-sm-3">
+			<img src="{f:uri.resource(path: 'Media/Broensfin-Logo.png', package: 'Famelo.Broensfin')}" width="200" alt="{node.properties.title}" style="margin-top:30px;"/>
+		</div>
+		<f:if condition="{0: parts.language} == {0: 'en_GB'}">
+            <div class="col-sm-3">
+                <h5>Legal</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/terms-of-use">Terms of use</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/imprint">Imprint</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/privacy-policy">Privacy Policy</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Broensfin</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/about-us">About us</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Site Service</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/help">Help</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/anmelden">Register</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/login">Login</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+		</f:if>
+		<f:if condition="{0: parts.language} == {0: 'de_DE'}">
+            <div class="col-sm-3">
+                <h5>Rechtliches</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/nutzungsbedingungen">Nutzungsbedingungen</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Broensfin</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/ueber-uns">Über uns</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Site Service</h5>
+                <ul>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/hilfe">Hilfe</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/anmelden">Registrieren</neos:link.node>
+                    </li>
+                    <li>
+                        <neos:link.node node="/sites/broensfin/login">Login</neos:link.node>
+                    </li>
+                </ul>
+            </div>
+		</f:if>
+	</div>
+</footer>
+<div class="footerwrapper">
+	<p><a href="#" title="Impressum">Impressum</a> . © Copyright 2014 BROENSFIN</p>
 
-<div class="container">
-	<div class="col-sm-3">
-		logo
-	</div>
-	<div class="col-sm-3">
-		broensfin
-	</div>
-	<div class="col-sm-3">
-		broensfin
-	</div>
-	<div class="col-sm-3">
-		broensfin
-	</div>		
+	<p class="copyright">{f:translate(value: 'Design and Development by')} <a href="http://www.famelo.com" title="Webentwicklung und IT-Service">Famelo OHG</a> & <a href="http://www.svensteinker.de" title="Sven Steinker - Webdesign und Frontendentwicklung">Sven Steinker </a></p>
 </div>

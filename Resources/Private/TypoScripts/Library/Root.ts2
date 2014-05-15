@@ -38,6 +38,7 @@ page = Page {
 
 	body {
 		templatePath = 'resource://Famelo.Broensfin/Private/Templates/Page/Default.html'
+		partialRootPath = 'resource://Famelo.Broensfin/Private/Partials/'
 		sectionName = 'body'
 		parts {
 			menu = Menu {
@@ -107,6 +108,11 @@ page = Page {
 						1 = 'object'
 					}
 				}
+			}
+
+			footer = TypoScript:Template
+			footer {
+				templatePath = 'resource://Famelo.Broensfin/Private/Templates/Parts/Footer.html'
 			}
 
 			breadcrumb = Breadcrumb

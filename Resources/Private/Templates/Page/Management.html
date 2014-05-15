@@ -46,60 +46,7 @@
 		</div>
 	</div>
 
-	<footer>
-		<div class="container">
-			<div class="col-sm-3">
-				<img src="{f:uri.resource(path: 'Media/Broensfin-Logo.png', package: 'Famelo.Broensfin')}" width="200" alt="{node.properties.title}" style="margin-top:30px;"/>
-			</div>
-			<div class="col-sm-3">
-				<h5>Rechtliches</h5>
-				<ul>
-					<li>
-						<neos:link.node node="/sites/broensfin/ueber-uns">Nutzungsbedingungen</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
-					</li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h5>Rechtliches</h5>
-				<ul>
-					<li>
-						<neos:link.node node="/sites/broensfin/ueber-uns">Nutzungsbedingungen</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
-					</li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<h5>Rechtliches</h5>
-				<ul>
-					<li>
-						<neos:link.node node="/sites/broensfin/ueber-uns">Nutzungsbedingungen</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/impressum">Impressum</neos:link.node>
-					</li>
-					<li>
-						<neos:link.node node="/sites/broensfin/datenschutz">Datenschutz</neos:link.node>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-	<div class="footerwrapper">
-		<p><a href="#" title="Impressum">Impressum</a> . © Copyright 2014 BROENSFIN</p>
-
-		<p class="copyright">Design und Entwicklung von <a href="http://www.famelo.com" title="Webentwicklung und IT-Service">Famelo OHG</a> & <a href="http://www.svensteinker.de" title="Sven Steinker - Webdesign und Frontendentwicklung">Sven Steinker </a></p>
-	</div>
+	{parts.footer -> f:format.raw()}
 </f:section>
 </body>
 </html>
