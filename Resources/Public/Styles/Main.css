@@ -7745,6 +7745,54 @@ figcaption p {
 .controls-debtor {
   margin-right: 0;
 }
+.controls-debtor > .box {
+  border: 1px solid #E1E1E1;
+  background: #f9f9f9;
+  overflow: auto;
+  margin-left: 15px;
+  padding: 5px;
+  max-height: 300px;
+}
+.controls-debtor > .box .col-debtor-wrapper {
+  padding: 5px;
+}
+.controls-debtor > .box .col-debtor {
+  border: 1px solid #E1E1E1;
+  background: #FFFFFF;
+  padding: 5px;
+  cursor: pointer;
+  cursor: hand;
+}
+.controls-debtor > .box .col-debtor:hover {
+  background: #b9d4ec;
+  border: 1px solid #428bca;
+}
+.controls-debtor > .box .col-debtor.active {
+  background: #b9d4ec;
+  border: 1px solid #428bca;
+}
+.controls-debtor .notFoundMessage {
+  clear: both;
+  margin: 10px 5px 0;
+}
+.controls-debtor .header {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.controls-debtor .header .form-control {
+  width: 60%;
+}
+.controls-debtor .header .btn {
+  margin-right: 15px;
+  margin-top: 0;
+}
+.controls-debtor > .invite-form {
+  padding: 5px 45px 5px 30px;
+  max-height: none;
+}
+.controls-debtor > .invite-form p {
+  margin-bottom: 10px;
+}
 .controls-debtor .form-group {
   margin-left: 0;
 }

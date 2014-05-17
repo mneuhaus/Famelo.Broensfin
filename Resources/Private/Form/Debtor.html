@@ -1,53 +1,108 @@
 <f:layout name="TYPO3.Form:Field" />
 <f:section name="field">
-	<div class="row controls-debtor">
-		<div class="col-sm-4">
-			<f:form.select property="{element.identifier}.existing" id="{element.uniqueIdentifier}" options="{element.properties.options}" class="xlarge form-control" errorClass="{element.properties.elementErrorClassAttribute}" />
+	<div id="debtor-selector" class="row controls-debtor">
+		<div class="row header">
+			<button class="pull-right btn btn-success btn-small btn-invite">{f:translate(value: 'Invite Company', package: 'Famelo.Broensfin')}</button>
+			<button class="pull-right btn btn-success btn-small btn-search" style="display: none;">{f:translate(value: 'Search for Company', package: 'Famelo.Broensfin')}</button>
+			<input type="text" class="fuzzy-search form-control col-xs-4" placeholder="{f:translate(value: 'Search for Company Name, Street, etc', package: 'Famelo.Broensfin')}"/>
 		</div>
-		<div class="col-sm-8 invite-form" style="display: none;">
-			<h4>Invite</h4>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.company" placeholder="Company Name" class="form-control" />
+		<div class="box">
+			<div class="list">
+			<f:for each="{element.properties.options}" as="debtor">
+				<div class="col-xs-12 col-md-6 col-debtor-wrapper">
+					<div class="col-debtor" data-identifier="{debtor.identifier}" data-match-height="debtor">
+						<b class="name">{debtor.name}</b> <br />
+						<span class="street">{debtor.street}</span><f:if condition="{debtor.street}"><br /></f:if>
+						<f:if condition="{debtor.hasZipAndCity}">
+							<f:then>
+								<span class="zip">{debtor.zip}</span>, <span class="city">{debtor.city}</span>
+							</f:then>
+							<f:else>
+								<span class="zip">{debtor.zip}</span>
+								<span class="city">{debtor.city}</span>
+							</f:else>
+						</f:if>
+					</div>
+				</div>
+			</f:for>
 			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.street" placeholder="Street" class="form-control" />
+			<div class="alert alert-info notFoundMessage" style="display: none;">
+				{f:translate(value: "If you can't find the Company you're looking for you can invite it through the 'Invite Company' button above", package: 'Famelo.Broensfin')}
 			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.city" placeholder="City" class="form-control" />
-			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.zip" placeholder="ZIP" class="form-control" />
-			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.firstname" placeholder="Firstname" class="form-control" />
-			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.lastname" placeholder="Lastname" class="form-control" />
-			</div>
-			<div class="form-group">
-				<f:form.textfield property="{element.identifier}.email" placeholder="E-Mail" class="form-control" />
+		</div>
+		<div class="box invite-form" style="display: none;">
+			<div class="row">
+				<h3>{f:translate(value: 'Invite', package: 'Famelo.Broensfin')}</h3>
+				<p>
+					{f:translate(value: 'Please fill out the Details about the Company you want to invite. Make sure the E-Mail is correct, because an invitation will be sent to that Address to create an Account.', package: 'Famelo.Broensfin')}
+				</p>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.company" placeholder="{f:translate(value: 'Company Name', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.street" placeholder="{f:translate(value: 'Street', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.city" placeholder="{f:translate(value: 'City', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.zip" placeholder="{f:translate(value: 'ZIP', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.firstname" placeholder="{f:translate(value: 'Firstname', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.lastname" placeholder="{f:translate(value: 'Lastname', package: 'Famelo.Broensfin')}" class="form-control" />
+				</div>
+				<div class="form-group">
+					<f:form.textfield property="{element.identifier}.email" placeholder="{f:translate(value: 'E-Mail', package: 'Famelo.Broensfin')}" class="form-control" id="{element.uniqueIdentifier}-email" />
+				</div>
 			</div>
 		</div>
 	</div>
+	<f:form.hidden property="{element.identifier}.existing" id="{element.uniqueIdentifier}-existing" />
+	<f:form.hidden property="{element.identifier}.submitted" id="{element.uniqueIdentifier}-submitted" value="{element.alreadySubmitted}"/>
 
 	<script type="text/javascript">
+		var targetField = '{element.uniqueIdentifier}-existing';
+		var emailField = '{element.uniqueIdentifier}-submitted';
 		jQuery(document).ready(function(){
-			$('#form-objects_0_debtor').selectize({
-			    create: false,
-			    render: {
-			        option: function(item, escape) {
-			        	return '<div>' + item.text.replace(/,/g, '<br />') + '</div>';
-			        }
-			    }
+
+			var list = new List('debtor-selector', {
+  				valueNames: ['name', 'street', 'zip', 'city'],
+  				plugins: [ ListFuzzySearch() ]
 			});
 
-			jQuery('.selectize-control input').keyup(function(){
-				if (jQuery('.selectize-dropdown-content div').length > 0) {
-					jQuery('.invite-form').hide();
+			list.on('updated', function(){
+				if (list.matchingItems.length > 3) {
+					$('.notFoundMessage').hide();
 				} else {
-					jQuery('.invite-form').show();
+					$('.notFoundMessage').show();
 				}
-			})
+			});
+
+			$('.col-debtor').click(function(){
+				$('.col-debtor.active').removeClass('active');
+				$(this).addClass('active');
+				$('#' + targetField).val($(this).attr('data-identifier'));
+			});
+
+			$('.btn-invite, .btn-search').click(function(e){
+				e.preventDefault();
+				$('.btn-invite, .btn-search').toggle();
+				$('.list').parent('.box').toggle();
+				$('.box.invite-form').toggle();
+				if ($('.box.invite-form').is(":hidden")) {
+					$('.box.invite-form input').each(function(){
+						$(this).val('');
+					});
+				}
+				e.preventDefault();
+			});
+
+			if ($('#' + emailField).val().length > 0) {
+				$('.btn-invite').click();
+			}
 		});
 	</script>
 </f:section>

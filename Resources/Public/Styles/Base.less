@@ -361,6 +361,62 @@
 
 	.controls-debtor {
 		margin-right: 0;
+		& > .box {
+			border: 1px solid #E1E1E1;
+			background: #f9f9f9;
+			overflow: auto;
+			margin-left: 15px;
+			padding: 5px;
+			max-height: 300px;
+
+			.col-debtor-wrapper {
+				padding: 5px;
+			}
+			.col-debtor {
+				border: 1px solid #E1E1E1;
+				background: #FFFFFF;
+				padding: 5px;
+				cursor: pointer;
+				cursor: hand;
+			}
+
+			.col-debtor:hover {
+				background: lighten(@brand-primary, 30%);
+				border: 1px solid @brand-primary;
+			}
+
+			.col-debtor.active {
+				background: lighten(@brand-primary, 30%);
+				border: 1px solid @brand-primary;
+			}
+		}
+
+		.notFoundMessage {
+			clear: both;
+			margin: 10px 5px 0;
+		}
+
+		.header {
+			margin-left: 15px;
+			margin-bottom: 10px;
+			.form-control {
+				width: 60%;
+			}
+
+			.btn {
+				margin-right: 15px;
+				margin-top: 0;
+			}
+		}
+
+		& > .invite-form {
+			padding: 5px 45px 5px 30px;
+			max-height: none;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	.controls-debtor .form-group {
 		margin-left: 0;

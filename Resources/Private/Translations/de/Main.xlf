@@ -318,7 +318,7 @@
       </trans-unit>
       <trans-unit id="slug.about-us">
         <source>About us</source>
-        <target>Über Uns</target>
+        <target>&#xDC;ber Uns</target>
       </trans-unit>
       <trans-unit id="slug.site-service">
         <source>Site Service</source>
@@ -327,6 +327,58 @@
       <trans-unit id="slug.help">
         <source>Help</source>
         <target>Hilfe</target>
+      </trans-unit>
+      <trans-unit id="slug.invite-company">
+        <source>Invite Company</source>
+        <target>Firma einladen</target>
+      </trans-unit>
+      <trans-unit id="slug.search-for-company-name-street-etc">
+        <source>Search for Company Name, Street, etc</source>
+        <target>Suche nach Firmenname, Stra&#xDF;e, etc</target>
+      </trans-unit>
+      <trans-unit id="slug.invite">
+        <source>Invite</source>
+        <target>Einladen</target>
+      </trans-unit>
+      <trans-unit id="slug.search-for-company">
+        <source>Search for Company</source>
+        <target>Nach Firma suchen</target>
+      </trans-unit>
+      <trans-unit id="slug.please-fill-out-the-details-about-the-company-you-want-to-invite-make-sure-the-e-mail-is-correct-because-an-invitation-will-be-sent-to-that-address-to-create-an-account">
+        <source>Please fill out the Details about the Company you want to invite. Make sure the E-Mail is correct, because an invitation will be sent to that Address to create an Account.</source>
+        <target>Bitte f&#xFC;llen sie die Folgenden Felder &#xFC;ber die Firma aus, die Sie einladen wollen. Stellen Sie sicher, dass die E-Mail Adresse korrekt ist, da an diese Adresse eine Einladung verschickt wird um ein Konto anzulegen.</target>
+      </trans-unit>
+      <trans-unit id="slug.if-you-can-t-find-the-company-you-re-looking-for-you-can-invite-it-through-the-invite-company-button-above">
+        <source>If you can't find the Company you're looking for you can invite it through the 'Invite Company' button above</source>
+        <target>Wenn Sie eine Firma nicht finden, k&#xF6;nnen Sie oben auf den Knopf "Firma einladen" klicken um die Firma zu Broensfin einzuladen.</target>
+      </trans-unit>
+      <trans-unit id="slug.account-has-been-created">
+        <source>Account has been created.</source>
+        <target>Konto wurde erstellt.</target>
+      </trans-unit>
+      <trans-unit id="slug.company-name">
+        <source>Company Name</source>
+        <target>Firmenname</target>
+      </trans-unit>
+      <trans-unit id="slug.street">
+        <source>Street</source>
+        <target>Straße</target>
+      </trans-unit>
+      <trans-unit id="slug.city">
+        <source>City</source>
+        <target>Stadt</target>
+      </trans-unit>
+      <trans-unit id="slug.zip">
+        <source>ZIP</source>
+        <target>PLZ</target>
+      </trans-unit>
+      <trans-unit id="slug.firstname">
+        <source>Firstname</source>
+        <target>Vorname</target>
+      </trans-unit>
+      <trans-unit id="slug.lastname">
+        <source>Lastname</source>
+        <target>Nachname</target>
       </trans-unit>
     </body>
   </file>

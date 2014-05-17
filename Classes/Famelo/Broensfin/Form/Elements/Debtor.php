@@ -28,9 +28,16 @@ class Debtor extends OptionsFormElement {
 	 */
 	protected $persistenceManager;
 
+	/**
+	 * @var mixed
+	 */
+	protected $elementValue;
+
 	public function onSubmit(\TYPO3\Form\Core\Runtime\FormRuntime $formRuntime, &$elementValue) {
 		if (strlen($elementValue['existing']) > 0 && empty($elementValue['email'])) {
 			$elementValue = $elementValue['existing'];
+		} else if (strlen($elementValue['submitted']) > 0) {
+			$elementValue = $elementValue['submitted'];
 		} else {
 			$user = new User();
 			$name = new PersonName();
@@ -55,7 +62,11 @@ class Debtor extends OptionsFormElement {
 					->send();
 			$elementValue = $identifier;
 		}
-		// do something with the elementValue
+		$this->elementValue = $elementValue;
+	}
+
+	public function getAlreadySubmitted() {
+		return $this->elementValue;
 	}
 
 }

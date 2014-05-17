@@ -16,7 +16,11 @@
       </trans-unit>
       <trans-unit id="1334768052">
         <source>Password doesn't match confirmation</source>
-        <target>Password doesn't match confirmation</target>
+        <target>Passwörter stimmen nicht überein.</target>
+      </trans-unit>
+      <trans-unit id="1221560910">
+        <source>This property is required.</source>
+        <target>Dieses Feld muss ausgefüllt werden!</target>
       </trans-unit>
     </body>
   </file>

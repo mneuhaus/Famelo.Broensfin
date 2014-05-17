@@ -27,6 +27,11 @@ prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(T
 
 		externalReference {
 			label = 'Referenz'
+			validate {
+				0 {
+					type = "NotEmpty"
+				}
+			}
 		}
 
 		currency {
@@ -38,14 +43,29 @@ prototype(TYPO3.Expose:Schema:Famelo.Broensfin.Domain.Model.Claim) < prototype(T
 					EUR = 'Euro'
 				}
 			}
+			validate {
+				0 {
+					type = "NotEmpty"
+				}
+			}
 		}
 
 		amount {
 			label = 'Amount'
+			validate {
+				0 {
+					type = "NotEmpty"
+				}
+			}
 		}
 
 		dueDate {
 			label = 'Due date'
+			validate {
+				0 {
+					type = "NotEmpty"
+				}
+			}
 		}
 
 		creationDate {
